@@ -1,0 +1,69 @@
+; o0.info v1.0.0 14/01/2012
+
+name = o0
+description = o0 theme
+screenshot = screenshot.png
+version = 1.x
+core = 7.x
+engine = phptemplate
+
+; REGIONS
+regions[header] = Header
+regions[navigation] = Navigation
+regions[navigation_global] = Navigation global
+regions[hero] = Hero
+;regions[hero_first] = Hero first
+;regions[hero_second] = Hero second
+;regions[hero_last] = Hero last
+regions[preface_first] = Preface first
+regions[preface_second] = Preface second
+regions[preface_third] = Preface third
+regions[preface_last] = Preface last
+regions[content_top] = Content top
+regions[content] = Content
+regions[content_bottom] = Content bottom
+regions[sidebar_first] = Sidebar first
+regions[sidebar_last] = Sidebar last
+regions[postscript_first] = Postscript first
+regions[postscript_second] = Postscript second
+regions[postscript_third] = Postscript third
+regions[postscript_last] = Postscript last
+regions[footer] = Footer
+regions[footer_first] = Footer first
+regions[footer_second] = Footer second
+regions[footer_third] = Footer third
+regions[footer_last] = Footer last
+;regions[highlighted] = Highlighted
+regions[help] = Help
+
+; FEATURES
+;features[] = logo
+;features[] = name
+;features[] = slogan
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = favicon
+;features[] = main_menu
+;features[] = secondary_menu
+
+; STYLESHEETS
+stylesheets[all][] = stylesheets/reset.css
+;stylesheets[all][] = ../o0cms/styles/toolbar-override.css
+;stylesheets[all][] = ../o0cms/styles/seven-override.css
+;stylesheets[all][] = ../o0cms/styles/admin-content.css
+;stylesheets[all][] = ../o0cms/styles/services.css
+stylesheets[all][] = stylesheets/vendor/foundation/normalize.css
+stylesheets[all][] = stylesheets/vendor/foundation/foundation.css
+;stylesheets[all][] = stylesheets/vendor/foundation/foundation-override.css
+stylesheets[all][] = ../../libraries/font-awesome/css/font-awesome.min.css
+stylesheets[all][] = stylesheets/style.css
+;stylesheets[all][] = stylesheets/mediaqueries.css
+;stylesheets[all][] = stylesheets/dev.css
+;stylesheets[print][] = stylesheets/print.css
+
+; SCRIPTS
+scripts[] = scripts/scripts.js
+
+; SCRIPTS - ZURB Foundation framework
+scripts[] = scripts/foundation/vendor/custom.modernizr.js
+scripts[] = scripts/foundation/foundation.min.js

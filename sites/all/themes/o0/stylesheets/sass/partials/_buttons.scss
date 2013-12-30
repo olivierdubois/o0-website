@@ -1,0 +1,129 @@
+//**
+//* 'o0' THEME STYLESHEET
+//* BUTTONS
+//* 22/04/2009
+//*
+//* by Olivier Dubois, olivierdubois.com
+//*
+//*/
+
+
+
+
+/**
+ * BUTTON - Default - ZURB Foundation
+ */
+
+/* CSS from ZURB Foundation (v4) 'button' class, 'as-is' from 'foundation.css' */
+button, .button {
+  border-style: solid; border-width: 1px; cursor: pointer; font-family: inherit; font-weight: bold; line-height: 1; margin: 0 0 1.25em; position: relative; text-decoration: none; text-align: center; display: inline-block; padding-top: 0.75em; padding-right: 1.5em; padding-bottom: 0.8125em; padding-left: 1.5em; font-size: 1em; background-color: rgb(153, 153, 153); border-color: rgb(122, 122, 122) /* Background color + 20% black */; color: rgb(255, 255, 255); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-transition: background-color 300ms ease-out; -moz-transition: background-color 300ms ease-out; transition: background-color 300ms ease-out;
+}
+/* Overrides */
+button, .button {
+  background-color: rgb(153, 153, 153);
+  border-color: rgb(122, 122, 122) /* Background color + 20% black */;
+  /*font-family: inherit;*/
+  /*font-size: 1em;*/
+  /*font-weight: bold;*/
+  /*color: rgb(255, 255, 255);*/
+  /*text-transform: uppercase;*/
+  padding-top: 0.8125em; padding-bottom: 0.75em; -webkit-appearance: none;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: rgb(122, 122, 122);
+  border-color: rgb(92, 92, 92) /* Background color + 20% black */;
+  color: rgb(255, 255, 255);
+}
+button:active, .button:active { -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+
+button.secondary, .button.secondary {
+  background-color: rgb(204, 204, 204);
+  border-color: rgb(163, 163, 163) /* Background color + 20% black */;
+  /*font-family: inherit;*/
+  /*font-size: 1em;*/
+  /*font-weight: bold;*/
+  /*color: rgb(255, 255, 255);*/
+}
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+  background-color: rgb(153, 153, 153);
+  border-color: rgb(122, 122, 122) /* Background color + 20% black */;
+  color: rgb(255, 255, 255);
+}
+
+button.large, .button.large { /*font-size: 1.25em;*/ padding-top: 1.03125em; padding-bottom: 1.03125em; -webkit-appearance: none; }
+button.small, .button.small { /*font-size: 0.8125em;*/ padding-top: 0.625em; padding-bottom: 0.5625em; -webkit-appearance: none; }
+button.tiny, .button.tiny { /*font-size: 0.6875em;*/ padding-top: 0.5em; padding-bottom: 0.4375em; -webkit-appearance: none; }
+button.expand, .button.expand { }
+button.left-align, .button.left-align { }
+button.right-align, .button.right-align { }
+button.radius, .button.radius { -webkit-border-radius: 3px; border-radius: 3px; }
+button.round, .button.round { -webkit-border-radius: 1000px; border-radius: 1000px; }
+
+@media only screen and (min-width: 768px) {
+button, .button { display: inline-block; }
+}
+
+/* 'Brown' Colour */
+button.button-style-brown, .button.button-style-brown {
+  background-color: rgb(105, 26, 2);
+  border-color: rgb(63, 16, 1) /* Background color + 20% black */;
+  /*font-family: inherit;*/
+  /*font-size: 1em;*/
+  /*font-weight: bold;*/
+  /*color: rgb(255, 255, 255);*/
+  /*text-transform: uppercase;*/
+  padding-top: 0.8125em; padding-bottom: 0.75em; -webkit-appearance: none;
+}
+button.button-style-brown:hover, button.button-style-brown:focus, .button.button-style-brown:hover, .button.button-style-brown:focus {
+  background-color: rgb(63, 16, 1);
+  border-color: rgb(21, 5, 0) /* Background color + 20% black */;
+  color: rgb(255, 255, 255);
+}
+button.button-style-brown:active, .button.button-style-brown:active { -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+
+
+
+
+/**
+ * BUTTON - Comments, Language Link - Reply, Permalink, etc.
+ */
+
+/* CSS from ZURB Foundation 'button' class, 'as-is' from 'foundation.css' */
+.comment-reply a, 
+a.permalink,
+a.language-link
+{
+border-style: solid; border-width: 1px; cursor: pointer; font-family: inherit; font-weight: bold; line-height: 1; margin: 0 0 1.25em; position: relative; text-decoration: none; text-align: center; display: inline-block; padding-top: 0.75em; padding-right: 1.5em; padding-bottom: 0.8125em; padding-left: 1.5em; font-size: 1em; background-color: rgb(153, 153, 153); border-color: rgb(122, 122, 122) /* Background color + 20% black */; color: rgb(255, 255, 255); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-transition: background-color 300ms ease-out; -moz-transition: background-color 300ms ease-out; transition: background-color 300ms ease-out;
+}
+/* Overrides */
+.comment-reply a, 
+a.permalink,
+a.language-link
+{
+background-color: rgb(204, 204, 204);
+border: none;
+box-shadow: none;
+/*-webkit-border-radius: 3px; border-radius: 3px;*/ /* .button.radius */
+/*font-family: inherit;*/
+font-size: 0.6875em; /* .button.tiny */
+/*font-weight: bold;*/
+/*color: rgb(255, 255, 255);*/
+text-transform: uppercase;
+padding-top: 0.3333em; padding-bottom: 0.2916em; padding-right: 0.5em; padding-left: 0.5em; -webkit-appearance: none;
+}
+a.permalink {
+background: none;
+color: rgb(183, 183, 183);
+}
+.comment-reply a:hover, .comment-reply a:focus, 
+a.permalink:hover, a.permalink:focus,
+a.language-link:hover, a.language-link:focus
+{
+background-color: rgb(163, 163, 163);
+border: none;
+color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 768px) {
+.comment-reply a { display: inline-block; }
+}

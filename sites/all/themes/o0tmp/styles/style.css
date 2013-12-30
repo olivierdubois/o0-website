@@ -1,0 +1,121 @@
+/**
+ * 'o0' THEME STYLESHEET
+ * STYLES
+ * 22/04/2009
+ * 
+ * by Olivier Dubois, olivierdubois.com
+ * 
+ */
+
+
+
+
+/**
+ * GLOBAL ELEMENTS
+ */
+
+body {
+/*background-image: url(../images/page-tpl-page-bg.jpg);*/
+}
+
+
+
+
+/**
+ * TABS
+ */
+
+#masthead-page-toolbar ul.primary {
+border-bottom: none;
+border-collapse: inherit;
+height: auto;
+line-height: normal;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin: 0;
+padding: 0;
+float: left;
+}
+
+#masthead-page-toolbar ul.tabs li {
+float: left;
+}
+
+#masthead-page-toolbar ul.primary li a {
+display: block;
+background-color: #888;
+border-top-left-radius: 0 0;
+border-top-right-radius: 0 0;
+border-style: none;
+border-width: 1px;
+height: auto;
+margin: 5px 4px 0 0;
+padding: 5px 21px;
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+line-height: 1.0em;
+}
+
+#masthead-page-toolbar ul.primary li.active a {
+background-color: #fff;
+border-top-left-radius: 0 0;
+border-top-right-radius: 0 0;
+color: #000;
+font-weight: bold;
+font-size: 19px;
+border-style: none;
+margin-top: 0;
+padding-top: 7px;
+}
+
+#masthead-page-toolbar ul.tabs li a:hover {
+background-color: #515151;
+text-decoration: none;
+}
+
+#masthead-page-toolbar ul.tabs li.active a:hover {
+background-color: #fff;
+}
+
+
+#masthead-page-toolbar ul.secondary {
+border-bottom: none;
+margin: 3px 0 0;
+padding: 0;
+float: right;
+}
+
+#masthead-page-toolbar ul.secondary li {
+border-right: none;
+padding: 0;
+}
+
+#masthead-page-toolbar ul.secondary li a {
+display: block;
+background-color: #888;
+border-top-left-radius: 0 0;
+border-top-right-radius: 0 0;
+border-style: none;
+border-width: 1px;
+height: auto;
+margin: 4px 4px 0 0;
+padding: 5px 18px;
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+line-height: 1.0em;
+}
+
+#masthead-page-toolbar ul.secondary li.active a {
+background-color: #fff;
+border-top-left-radius: 0 0;
+border-top-right-radius: 0 0;
+color: #000;
+font-weight: bold;
+font-size: 16px;
+border-style: none;
+margin-top: 0;
+padding-top: 7px;
+}

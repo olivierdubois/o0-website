@@ -1,0 +1,82 @@
+//**
+//* GLOBAL VARIABLES
+//*/
+
+
+// Theme name.
+$theme-name: "o0";
+
+
+// Primary font stack.
+$font-stack: Arial, Helvetica, sans-serif;
+
+// Primary font stack for heading.
+$font-stack-heading: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
+
+// Primary font stack for navigation.
+$font-stack-navigation: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
+
+// Set font size baseline.
+$font-size-baseline: 16px;
+
+// Set line height baseline.
+$line-height-baseline: 26px;
+
+
+// Primary colours.
+$color-1: hsl(0, 0, 0);
+//$color-2: ;
+//$color-3: ;
+//$color-4: ;
+//$color-5: ;
+
+// Primary font colour.
+$font-color: rgb(51, 51, 51);
+
+// Primary font colour for heading.
+$font-color-heading: rgb(255, 134, 42);
+$font-color-heading-hover: rgb(153, 80, 25);
+
+
+// Default colour for link.
+$font-color-link: rgb(23, 141, 177);
+$font-color-link-hover: rgb(23, 141, 177);
+
+
+
+
+//**
+//* MIXINS
+//*/
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+// Font Awesome icons to use with ':before' (v4.0.3).
+@mixin icon-field-items {
+  // Font Awesome 'fa-ul' class.
+  position: relative;
+  padding-left: 0;
+  margin-left: 2.142857142857143em;
+}
+@mixin icon-field-item-before {
+  // Font Awesome 'fa-li' class.
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  top: 0.525em; //* Default: 0.14285714285714285em; */
+  text-align: center;
+  // Font Awesome 'fa' class.
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

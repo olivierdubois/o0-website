@@ -1,0 +1,68 @@
+; o0tmp.info v1.0.0 14/01/2012
+
+name = o0 Tmp
+description = o0 Temporary theme
+screenshot = screenshot.png
+version = 0.x
+core = 7.x
+engine = phptemplate
+
+; REGIONS
+regions[header] = Header
+regions[masthead_top] = Masthead top
+regions[masthead_bottom] = Masthead bottom
+;regions[masthead_first] = Masthead first
+;regions[masthead_second] = Masthead second
+;regions[masthead_last] = Masthead last
+regions[preface_first] = Preface first
+regions[preface_second] = Preface second
+regions[preface_last] = Preface last
+regions[content_top] = Content top
+regions[content] = Content
+regions[content_bottom] = Content bottom
+regions[sidebar_first] = Sidebar first
+regions[sidebar_last] = Sidebar last
+;regions[postscript_first] = Postscript first
+;regions[postscript_second] = Postscript second
+;regions[postscript_last] = Postscript last
+regions[footer_top] = Footer top
+regions[footer_top_first] = Footer top first
+regions[footer_top_second] = Footer top second
+regions[footer_top_last] = Footer top last
+regions[footer_bottom] = Footer bottom
+;regions[highlighted] = Highlighted
+regions[help] = Help
+
+; FEATURES
+;features[] = logo
+;features[] = name
+;features[] = slogan
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = favicon
+;features[] = main_menu
+;features[] = secondary_menu
+
+; STYLESHEETS
+stylesheets[all][] = styles/reset.css
+;stylesheets[all][] = ../o0cms/styles/toolbar-override.css
+;stylesheets[all][] = ../o0cms/styles/seven-override.css
+;stylesheets[all][] = ../o0cms/styles/admin-content.css
+;stylesheets[all][] = ../o0cms/styles/services.css
+stylesheets[all][] = styles/normalize.css
+stylesheets[all][] = styles/foundation.css
+;stylesheets[all][] = styles/foundation-override.css
+stylesheets[all][] = styles/content.css
+stylesheets[all][] = styles/wireframe.css
+stylesheets[all][] = styles/navigation.css
+stylesheets[all][] = styles/style.css
+;stylesheets[all][] = styles/mediaqueries.css
+;stylesheets[all][] = styles/dev.css
+;stylesheets[print][] = styles/print.css
+
+; SCRIPTS
+scripts[] = scripts/scripts.js
+
+; SCRIPTS - ZURB Foundation framework
+scripts[] = scripts/foundation/foundation.min.js
+scripts[] = scripts/foundation/vendor/custom.modernizr.js

@@ -1,0 +1,103 @@
+/**
+ * BLOCK - Copyright
+ */
+
+#block-block-1 {
+  font-size: 0.625em;
+  color: rgb(102, 102, 102);
+  line-height: 1em;
+}
+#block-block-1 p {
+  margin: 0;
+}
+#block-block-1 a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+#block-block-1 a:hover {
+  color: rgb(51, 51, 51);
+}
+
+
+
+
+/**
+ * BLOCK - Credits
+ */
+
+#block-block-2 {
+  font-size: 0.625em;
+  color: rgb(102, 102, 102);
+  line-height: 1em;
+}
+#block-block-2 p {
+  margin: 0;
+}
+#block-block-2 a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+#block-block-2 a:hover {
+  color: rgb(51, 51, 51);
+}
+
+
+
+
+/**
+ * BLOCK - Channels
+ */
+
+#block-block-5 ul.channels {
+}
+#block-block-5 ul.channels li {
+  display: block;
+  float: left;
+  margin: 0 1em 0.3125em 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+#block-block-5 ul.channels li a span {
+  display: none;
+}
+#block-block-5 ul.channels li a {
+  display: block;
+  /*width: 48px;
+  min-height: 48px;*/
+  padding: 0;
+  font-size: 3em;
+  color: #999;
+  line-height: 1em;
+  text-decoration: none;
+}
+#block-block-5 ul.channels li a:hover {
+  color: rgb(0, 0, 0);
+}
+#block-block-5 ul.channels li.facebook a {
+}
+#block-block-5 ul.channels li.facebook a:hover {
+  color: rgb(59, 89, 152);
+}
+#block-block-5 ul.channels li.twitter a {
+}
+#block-block-5 ul.channels li.twitter a:hover {
+  color: rgb(0, 172, 237);
+}
+#block-block-5 ul.channels li.delicious a {
+}
+#block-block-5 ul.channels li.delicious a:hover {
+  color: rgb(0, 0, 0);
+}
+#block-block-5 ul.channels li.lastfm a {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+#block-block-5 ul.channels li.lastfm a:hover {
+  color: rgb(213, 16, 7);
+}
+#block-block-5 ul.channels li.linkedin a {
+}
+#block-block-5 ul.channels li.linkedin a:hover {
+  color: rgb(0, 119, 181);
+}

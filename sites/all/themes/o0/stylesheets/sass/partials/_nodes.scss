@@ -1,0 +1,140 @@
+/**
+ * NODE
+ */
+
+/* Default */
+.node .meta .submitted {
+  margin: 0.1875em 0 0 0;
+  padding: 0;
+  font-size: 0.625em;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+  line-height: 0.75em;
+  text-align: left;
+}
+
+/* Date fields */
+.node .field-type-date {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+}
+
+.node .meta .field-type-date {
+  .field-items {
+    @include icon-field-items;
+  }
+
+  .field-item:before {
+    @include icon-field-item-before;
+    content: "\f017";
+  }
+}
+
+
+
+
+/**
+ * NODE - Article - Default
+ */
+
+.node.node-article {
+}
+.node.node-article .field-name-field-article-image-2 {
+  margin: 1.5em 0 0 0;
+}
+.node.node-article .field-name-field-article-image-2 .field-item {
+  float: left !important;
+  width: 21%;
+  margin: 2% 2% 2% 2%;
+}
+
+
+
+
+/**
+ * NODE - Project - Default
+ */
+
+.node.node-project {
+}
+.node.node-project .field-name-field-project-type {
+  font-size: 1.375em;
+}
+.node.node-project .field-name-field-project-link {
+}
+
+
+
+
+/**
+ * NODE - Feed - Content region
+ */
+
+/* Default */
+.feed-item h3.feed-item-title {
+  margin: 1.25em 0 0 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(255, 134, 42);
+  line-height: 1em;
+  text-align: left;
+}
+.feed-item h3.feed-item-title a {
+  color: rgb(255, 134, 42);
+  text-decoration: none;
+}
+.feed-item h3.feed-item-title a:hover {
+  color: #00879c;
+}
+.feed-item .feed-item-description {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  font-size: 0.688em;
+  font-weight: normal;
+  color: rgb(204, 204, 204);
+  line-height: 1em;
+  text-align: left;
+}
+.feed-item .feed-item-timestamp {
+  margin: 0.1875em 0 0 0;
+  padding: 0;
+  font-family: $font-stack;
+  font-size: 0.625em;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+  line-height: 0.75em;
+  text-align: left;
+}
+
+/* Microblog */
+.feed-item.feed-item-type-microblog {
+  margin: 0;
+  padding: 0.625em 0 0.625em 0;
+  border-bottom: 1px dashed rgb(153, 153, 153);
+}
+.feed-item.feed-item-type-microblog h3.feed-item-title {
+  display: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.feed-item.feed-item-type-microblog .feed-item-description {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  font-size: 0.875em;
+  font-weight: normal;
+  color: rgb(204, 204, 204);
+  line-height: 1.125em;
+  text-align: left;
+}
+.feed-item.feed-item-type-microblog .feed-item-description a {
+  color: rgb(29, 176, 221);
+}

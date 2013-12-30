@@ -1,0 +1,583 @@
+/**
+ * 'o0' THEME STYLESHEET
+ * CONTENT
+ * Typography, View styles, Block styles, etc.
+ * 22/04/2009
+ * 
+ * by Olivier Dubois, olivierdubois.com
+ * 
+ */
+
+
+
+
+/**
+ * TYPOGRAPHY
+ */
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 100%; /* Fix the exaggerated text resizing in IE6/IE7. */
+font-size: 0.8125em; /* 13px */
+color: rgb(51, 51, 51);
+line-height: 1.6923em; /* 22px */
+}
+
+p {
+margin: 8px 0 8px 0;
+}
+
+a {
+color: rgb(29, 176, 221);
+}
+
+ul {
+margin: 8px 15px 8px 15px;
+padding: 0 0 0 15px;
+}
+
+form {
+margin: 0 0 0 0;
+}
+
+img {
+border: 0;
+}
+
+p.first {
+}
+p.emphasis {
+}
+
+
+
+
+/**
+ * NODE - All - Default
+ */
+
+/* Heading */
+h1 {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 2em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 24px;
+}
+h2 {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 1.75em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 22px;
+}
+h3 {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 1.5em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 20px;
+}
+h4 {
+margin: 15px 0 8px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 1.25em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 18px;
+}
+h5 {
+margin: 12px 0 8px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 1.125em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 16px;
+}
+h6 {
+margin: 10px 0 8px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 1em;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 16px;
+}
+
+h1.page-title {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 2em;
+font-weight: normal;
+color: rgb(102, 102, 102);
+line-height: 24px;
+}
+h2.section-title {
+margin: 150px 10px 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 2em;
+font-weight: bold;
+color: rgb(118, 98, 15);
+line-height: 24px;
+}
+.node h2.title {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 2.25em; /* 26px */
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 1.75em; /* 28px */
+}
+
+div.section-title-home {
+margin: 15px 0 10px 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 30px;
+font-weight: normal;
+color: rgb(102, 102, 102);
+line-height: 32px;
+}
+
+
+
+
+
+/**
+ * NODE
+ */
+
+/* Default */
+#content-content {
+}
+
+#content-content p {
+font-size: 1em;
+}
+#content-content p.first {
+font-size: 1.2307em; /* 16px */
+}
+#content-content p.emphasis {
+font-size: 1.2307em; /* 16px */
+}
+#content-content p.note.small {
+font-size: 0.825em; /* ? */
+font-style: italic;
+color: rgb(153, 153, 153);
+}
+
+.node .content {
+font-style: normal;
+}
+.node .content p {
+margin: 16px 0 16px 0;
+}
+
+.node .meta .submitted {
+margin: 3px 0 0 0;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+color: rgb(153, 153, 153);
+text-transform: uppercase;
+line-height: 12px;
+text-align: left;
+}
+
+
+
+
+/**
+ * VIEW
+ */
+
+#content-group .view h2.title {
+margin: 0px 0 0 0;
+padding: 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, sans-serif;
+font-size: 2.500em; /* Default: 1.375em */
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 1.000em;
+text-align: left;
+}
+#content-group .view h2.title a {
+color: rgb(255, 134, 42);
+text-decoration: none;
+}
+#content-group .view h2.title a:hover {
+color: #00879c;
+}
+
+
+
+
+
+
+/**
+ * NODE - Feed - Content region
+ */
+
+/* Default */
+div.feed-item h3.feed-item-title {
+margin: 20px 0 0 0;
+padding: 0;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, sans-serif;
+font-size: 15px;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 17px;
+text-align: left;
+}
+div.feed-item h3.feed-item-title a {
+color: rgb(255, 134, 42);
+text-decoration: none;
+}
+div.feed-item h3.feed-item-title a:hover {
+color: #00879c;
+}
+div.feed-item div.feed-item-description {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 11px;
+font-weight: normal;
+color: rgb(204, 204, 204);
+line-height: 15px;
+text-align: left;
+}
+div.feed-item div.feed-item-timestamp {
+margin: 3px 0 0 0;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+color: rgb(153, 153, 153);
+text-transform: uppercase;
+line-height: 12px;
+text-align: left;
+}
+
+/* Microblog */
+div.feed-item.feed-item-type-microblog {
+margin: 0;
+padding: 10px 0 10px 0;
+border-bottom: 1px dashed #666666;
+}
+div.feed-item.feed-item-type-microblog h3.feed-item-title {
+display: none;
+width: 0;
+height: 0;
+margin: 0;
+padding: 0;
+}
+div.feed-item.feed-item-type-microblog div.feed-item-description {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 14px;
+font-weight: normal;
+color: rgb(204, 204, 204);
+line-height: 18px;
+text-align: left;
+}
+div.feed-item.feed-item-type-microblog div.feed-item-description a {
+color: rgb(29, 176, 221);
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ * PANELS
+ */
+
+/* Panel Title */
+h2.pane-title {
+margin: 0px 0 0px 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+font-weight: normal;
+color: rgb(255, 134, 42);
+line-height: 34px;
+}
+
+
+
+
+/**
+ * VIEWS
+ */
+
+/* Default */
+.view .node h2.title {
+/*margin: 10px 0 5px 0;*/
+font-size: 16px;
+font-weight: bold;
+color: #eee;
+line-height: 20px;
+}
+.view .views-row-odd, 
+.view .views-row-even {
+margin: 0;
+padding: 10px 0 10px 0;
+border-bottom: 1px dashed #666666;
+}
+.view .views-row-odd.views-row-first {
+border-top: 1px dashed #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.container-socialmedia {
+display: block;
+overflow: hidden;
+clear: both;
+width: 100%;
+margin: 110px 0 0px 50px;
+}
+
+div.container-socialmedia-feed {
+display: block;
+overflow: hidden;
+clear: both;
+width: 100%;
+margin: 10px 0 0 210px;
+}
+
+div.container-copyright {
+display: block;
+clear: both;
+height: 45px;
+margin: 30px 0 0 220px;
+}
+
+ul.menu.socialmedia {
+}
+
+ul.menu.socialmedia li.leaf {
+display: block;
+/*float: left;*/
+width: 190px;
+min-height: 32px;
+margin: 0 0 0 5px;
+padding: 0;
+}
+
+ul.menu.socialmedia li.leaf a {
+display: block;
+padding: 0px 0 4px 30px;
+font-size: 14px;
+color: #999;
+line-height: 15px;
+text-decoration: none;
+}
+ul.menu.socialmedia li.leaf a:hover {
+color: #3274d0;
+}
+
+ul.menu.socialmedia li.leaf a span.url {
+display: block;
+padding: 0 0 0 1px;
+font-size: 9px;
+color: #999;
+line-height: 9px;
+text-decoration: none;
+}
+ul.menu.socialmedia li.leaf a:hover span.url {
+color: #999;
+}
+
+ul.menu.socialmedia li.leaf.twitter a {
+background: url(/sites/all/themes/o0/images/icons/twitter-24x24.png) left top no-repeat;
+}
+
+ul.menu.socialmedia li.leaf.delicious a {
+background: url(/sites/all/themes/o0/images/icons/delicious-24x24.png) left top no-repeat;
+}
+
+ul.menu.socialmedia li.leaf.lastfm a {
+background: url(/sites/all/themes/o0/images/icons/lastfm-24x24.png) left top no-repeat;
+}
+
+ul.menu.socialmedia li.leaf.follow {
+display: block;
+width: 120px;
+font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #999;
+text-transform: none;
+}
+
+ul.menu.socialmedia li.leaf.twitter.feed, 
+ul.menu.socialmedia li.leaf.delicious.feed {
+display: block;
+width: 180px;
+min-height: 20px;
+}
+
+ul.menu.socialmedia li.leaf.twitter.feed a, 
+ul.menu.socialmedia li.leaf.delicious.feed a {
+display: block;
+padding: 1px 0 3px 20px;
+background: url(/sites/all/themes/o0/images/icons/feed-16x16.png) left top no-repeat;
+font-size: 10px;
+}
+
+div.container-socialmedia-feed {
+}
+
+div.container-socialmedia-feed .feedburnerfeedblock {
+}
+div.container-socialmedia-feed .feedburnerfeedblock ul {
+}
+div.container-socialmedia-feed .feedburnerfeedblock #creditfooter {
+display: none;
+}
+
+/* Twitter feed */
+div.container-socialmedia-feed #feed-twitter {
+width: 170px;
+}
+div.container-socialmedia-feed #feed-twitter .tweet {
+padding: 2px 0 2px 0;
+border-bottom: 1px dashed #9f9f9f;
+/*background: url(/sites/all/themes/o0/images/icons/o0-24x24.png) left 4px no-repeat;*/
+font-family: Arial, Helvetica, sans-serif;
+}
+div.container-socialmedia-feed #feed-twitter .tweet:first-child {
+border-top: 1px dashed #9f9f9f;
+}
+div.container-socialmedia-feed #feed-twitter .tweet .tweet-content {
+display: block;
+font-size: 10px;
+font-weight: normal;
+color: #777;
+line-height: 13px;
+}
+div.container-socialmedia-feed #feed-twitter .tweet .tweet-content a {
+display: inline-block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #3274d0;
+}
+div.container-socialmedia-feed #feed-twitter .tweet .tweet-timestamp {
+display: block;
+font-size: 9px;
+font-style: italic;
+color: #999;
+}
+
+div.container-socialmedia-feed a span.url {
+display: block;
+padding: 5px 0 0 5px;
+font-size: 9px;
+color: #333;
+line-height: 9px;
+text-decoration: none;
+}
+div.container-socialmedia-feed a:hover span.url {
+color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.node .feed-item-timestamp {
+margin: 3px 0 0 0;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 1.5em;
+font-weight: bold;
+color: rgb(153, 153, 153);
+text-transform: uppercase;
+line-height: 1em;
+text-align: left;
+}
+
+div.node .field-name-field-article-date {
+display: none;
+}
+
+div.node .content {
+margin: 15px 0 0 0;
+}
+
+
+div.node .comments, 
+div.node .comments h2.title {
+color: rgb(102, 102, 102) !important;
+}
+
+div.node .comments fieldset.filter-wrapper {
+display: none;
+}
+
+
+
+
+
+
+
+
+#footer-wrapper .credits, 
+#footer-wrapper .copyright {
+margin: 0;
+font-size: 10px;
+color: #666;
+}
+#footer-wrapper .credits a, 
+#footer-wrapper .copyright a {
+color: #666;
+text-decoration: none;
+}
+#footer-wrapper .credits a:hover, 
+#footer-wrapper .copyright a:hover {
+color: #999;
+text-decoration: none;
+}
+
+
+body.page-node-1 #content-group {
+	display: none;
+}

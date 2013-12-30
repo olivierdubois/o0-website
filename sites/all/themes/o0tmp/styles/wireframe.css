@@ -1,0 +1,299 @@
+/**
+ * 'o0' THEME STYLESHEET
+ * WIREFRAME
+ * 22/04/2009
+ * 
+ * by Olivier Dubois, olivierdubois.com
+ * 
+ */
+
+
+
+
+/**
+ * WIREFRAME
+ */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+position: relative;
+background-color: rgb(255, 255, 255);
+}
+
+#page {
+/*width: 100%;*/
+height: 100%;
+overflow: hidden;
+}
+
+#top-nav-container {
+height: 100px;
+}
+
+#masthead-wrapper {
+position: absolute;
+/*width: 100%;*/
+overflow: hidden;
+z-index: 10;
+}
+
+#masthead-top {
+padding: 0 6%;
+/*height: 100px;*/
+}
+
+#masthead-first {
+/*height: 100px;
+padding: 0 20px 0 0;*/
+}
+
+#masthead-second {
+/*height: 100px;
+padding: 0 20px 0 20px;*/
+}
+
+#masthead-last {
+/*float: right;
+width: 20%;
+height: 100px;
+padding: 0 0 0 20px;*/
+}
+
+#masthead-page-toolbar {
+padding: 0 6%;
+overflow: hidden;
+}
+
+#statusbar {
+padding: 0 6%;
+margin: 21px 0 42px;
+}
+
+#preface-wrapper {
+clear: both;
+overflow: hidden;
+padding: 0 6%;
+}
+
+#preface-wrapper #preface-first {
+width: 32%;
+padding: 0 1% 0 0;
+}
+
+#preface-wrapper #preface-second {
+width: 32%;
+padding: 0 1% 0 1%;
+}
+
+#preface-wrapper #preface-last {
+width: 32%;
+padding: 0 0 0 1%;
+}
+
+    #sections {
+    overflow: hidden;
+    height: 100%;
+    }
+
+#main-wrapper {
+/*width: 900px;*/
+margin: 0 auto 0 auto;
+}
+
+#main-wrapper #content-group {
+/*width: 900px;*/
+overflow: hidden;
+}
+
+#main-wrapper #content-first {
+/*width: 460px;*/ /* Box: 480px */
+margin: 0 10px 0 10px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+#main-wrapper #content-second {
+/*width: 380px;*/ /* Box: 400px */
+margin: 0 10px 0 10px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+#main-wrapper #content-third {
+/*width: 300px;*/ /* Box: 320px */
+margin: 0 10px 0 10px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+#main-wrapper #content-fourth {
+/*width: 300px;*/ /* Box: 320px */
+margin: 0 10px 0 10px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+#main-wrapper #content-last {
+/*width: 300px;*/ /* Box: 320px */
+margin: 0 10px 0 10px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+#main-wrapper #sidebar-first {
+/*width: 320px;*/
+/*    background-color: #999;*/
+}
+
+#main-wrapper #sidebar-second {
+/*width: 320px;*/
+/*    background-color: #888;*/
+}
+
+#main-wrapper #sidebar-last {
+/*width: 320px;*/
+/*    background-color: #555;*/
+}
+
+#main-wrapper .column {
+float: left;
+}
+
+#postscript-wrapper {
+clear: both;
+padding: 0 6%;
+}
+
+#postscript-wrapper #postscript-first {
+width: 32%;
+padding: 0 1% 0 0;
+}
+
+#postscript-wrapper #postscript-second {
+width: 32%;
+padding: 0 1% 0 1%;
+}
+
+#postscript-wrapper #postscript-last {
+width: 32%;
+padding: 0 0 0 1%;
+}
+
+#footer-wrapper {
+position: absolute;
+/*width: 100%;*/
+height: 30px;
+}
+
+#footer-bottom {
+padding: 0 6%;
+}
+
+.column {
+float: left;
+}
+
+
+
+
+/**
+ * WIREFRAME GRAPHIC
+ */
+
+#masthead-wrapper {
+/*background: rgb(51, 51, 51) url(images/masthead-wrapper-bg.png) top center repeat-x;*/
+}
+
+#masthead-first {
+/*color: rgb(255, 255, 255);
+color: rgba(255, 255, 255, 0.75);*/
+}
+
+/* Search box. */
+#masthead-last #search-box {
+/*height: 30px;
+padding: 30px 0 0 0;
+line-height: 30px;*/
+}
+#masthead-last #search-box input.form-text {
+width: 200px;
+/*background: rgb(255, 255, 255);
+background: rgba(255, 255, 255, 0.3);*/
+}
+#masthead-last #search-box #edit-submit {
+/*background: rgb(255, 255, 255);
+background: rgba(255, 255, 255, 0.3);*/
+}
+#masthead-last #search-box #edit-submit:hover {
+/*background: rgb(102, 102, 102);
+background: rgba(255, 255, 255, 0.5);*/
+}
+
+#sections .container {
+/*width: 900px;*/
+height: 100%;
+margin: 0;
+padding: 100px 0 30px 0;
+background-color: rgb(255, 255, 255);
+/*background-image: url(../images/page-tpl-page-bg.jpg);
+background-repeat: repeat-x;*/
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+/*  */
+  #content-group .node.type-article .tmp-node-bg {
+  margin: 0;
+  padding: 0 10px 0 10px;
+  background-color: rgba(25, 25, 25, 0.1);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For lt IE8 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For gte IE8 */
+  }
+
+
+
+/**
+ * BLOCKS
+ */
+
+/* 'Archive - Microblog (block)' */
+.sidebar .pane-block.pane-views-microblog-archive-block-2 {
+/*width: 220px;*/ /* Box: 240px */
+margin: 0;
+padding: 0 10px 0 10px;
+background-color: rgba(25, 25, 25, 0.1);
+filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For lt IE8 */
+-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For gte IE8 */
+}
+.sidebar .pane-block.pane-views-microblog-archive-block-2 .view .views-row-odd.views-row-first {
+border-top: none;
+}
+
+.pane-block.pane-views-feed-aggregator-block-2 {
+padding: 0 10px 0 10px;
+background-color: rgba(25, 25, 25, 0.1);
+filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For lt IE8 */
+-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For gte IE8 */
+}
+
+.pane-block.pane-views-article-block-2 {
+padding: 0 10px 0 10px;
+background-color: rgba(25, 25, 25, 0.1);
+filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For lt IE8 */
+-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientype=0,startColorstr='#33333333', endColorstr='#33333333'); /* For gte IE8 */
+}
+  .pane-block.pane-views-article-block-2 .view .views-row-odd.views-row-first {
+  border-top: none;
+  }
+
+
+
+
+
+

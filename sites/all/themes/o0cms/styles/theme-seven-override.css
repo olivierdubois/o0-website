@@ -1,0 +1,114 @@
+/**
+ * 'SEVEN' THEME STYLESHEET OVERRIDE
+ * STYLES
+ * 25/09/2010
+ * 
+ * by Olivier Dubois, olivierdubois.com
+ * 
+ */
+
+
+
+
+/**
+ * GLOBAL ELEMENTS
+ */
+
+body {
+/*background-image: url(../images/page-tpl-page-bg.jpg);*/
+}
+
+
+
+
+/**
+ * OVERLAY
+ */
+
+#overlay-content {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-moz-border-top-right-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+border-top-right-radius: 0px;
+}
+
+
+
+
+/**
+ * BUTTONS
+ */
+
+/* Default */
+input.form-submit, 
+a.button {
+border: 1px solid #e4e4e4; /* Default: # */
+border-bottom: 1px solid #b4b4b4; /* Default: # */
+border-left-color: #d2d2d2; /* Default: # */
+border-right-color: #d2d2d2; /* Default: # */
+background: none; /* Default: url(images/buttons.png) 0 0 repeat-x */
+background-image: url(../images/buttons.png);
+background-position: 0px 0px;
+background-repeat: repeat-x;
+background-color: rgb(153, 153, 153);
+-moz-border-radius: 5px; /* Default: 20px */
+-webkit-border-radius: 5px; /* Default: 20px */
+border-radius: 5px; /* Default: 20px */
+font-family: Arial, Helvetica, sans-serif; /* Default: "Lucida Grande", Verdana, sans-serif */
+font-size: 1.077em; /* Default: 1.077em */
+font-weight: bold; /* Default: normal */
+color: #fff; /* Default: #5a5a5a */
+}
+
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+input.form-submit:active {
+  background: #666;
+  color: #fff;
+  border-color: #555;
+  text-shadow: #222 0 -1px 0;
+}
+input.form-button-disabled,
+input.form-button-disabled:active {
+  background: #eee none;
+  border-color: #eee;
+  text-shadow: none;
+  color: #999;
+}
+
+
+
+/* Green */
+.form-submit[value*="Create"], 
+.form-submit[value*="Save"], 
+.form-submit[value*="Update"] {
+background-color: rgb(115, 137, 33);
+}
+
+/* Blue */
+.form-submit[value="Filter"], 
+.form-submit[value="Preview"] {
+background-color: rgb(8, 100, 192);
+}
+
+/* Orange */
+.form-submit[value="Clear all caches"] {
+background-color: rgb(229, 119, 4);
+}
+
+/* Red */
+.form-submit[value*="Delete"] {
+background-color: rgb(211, 47, 57);
+}
+
+input.form-submit:hover, 
+a.button:hover {
+background-image: none;
+}
