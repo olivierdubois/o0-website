@@ -1,6 +1,6 @@
 /**
  * 'o0' THEME STYLESHEET
- * STYLES
+ *
  *
  * Created 22/04/2009
  * Modified 05/2013
@@ -262,7 +262,7 @@ button, .button {
 /* Overrides */
 button, .button {
   background-color: #999999;
-  border-color: #7a7a7a;
+  border-color: #666666;
   /*font-family: inherit;*/
   /*font-size: 1em;*/
   /*font-weight: bold;*/
@@ -668,12 +668,13 @@ h1#page-title {
 
 /* Submitted line */
 .node .meta .submitted {
+  font-size: 0.75em;
+  color: #999999;
+  text-transform: uppercase;
   margin: 0.1875em 0 0 0;
   padding: 0;
   font-size: 0.625em;
   font-weight: bold;
-  color: #999999;
-  text-transform: uppercase;
   line-height: 0.75em;
   text-align: left;
 }

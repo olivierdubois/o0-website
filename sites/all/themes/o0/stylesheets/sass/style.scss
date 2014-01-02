@@ -1,6 +1,6 @@
 /**
  * 'o0' THEME STYLESHEET
- * STYLES
+ *
  *
  * Created 22/04/2009
  * Modified 05/2013
@@ -14,10 +14,14 @@
 
 
 
-// Partials
+// Base
 @import "base/base";
 @import "base/styles";
+
+// Layout
 @import "layout/layout";
+
+// Modules
 @import "modules/navigation";
 @import "modules/buttons";
 @import "modules/forms";

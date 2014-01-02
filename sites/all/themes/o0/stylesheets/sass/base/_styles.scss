@@ -9,7 +9,7 @@
 body {
   font-size: 100%; /* Fix the exaggerated text resizing in IE6/IE7. */
   font-size: $font-size-baseline; /* Set font size baseline. */
-  line-height: $line-height-baseline; /* Set line height baseline. */
+  line-height: $font-line-height-baseline; /* Set line height baseline. */
   color: $font-color;
   //background: rgb(255, 255, 255) url(../images/page-tpl-page-bg.jpg) repeat top center;
   background: rgb(255, 255, 255);
@@ -24,30 +24,30 @@ p {
 }
 
 a {
-  color: $font-color-link;
+  color: $link-font-color;
   text-decoration: none;
   @include transition(all 0.25s ease);
 
   &:hover {
-    color: $font-color-link-hover;
+    color: $link-font-color-s-hover;
     text-decoration: underline;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.5em 0 0.5em 0;
-  font-family: $font-stack-heading;
+  font-family: $heading-font-stack;
   font-weight: bold;
-  color: $font-color-heading;
+  color: $heading-font-color;
   line-height: 1.25em;
 
   a {
-    color: $font-color-heading;
+    color: $heading-font-color;
     text-decoration: none !important;
   }
 
   a:hover {
-    color: $font-color-heading-hover;
+    color: $heading-font-color-s-hover;
   }
 }
 
@@ -74,5 +74,5 @@ input {
 #content-content {
   font-size: $font-size-baseline;
   font-weight: normal;
-  line-height: $line-height-baseline;
+  line-height: $font-line-height-baseline;
 }

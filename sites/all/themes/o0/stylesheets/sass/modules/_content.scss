@@ -25,17 +25,16 @@ h6 {
 /* Page Title */
 h1#page-title {
   margin-top: 0;
-  color: $font-color-heading;
+  color: $heading-font-color;
 }
 
 /* Submitted line */
 .node .meta .submitted {
+  @include meta;
   margin: 0.1875em 0 0 0;
   padding: 0;
   font-size: 0.625em;
   font-weight: bold;
-  color: rgb(153, 153, 153);
-  text-transform: uppercase;
   line-height: 0.75em;
   text-align: left;
 }

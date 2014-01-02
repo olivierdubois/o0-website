@@ -1,46 +1,227 @@
 //**
-//* GLOBAL VARIABLES
+//* STYLE GUIDELINES
+//*
+//*
+//* Colour palette:
+//* - o0 Orange - rgb(255, 134, 42) - #ff862a - hsl(26, 100, 58.2)
+//* - o0 Black - rgb(51, 51, 51) - #333333 - hsl(0, 0, 20)
+//*
+//*
 //*/
 
+
+
+
+//**
+//* THEME
+//*/
 
 // Theme name.
 $theme-name: "o0";
 
 
-// Primary font stack.
-$font-stack: Arial, Helvetica, sans-serif;
 
-// Primary font stack for heading.
-$font-stack-heading: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
 
-// Primary font stack for navigation.
-$font-stack-navigation: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
+//**
+//* COLOURS
+//*/
+
+// Primary colours.
+$color-1: rgb(255, 134, 42); // o0 Orange
+$color-2: rgb(0, 0, 0);
+$color-3: rgb(0, 0, 0);
+$color-4: rgb(0, 0, 0);
+$color-5: rgb(0, 0, 0);
+
+
+
+
+//**
+//* TYPOGRAPHY
+//*/
 
 // Set font size baseline.
 $font-size-baseline: 16px;
 
 // Set line height baseline.
-$line-height-baseline: 26px;
+$font-line-height-baseline: 26px;
 
-
-// Primary colours.
-$color-1: hsl(0, 0, 0);
-//$color-2: ;
-//$color-3: ;
-//$color-4: ;
-//$color-5: ;
-
-// Primary font colour.
+// Default font.
+$font-stack: Arial, Helvetica, sans-serif;
 $font-color: rgb(51, 51, 51);
 
-// Primary font colour for heading.
-$font-color-heading: rgb(255, 134, 42);
-$font-color-heading-hover: rgb(153, 80, 25);
+// Heading font.
+$heading-font-stack: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
+$heading-font-color: rgb(255, 134, 42);
+  $heading-font-color-s-hover: rgb(153, 80, 25);
+
+// Hero font.
+$hero-font-stack: Arial, Helvetica, sans-serif;
+$hero-font-color: rgb(102, 102, 102);
+
+// Footer font.
+$footer-font-stack: Arial, Helvetica, sans-serif;
+$footer-font-color: rgb(102, 102, 102);
 
 
-// Default colour for link.
-$font-color-link: rgb(23, 141, 177);
-$font-color-link-hover: rgb(23, 141, 177);
+
+
+//**
+//* LINKS
+//*/
+
+// Default link.
+$link-font-color: rgb(23, 141, 177);
+  $link-font-color-s-hover: rgb(23, 141, 177);
+
+// Footer link.
+$footer-link-font-color: $footer-font-color;
+  $footer-link-font-color-s-hover: darken($footer-link-font-color, 20);
+
+
+
+
+//**
+//* NAVIGATION
+//*/
+
+// Primary navigation.
+$navigation-font-stack: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
+$navigation-font-color: rgb(255, 255, 255);
+  $navigation-font-color-s-hover: $color-1;
+  $navigation-font-color-s-active: $color-1;
+$navigation-background-color: rgb(51, 51, 51);
+  $navigation-background-color-s-hover: darken($navigation-background-color, 20);
+  $navigation-background-color-s-active: darken($navigation-background-color, 20);
+
+// Primary navigation menu level 2.
+$navigation-menu-2-font-color: rgb(204, 204, 204);
+  $navigation-menu-2-font-color-s-hover: rgb(204, 204, 204);
+  $navigation-menu-2-font-color-s-active: rgb(204, 204, 204);
+$navigation-menu-2-background-color: rgb(0, 0, 0);
+  $navigation-menu-2-background-color-s-hover: lighten($navigation-menu-2-background-color, 20);
+  $navigation-menu-2-background-color-s-active: lighten($navigation-menu-2-background-color, 20);
+
+
+
+
+//**
+//* MENUS
+//*/
+
+// Sidebar menu.
+$sidebar-menu-font-color: rgb(102, 102, 102);
+  $sidebar-menu-font-color-s-hover: darken($sidebar-menu-font-color, 20);
+  $sidebar-menu-font-color-s-active: darken($sidebar-menu-font-color, 20);
+
+// Footer menu.
+$footer-menu-font-color: rgb(102, 102, 102);
+  $footer-menu-font-color-s-hover: darken($footer-menu-font-color, 20);
+  $footer-menu-font-color-s-active: darken($footer-menu-font-color, 20);
+
+
+
+
+//**
+//* NODES
+//*/
+
+// Meta data.
+$meta-font-size: 0.75em;
+$meta-font-color: hsl(0, 0, 60);
+$meta-text-transform: uppercase;
+
+
+
+
+//**
+//* BUTTONS
+//*/
+
+// Default button.
+// For example: inline buttons in content, etc.
+$button-font-color: rgb(255, 255, 255);
+  $button-font-color-s-hover: rgb(255, 255, 255);
+  $button-font-color-s-active: rgb(255, 255, 255);
+$button-background-color: rgb(153, 153, 153);
+  $button-background-color-s-hover: darken($button-background-color, 20);
+  $button-background-color-s-active: darken($button-background-color, 20);
+$button-border-color: darken($button-background-color, 20); // Default: background color + 20% black
+  $button-border-color-s-hover: darken($button-background-color-s-hover, 20);
+  $button-border-color-s-active: darken($button-background-color-s-active, 20);
+
+// 'Read more' button.
+// For example: 'read more' buttons for content teasers in views, etc.
+$button-readmore-font-color: rgb(255, 255, 255);
+  $button-readmore-font-color-s-hover: rgb(255, 255, 255);
+  $button-readmore-font-color-s-active: rgb(255, 255, 255);
+$button-readmore-background-color: rgb(204, 204, 204);
+  $button-readmore-background-color-s-hover: darken($button-readmore-background-color, 20);
+  $button-readmore-background-color-s-active: darken($button-readmore-background-color, 20);
+$button-readmore-border-color: darken($button-readmore-background-color, 20); // Default: background color + 20% black
+  $button-readmore-border-color-s-hover: darken($button-readmore-background-color-s-hover, 20);
+  $button-readmore-border-color-s-active: darken($button-readmore-background-color-s-active, 20);
+
+// 'View more' button.
+// For example: 'view more' buttons in views, etc.
+$button-viewmore-font-color: rgb(255, 255, 255);
+  $button-viewmore-font-color-s-hover: rgb(255, 255, 255);
+  $button-viewmore-font-color-s-active: rgb(255, 255, 255);
+$button-viewmore-background-color: rgb(204, 204, 204);
+  $button-viewmore-background-color-s-hover: darken($button-viewmore-background-color, 20);
+  $button-viewmore-background-color-s-active: darken($button-viewmore-background-color, 20);
+$button-viewmore-border-color: darken($button-viewmore-background-color, 20); // Default: background color + 20% black
+  $button-viewmore-border-color-s-hover: darken($button-viewmore-background-color-s-hover, 20);
+  $button-viewmore-border-color-s-active: darken($button-viewmore-background-color-s-active, 20);
+
+
+
+
+//**
+//* BLOCKS
+//*/
+
+// Default title.
+$block-title-font-color: rgb(0, 0, 0);
+
+
+
+
+//**
+//* FORMS
+//*/
+
+// Submit button.
+$form-submit-button-font-color: rgb(255, 255, 255);
+  $form-submit-button-font-color-s-hover: rgb(255, 255, 255);
+  $form-submit-button-font-color-s-active: rgb(255, 255, 255);
+$form-submit-button-background-color: rgb(204, 204, 204);
+  $form-submit-button-background-color-s-hover: darken($form-submit-button-background-color, 20);
+  $form-submit-button-background-color-s-active: darken($form-submit-button-background-color, 20);
+
+// Search button.
+$form-search-button-font-color: rgb(255, 255, 255);
+  $form-search-button-font-color-s-hover: rgb(255, 255, 255);
+  $form-search-button-font-color-s-active: rgb(255, 255, 255);
+$form-search-button-background-color: rgb(204, 204, 204);
+  $form-search-button-background-color-s-hover: darken($form-search-button-background-color, 20);
+  $form-search-button-background-color-s-active: darken($form-search-button-background-color, 20);
+
+
+
+
+//**
+//* MEDIA QUERIES
+//*/
+
+// Desktop (1050px).
+$mq-breakpoint-large: "1049px";
+
+// Tablet (768px).
+$mq-breakpoint-medium: "767px";
+
+// Phone (320px).
+$mq-breakpoint-small: "319px";
 
 
 
@@ -49,12 +230,29 @@ $font-color-link-hover: rgb(23, 141, 177);
 //* MIXINS
 //*/
 
+// Transition.
 @mixin transition($value) {
   -webkit-transition: $value;
   -moz-transition: $value;
   -ms-transition: $value;
   -o-transition: $value;
   transition: $value;
+}
+
+// Meta.
+@mixin meta {
+  font-size: $meta-font-size;
+  color: $meta-font-color;
+  text-transform: $meta-text-transform;
+}
+
+// Button.
+// CSS from ZURB Foundation (v4) 'button' class, as-is from 'foundation.css'.
+@mixin button {
+  border-style: solid; border-width: 1px; cursor: pointer; font-family: inherit; font-weight: bold; line-height: 1; margin: 0 0 1.25em; position: relative; text-decoration: none; text-align: center; display: inline-block; padding-top: 0.75em; padding-right: 1.5em; padding-bottom: 0.8125em; padding-left: 1.5em; font-size: 1em;
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  color: $button-font-color;
 }
 
 // Font Awesome icons to use with ':before' (v4.0.3).
