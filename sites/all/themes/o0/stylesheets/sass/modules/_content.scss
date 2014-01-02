@@ -1,0 +1,128 @@
+/**
+ * NODE - Defaults
+ */
+
+/* Heading */
+h1 {
+  font-size: 2.625em; // Default: 2.375em
+}
+h2 {
+  font-size: 2.375em; // Default: 2.125em
+}
+h3 {
+  font-size: 2.125em; // Default: 1.875em
+}
+h4 {
+  font-size: 1.875em; // Default: 1.625em
+}
+h5 {
+  font-size: 1.625em; // Default: 1.375em
+}
+h6 {
+  font-size: 1.375em; // Default: 1.125em
+}
+
+/* Page Title */
+h1#page-title {
+  margin-top: 0;
+  color: $font-color-heading;
+}
+
+/* Submitted line */
+.node .meta .submitted {
+  margin: 0.1875em 0 0 0;
+  padding: 0;
+  font-size: 0.625em;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+  line-height: 0.75em;
+  text-align: left;
+}
+
+/* Date fields */
+.node .field-type-date {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+}
+
+.node .meta .field-type-date {
+  .field-items {
+    @include icon-field-items;
+  }
+
+  .field-item:before {
+    @include icon-field-item-before;
+    content: "\f017";
+  }
+}
+
+
+
+
+/**
+ * VIEWS
+ */
+
+/* Default */
+.view .node h2.node-title {
+}
+.view .views-row {
+  padding: 0.625em 0 0.625em 0;
+  border-bottom: 1px dashed rgb(153, 153, 153);
+}
+.view .views-row.views-row-first {
+  border-top: 1px dashed rgb(153, 153, 153);
+}
+.view .node .meta .field-type-date {
+  .field-items {
+    @include icon-field-items;
+  }
+
+  .field-item:before {
+    @include icon-field-item-before;
+    content: "\f017";
+  }
+}
+
+
+
+
+/**
+ * VIEWS - Page Grid
+ */
+
+/* Default */
+.view .views-view-grid {
+}
+.view .views-view-grid h2.node-title {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 1.125em;
+  line-height: 1.125em;
+}
+.view .views-view-grid .node .field-type-date {
+  font-size: 0.75em;
+}
+@media only screen and (max-width: 767px) {
+  .view .views-view-grid .node {
+    margin: 0em 0 0em 0;
+    padding: 0em 0 0.938em 0;
+    border-bottom: 1px dashed rgb(153, 153, 153);
+  }
+}
+
+
+
+
+/**
+ * OVERRIDE
+ */
+
+/* Homepage title */
+body.front #content-title,
+body.page-node-1 #content-title {
+  display: none;
+}

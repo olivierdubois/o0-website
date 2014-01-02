@@ -1,75 +1,4 @@
 /**
- * NODE
- */
-
-/* Default */
-.node .meta .submitted {
-  margin: 0.1875em 0 0 0;
-  padding: 0;
-  font-size: 0.625em;
-  font-weight: bold;
-  color: rgb(153, 153, 153);
-  text-transform: uppercase;
-  line-height: 0.75em;
-  text-align: left;
-}
-
-/* Date fields */
-.node .field-type-date {
-  font-size: 0.875em;
-  font-weight: bold;
-  color: rgb(153, 153, 153);
-  text-transform: uppercase;
-}
-
-.node .meta .field-type-date {
-  .field-items {
-    @include icon-field-items;
-  }
-
-  .field-item:before {
-    @include icon-field-item-before;
-    content: "\f017";
-  }
-}
-
-
-
-
-/**
- * NODE - Article - Default
- */
-
-.node.node-article {
-}
-.node.node-article .field-name-field-article-image-2 {
-  margin: 1.5em 0 0 0;
-}
-.node.node-article .field-name-field-article-image-2 .field-item {
-  float: left !important;
-  width: 21%;
-  margin: 2% 2% 2% 2%;
-}
-
-
-
-
-/**
- * NODE - Project - Default
- */
-
-.node.node-project {
-}
-.node.node-project .field-name-field-project-type {
-  font-size: 1.375em;
-}
-.node.node-project .field-name-field-project-link {
-}
-
-
-
-
-/**
  * NODE - Feed - Content region
  */
 
@@ -137,4 +66,48 @@
 }
 .feed-item.feed-item-type-microblog .feed-item-description a {
   color: rgb(29, 176, 221);
+}
+
+/* Twitter feed */
+.container-socialmedia-feed #feed-twitter {
+  width: 170px;
+}
+.container-socialmedia-feed #feed-twitter .tweet {
+  padding: 2px 0 2px 0;
+  border-bottom: 1px dashed #9f9f9f;
+  /*background: url(/sites/all/themes/o0/images/icons/o0-24x24.png) left 4px no-repeat;*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container-socialmedia-feed #feed-twitter .tweet:first-child {
+  border-top: 1px dashed #9f9f9f;
+}
+.container-socialmedia-feed #feed-twitter .tweet .tweet-content {
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+  color: #777;
+  line-height: 13px;
+}
+.container-socialmedia-feed #feed-twitter .tweet .tweet-content a {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #3274d0;
+}
+.container-socialmedia-feed #feed-twitter .tweet .tweet-timestamp {
+  display: block;
+  font-size: 9px;
+  font-style: italic;
+  color: #999;
+}
+.container-socialmedia-feed a span.url {
+  display: block;
+  padding: 5px 0 0 5px;
+  font-size: 9px;
+  color: #333;
+  line-height: 9px;
+  text-decoration: none;
+}
+.container-socialmedia-feed a:hover span.url {
+  color: #666;
 }
