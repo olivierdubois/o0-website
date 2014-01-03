@@ -6,24 +6,6 @@
  *
  */
 ?>
-<?php /*
-if ($node->nid == 108) {
-  $output = 'node 108';
-  print $output;
-  
-  $terms = $node->field_global_t_mod_state;
-  
-  foreach ($terms as $term) {
-    print_r($term);
-    if ($term[0]['tid'] == 20) { $output_123456 = 'Tid is 20'; }
-  }
-  
-  
-  
-  
-  
-}
-*/?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <header>
@@ -39,9 +21,7 @@ if ($node->nid == 108) {
         <?php //print $submitted; ?>
       </div>
     <?php endif; ?>
-  
-<?php // print $output_123456; ?>
-  
+
     <div class="meta">
       <?php if (!empty($content['field_global_pub_date'])): ?>
         <?php print render($content['field_global_pub_date']); ?>

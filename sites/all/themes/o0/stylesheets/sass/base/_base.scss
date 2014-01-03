@@ -1,5 +1,5 @@
 //**
-//* STYLE GUIDELINES
+//* STYLE GUIDE
 //*
 //*
 //* Colour palette:
@@ -27,11 +27,11 @@ $theme-name: "o0";
 //*/
 
 // Primary colours.
-$color-1: rgb(255, 134, 42); // o0 Orange
-$color-2: rgb(0, 0, 0);
-$color-3: rgb(0, 0, 0);
-$color-4: rgb(0, 0, 0);
-$color-5: rgb(0, 0, 0);
+$color-1-orange: rgb(255, 134, 42); // o0 Orange
+$color-1-black: rgb(51, 51, 51); // o0 Black
+
+// Secondary colours.
+$color-2-grey: hsl(0, 0, 60);
 
 
 
@@ -88,8 +88,8 @@ $footer-link-font-color: $footer-font-color;
 // Primary navigation.
 $navigation-font-stack: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
 $navigation-font-color: rgb(255, 255, 255);
-  $navigation-font-color-s-hover: $color-1;
-  $navigation-font-color-s-active: $color-1;
+  $navigation-font-color-s-hover: $color-1-orange;
+  $navigation-font-color-s-active: $color-1-orange;
 $navigation-background-color: rgb(51, 51, 51);
   $navigation-background-color-s-hover: darken($navigation-background-color, 20);
   $navigation-background-color-s-active: darken($navigation-background-color, 20);
@@ -128,7 +128,7 @@ $footer-menu-font-color: rgb(102, 102, 102);
 
 // Meta data.
 $meta-font-size: 0.75em;
-$meta-font-color: hsl(0, 0, 60);
+$meta-font-color: $color-2-grey;
 $meta-text-transform: uppercase;
 
 
