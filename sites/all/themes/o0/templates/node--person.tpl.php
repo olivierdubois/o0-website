@@ -47,12 +47,68 @@
 
     <?php if (!empty($content['field_person_educ'])): ?>
       <h3>Education</h3>
-      <?php print render($content['field_person_educ']); ?>
+      <div class="field field-name-field-person-educ field-type-field-collection">
+        <div class="field-items">
+          <?php foreach($content['field_person_educ']['#items'] as $entity_uri) :
+            $field_collection_item = entity_load('field_collection_item', $entity_uri);
+            foreach($field_collection_item as $field_collection_object) : ?>
+              <div class="field-item row">
+                <div class="large-9 columns">
+                  <?php if ($field_collection_object->field_person_educ_educ): ?>
+                    <div class="field field-name-field-person-educ-educ field-type-text"><?php print $field_collection_object->field_person_educ_educ['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_inst): ?>
+                    <div class="field field-name-field-person-educ-inst field-type-text"><?php print $field_collection_object->field_person_educ_inst['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_loc): ?>
+                    <div class="field field-name-field-person-educ-loc field-type-text"><?php print $field_collection_object->field_person_educ_loc['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_descr): ?>
+                    <div class="field field-name-field-person-educ-descr field-type-text"><?php print $field_collection_object->field_person_educ_descr['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+                <div class="large-3 columns">
+                  <?php if ($field_collection_object->field_person_educ_date): ?>
+                    <div class="field field-name-field-person-educ-date field-type-text"><?php print $field_collection_object->field_person_educ_date['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+              </div>
+            <?php endforeach; endforeach; ?>
+        </div>
+      </div>
     <?php endif; ?>
 
     <?php if (!empty($content['field_person_educ_2'])): ?>
       <h3>Professional development</h3>
-      <?php print render($content['field_person_educ_2']); ?>
+      <div class="field field-name-field-person-educ-2 field-type-field-collection">
+        <div class="field-items">
+          <?php foreach($content['field_person_educ_2']['#items'] as $entity_uri) :
+            $field_collection_item = entity_load('field_collection_item', $entity_uri);
+            foreach($field_collection_item as $field_collection_object) : ?>
+              <div class="field-item row">
+                <div class="large-9 columns">
+                  <?php if ($field_collection_object->field_person_educ_educ): ?>
+                    <div class="field field-name-field-person-educ-educ field-type-text"><?php print $field_collection_object->field_person_educ_educ['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_inst): ?>
+                    <div class="field field-name-field-person-educ-inst field-type-text"><?php print $field_collection_object->field_person_educ_inst['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_loc): ?>
+                    <div class="field field-name-field-person-educ-loc field-type-text"><?php print $field_collection_object->field_person_educ_loc['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_educ_descr): ?>
+                    <div class="field field-name-field-person-educ-descr field-type-text"><?php print $field_collection_object->field_person_educ_descr['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+                <div class="large-3 columns">
+                  <?php if ($field_collection_object->field_person_educ_date): ?>
+                    <div class="field field-name-field-person-educ-date field-type-text"><?php print $field_collection_object->field_person_educ_date['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+              </div>
+          <?php endforeach; endforeach; ?>
+        </div>
+      </div>
     <?php endif; ?>
 
     <?php if (!empty($content['field_person_skill'])): ?>

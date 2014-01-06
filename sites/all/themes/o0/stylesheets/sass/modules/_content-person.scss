@@ -1,0 +1,37 @@
+/**
+ * NODE - Person - Default
+ */
+
+.node-person {
+}
+.node-person .field-name-field-person-image {
+}
+.node-person .field-name-field-person-educ > .field-items > .field-item,
+.node-person .field-name-field-person-educ-2 > .field-items > .field-item {
+  padding: 1em 0 1em 0;
+  border-bottom: 1px dashed $color-2-grey;
+
+  &:first-child {
+    border-top: 1px dashed $color-2-grey;
+  }
+}
+.node-person .field-name-field-person-educ-educ {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+.node-person .field-name-field-person-educ-inst {
+}
+.node-person .field-name-field-person-educ-loc {
+  color: $color-2-grey;
+}
+.node-person .field-name-field-person-educ-date {
+  font-size: 1.125em;
+  color: $color-2-grey;
+}
+@media only screen and (max-width: $mq-breakpoint-small) {
+  .node-person .field-name-field-person-educ-date { font-size: 1em; }
+}
+.node-person .field-name-field-person-educ-descr {
+  font-size: 0.875em;
+  color: $color-2-grey;
+}
