@@ -55,7 +55,6 @@ stylesheets[all][] = stylesheets/reset.css
 stylesheets[all][] = stylesheets/vendor/foundation/normalize.css
 stylesheets[all][] = stylesheets/vendor/foundation/foundation.css
 ;stylesheets[all][] = stylesheets/vendor/foundation/foundation-override.css
-stylesheets[all][] = ../../libraries/font-awesome/css/font-awesome.min.css
 stylesheets[all][] = stylesheets/style.css
 ;stylesheets[all][] = stylesheets/mediaqueries.css
 ;stylesheets[all][] = stylesheets/dev.css
