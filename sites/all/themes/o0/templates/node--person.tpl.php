@@ -111,9 +111,41 @@
       </div>
     <?php endif; ?>
 
+    <h3>Skills</h3>
     <?php if (!empty($content['field_person_skill'])): ?>
-      <h3>Skills</h3>
-      <?php print render($content['field_person_skill']); ?>
+      <h4>Web technologies</h4>
+      <div class="field field-name-field-person-skill field-type-field-collection clearfix">
+        <div class="field-items">
+          <?php foreach($content['field_person_skill']['#items'] as $entity_uri) :
+            $field_collection_item = entity_load('field_collection_item', $entity_uri);
+            foreach($field_collection_item as $field_collection_object) : ?>
+              <div class="field-item">
+                  <?php if ($field_collection_object->field_person_skill_skill && $field_collection_object->field_person_skill_level): ?>
+                    <div class="field field-name-field-person-skill-level field-type-text"><input class="chart-doughnut" value="<?php print $field_collection_object->field_person_skill_level['und'][0]['value']; ?>" data-width="120" data-height="120" data-angleOffset=-125 data-angleArc=250 data-readOnly=true /></div>
+                    <div class="field field-name-field-person-skill-skill field-type-text"><?php print $field_collection_object->field_person_skill_skill['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+              </div>
+            <?php endforeach; endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_skill_2'])): ?>
+      <h4>Content management systems, etc.</h4>
+      <div class="field field-name-field-person-skill-2 field-type-field-collection clearfix">
+        <div class="field-items">
+          <?php foreach($content['field_person_skill_2']['#items'] as $entity_uri) :
+            $field_collection_item = entity_load('field_collection_item', $entity_uri);
+            foreach($field_collection_item as $field_collection_object) : ?>
+              <div class="field-item">
+                <?php if ($field_collection_object->field_person_skill_skill && $field_collection_object->field_person_skill_level): ?>
+                  <div class="field field-name-field-person-skill-level field-type-text"><input class="chart-doughnut" value="<?php print $field_collection_object->field_person_skill_level['und'][0]['value']; ?>" data-width="120" data-height="120" data-angleOffset=-125 data-angleArc=250 data-readOnly=true /></div>
+                  <div class="field field-name-field-person-skill-skill field-type-text"><?php print $field_collection_object->field_person_skill_skill['und'][0]['value']; ?></div>
+                <?php endif; ?>
+              </div>
+            <?php endforeach; endforeach; ?>
+        </div>
+      </div>
     <?php endif; ?>
 
   </div>

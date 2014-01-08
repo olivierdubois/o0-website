@@ -828,6 +828,7 @@ body.page-node-1 #content-title {
 .node-person .field-name-field-person-educ-date {
   font-size: 1.125em;
   color: #999999;
+  text-align: right;
 }
 
 @media only screen and (max-width: 319px) {
@@ -838,6 +839,20 @@ body.page-node-1 #content-title {
 .node-person .field-name-field-person-educ-descr {
   font-size: 0.875em;
   color: #999999;
+}
+
+.node-person .field-name-field-person-skill > .field-items > .field-item,
+.node-person .field-name-field-person-skill-2 > .field-items > .field-item {
+  position: relative;
+  float: left;
+  padding: 2% 2%;
+}
+
+.node-person .field-name-field-person-skill-skill {
+  top: 100px;
+  width: 120px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /**
