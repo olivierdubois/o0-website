@@ -806,6 +806,7 @@ body.page-node-1 #content-title {
 /**
  * NODE - Person - Default
  */
+/* Education. */
 .node-person .field-name-field-person-educ > .field-items > .field-item,
 .node-person .field-name-field-person-educ-2 > .field-items > .field-item {
   padding: 1em 0 1em 0;
@@ -826,8 +827,9 @@ body.page-node-1 #content-title {
 }
 
 .node-person .field-name-field-person-educ-date {
-  font-size: 1.125em;
-  color: #999999;
+  font-size: 1.250em;
+  font-weight: bold;
+  color: #bfbfbf;
   text-align: right;
 }
 
@@ -841,6 +843,44 @@ body.page-node-1 #content-title {
   color: #999999;
 }
 
+/* Experience. */
+.node-person .field-name-field-person-exper > .field-items > .field-item,
+.node-person .field-name-field-person-exper-2 > .field-items > .field-item {
+  padding: 1em 0 1em 0;
+  border-bottom: 1px dashed #999999;
+}
+.node-person .field-name-field-person-exper > .field-items > .field-item:first-child,
+.node-person .field-name-field-person-exper-2 > .field-items > .field-item:first-child {
+  border-top: 1px dashed #999999;
+}
+
+.node-person .field-name-field-person-exper-exper {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.node-person .field-name-field-person-exper-loc {
+  color: #999999;
+}
+
+.node-person .field-name-field-person-exper-date {
+  font-size: 1.250em;
+  font-weight: bold;
+  color: #bfbfbf;
+  text-align: right;
+}
+
+@media only screen and (max-width: 319px) {
+  .node-person .field-name-field-person-exper-date {
+    font-size: 1em;
+  }
+}
+.node-person .field-name-field-person-exper-descr {
+  font-size: 0.875em;
+  color: #999999;
+}
+
+/* Skills. */
 .node-person .field-name-field-person-skill > .field-items > .field-item,
 .node-person .field-name-field-person-skill-2 > .field-items > .field-item {
   position: relative;

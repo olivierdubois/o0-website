@@ -6,6 +6,8 @@
 }
 .node-person .field-name-field-person-image {
 }
+
+/* Education. */
 .node-person .field-name-field-person-educ > .field-items > .field-item,
 .node-person .field-name-field-person-educ-2 > .field-items > .field-item {
   padding: 1em 0 1em 0;
@@ -25,8 +27,9 @@
   color: $color-2-grey;
 }
 .node-person .field-name-field-person-educ-date {
-  font-size: 1.125em;
-  color: $color-2-grey;
+  font-size: 1.250em;
+  font-weight: bold;
+  color: lighten($color-2-grey, 15);
   text-align: right;
 }
 @media only screen and (max-width: $mq-breakpoint-small) {
@@ -36,6 +39,41 @@
   font-size: 0.875em;
   color: $color-2-grey;
 }
+
+/* Experience. */
+.node-person .field-name-field-person-exper > .field-items > .field-item,
+.node-person .field-name-field-person-exper-2 > .field-items > .field-item {
+  padding: 1em 0 1em 0;
+  border-bottom: 1px dashed $color-2-grey;
+
+  &:first-child {
+    border-top: 1px dashed $color-2-grey;
+  }
+}
+.node-person .field-name-field-person-exper-exper {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+.node-person .field-name-field-person-exper-org {
+}
+.node-person .field-name-field-person-exper-loc {
+  color: $color-2-grey;
+}
+.node-person .field-name-field-person-exper-date {
+  font-size: 1.250em;
+  font-weight: bold;
+  color: lighten($color-2-grey, 15);
+  text-align: right;
+}
+@media only screen and (max-width: $mq-breakpoint-small) {
+  .node-person .field-name-field-person-exper-date { font-size: 1em; }
+}
+.node-person .field-name-field-person-exper-descr {
+  font-size: 0.875em;
+  color: $color-2-grey;
+}
+
+/* Skills. */
 .node-person .field-name-field-person-skill {
 }
 .node-person .field-name-field-person-skill > .field-items > .field-item,
