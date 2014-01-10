@@ -23,7 +23,7 @@ h6 {
 }
 
 /* Page Title */
-h1#page-title {
+#page-title {
   margin-top: 0;
   color: $heading-font-color;
 }
@@ -66,7 +66,7 @@ h1#page-title {
  */
 
 /* Default */
-.view .node h2.node-title {
+.view .node .node-title {
 }
 .view .views-row {
   padding: 0.625em 0 0.625em 0;
@@ -96,7 +96,11 @@ h1#page-title {
 /* Default */
 .view .views-view-grid {
 }
-.view .views-view-grid h2.node-title {
+.view .views-view-grid .node {
+  margin: 0;
+  padding: 1em 0 1em 0;
+}
+.view .views-view-grid .node-title {
   margin-top: 0.5em;
   margin-bottom: 0;
   font-size: 1.125em;
@@ -107,8 +111,6 @@ h1#page-title {
 }
 @media only screen and (max-width: 767px) {
   .view .views-view-grid .node {
-    margin: 0em 0 0em 0;
-    padding: 0em 0 0.938em 0;
     border-bottom: 1px dashed rgb(153, 153, 153);
   }
 }
