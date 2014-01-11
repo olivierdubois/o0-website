@@ -33,7 +33,18 @@
     <?php if (!empty($content['body'])): ?>
       <?php print render($content['body']); ?>
     <?php endif; ?>
-    
+
+    <?php if (!empty($content['field_testimonial_author_name'])): ?>
+      <?php print render($content['field_testimonial_author_name']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_testimonial_author_title'])): ?>
+      <?php print render($content['field_testimonial_author_title']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_testimonial_author_org'])): ?>
+      <?php print render($content['field_testimonial_author_org']); ?>
+    <?php endif; ?>
   </div>
 
   <footer>
