@@ -43,39 +43,40 @@
     <div class="row">
       <div class="large-4 columns">
       
-    <?php if (!empty($content['body'])): ?>
-      <?php print render($content['body']); ?>
-    <?php endif; ?>
+        <?php if (!empty($content['body'])): ?>
+          <?php print render($content['body']); ?>
+        <?php endif; ?>
       
-    <?php if (!empty($content['field_project_link'])): ?>
-      <?php print render($content['field_project_link']); ?>
-    <?php endif; ?>
+        <?php if (!empty($content['field_project_link'])): ?>
+          <?php print render($content['field_project_link']); ?>
+        <?php endif; ?>
       
-    <?php if (!empty($content['field_project_file'])): ?>
-      <?php print render($content['field_project_file']); ?>
-    <?php endif; ?>
-    
+        <?php if (!empty($content['field_global_t_service'])): ?>
+          <h4>My work on this project</h4>
+          <?php print render($content['field_global_t_service']); ?>
+        <?php endif; ?>
+
       </div>
 
       <div class="large-8 columns">
 
-    <?php if (!empty($content['field_project_image'])): ?>
-      <?php //print render($content['field_project_image']); ?>
-      <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_node', $node->field_project_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
-    <?php else: ?>
-      <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_node', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
-    <?php endif; ?>
+        <?php if (!empty($content['field_project_image'])): ?>
+          <?php //print render($content['field_project_image']); ?>
+          <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_node', $node->field_project_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
+        <?php else: ?>
+          <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_node', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+        <?php endif; ?>
     
-    <?php if (!empty($content['field_project_image_2'])): ?>
-      <div class="field-group-format field-group-div group-project-image-2 clearfix">
-        <div class="field-group-format-wrapper" style="display: block;">
-          <?php print render($content['field_project_image_2']); ?>
-          <?php /* <?php foreach ($node->field_project_image_2[$node->language] as $key => $value) { ?>
-            <div class="field field-name-field-project-image-2 field-type-image thumbnail"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('project_image_modal_fullscreen', $node->field_project_image_2[$node->language][$key]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_2_node', $node->field_project_image_2[$node->language][$key]['uri']); ?>" alt="" /></a></div></div></div>
-          <?php } ?> */ ?>
-        </div>
-      </div>
-    <?php endif; ?>
+        <?php if (!empty($content['field_project_image_2'])): ?>
+          <div class="field-group-format field-group-div group-project-image-2 clearfix">
+            <div class="field-group-format-wrapper" style="display: block;">
+              <?php print render($content['field_project_image_2']); ?>
+              <?php /* <?php foreach ($node->field_project_image_2[$node->language] as $key => $value) { ?>
+                <div class="field field-name-field-project-image-2 field-type-image thumbnail"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('project_image_modal_fullscreen', $node->field_project_image_2[$node->language][$key]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_2_node', $node->field_project_image_2[$node->language][$key]['uri']); ?>" alt="" /></a></div></div></div>
+              <?php } ?> */ ?>
+            </div>
+          </div>
+        <?php endif; ?>
 
       </div>
 

@@ -4,6 +4,15 @@
 
 .node-project {
 }
+/* Decrease -0.375em all heading sizes to accommodate column layout. */
+.node-project {
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.75em; }
+  h4 { font-size: 1.5em; }
+  h5 { font-size: 1.250em; }
+  h6 { font-size: 1em; }
+}
 .node-project .field-name-field-project-type {
   font-size: 1.375em;
 }
