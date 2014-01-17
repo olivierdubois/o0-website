@@ -4,6 +4,7 @@
 
 .node-project {
 }
+
 /* Decrease all heading font sizes by -0.375em to accommodate narrow column layout. */
 .node-project {
   h1 { font-size: 2.5em; }
@@ -13,10 +14,36 @@
   h5 { font-size: 1.250em; }
   h6 { font-size: 1em; }
 }
+
+/* Release date. */
+.node-project .meta .field-type-date {
+  .field-items {
+    @include icon-field-items;
+  }
+
+  .field-item:before {
+    @include icon-field-item-before;
+    content: "\f073";
+  }
+}
+
 .node-project .field-name-field-project-type {
   font-size: 1.375em;
 }
 .node-project .field-name-field-project-link {
+}
+
+/* Services. */
+.node-project .field-name-field-global-t-service {
+  ul { @include icon-lu; }
+
+  li { @include icon-li; }
+
+  li:before {
+    @include icon-li-before;
+    content: "\f00c";
+    color: $color-2-grey;
+  }
 }
 
 
