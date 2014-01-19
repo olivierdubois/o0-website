@@ -4,7 +4,7 @@
 
 /* CSS from ZURB Foundation (v4) 'button' class, 'as-is' from 'foundation.css' */
 button, .button {
-  border-style: solid; border-width: 1px; cursor: pointer; font-family: inherit; font-weight: bold; line-height: 1; margin: 0 0 1.25em; position: relative; text-decoration: none; text-align: center; display: inline-block; padding-top: 0.75em; padding-right: 1.5em; padding-bottom: 0.8125em; padding-left: 1.5em; font-size: 1em; background-color: rgb(153, 153, 153); border-color: rgb(122, 122, 122) /* Background color + 20% black */; color: rgb(255, 255, 255); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-transition: background-color 300ms ease-out; -moz-transition: background-color 300ms ease-out; transition: background-color 300ms ease-out;
+  @include button;
 }
 /* Overrides */
 button, .button {

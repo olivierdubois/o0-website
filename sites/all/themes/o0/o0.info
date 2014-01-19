@@ -52,8 +52,6 @@ stylesheets[all][] = stylesheets/reset.css
 ;stylesheets[all][] = ../o0cms/styles/seven-override.css
 ;stylesheets[all][] = ../o0cms/styles/admin-content.css
 ;stylesheets[all][] = ../o0cms/styles/services.css
-stylesheets[all][] = stylesheets/vendor/foundation/normalize.css
-stylesheets[all][] = stylesheets/vendor/foundation/foundation.css
 ;stylesheets[all][] = stylesheets/vendor/foundation/foundation-override.css
 stylesheets[all][] = stylesheets/style.css
 ;stylesheets[all][] = stylesheets/mediaqueries.css
@@ -62,7 +60,3 @@ stylesheets[all][] = stylesheets/style.css
 
 ; SCRIPTS
 scripts[] = scripts/scripts.js
-
-; SCRIPTS - ZURB Foundation framework
-scripts[] = scripts/foundation/vendor/custom.modernizr.js
-scripts[] = scripts/foundation/foundation.min.js

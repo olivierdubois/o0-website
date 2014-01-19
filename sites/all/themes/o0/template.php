@@ -80,15 +80,21 @@ function o0_preprocess_html(&$variables, $hook) {
   $variables['head_title'] = implode(' | ', $head_title);
   $variables['head_title'] = preg_replace('/\|/', '-', $variables['head_title']);
   $variables['head_title'] = preg_replace('/\-/', '|', $variables['head_title'], 1);
+  // Add ZURB Foundation framework CSS files.
+  drupal_add_css('sites/all/libraries/foundation/css/normalize.css');
+  drupal_add_css('sites/all/libraries/foundation/css/foundation.min.css');
+  // Add CSS files from libraries.
+  drupal_add_css('sites/all/libraries/font-awesome/css/font-awesome.min.css');
+  // Add ZURB Foundation framework JavaScript files.
+  drupal_add_js('sites/all/libraries/foundation/js/vendor/modernizr.js');
+  drupal_add_js('sites/all/libraries/foundation/js/foundation.min.js');
+  // Add JavaScript files from libraries.
+  drupal_add_js('sites/all/libraries/knob/js/jquery.knob.js');
   // Attributes for body element.
   $path_alias_1 = 'path-alias-1-' . arg(0, drupal_get_path_alias());
   $path_alias_2 = 'path-alias-2-' . arg(1, drupal_get_path_alias());
   $path_alias = $path_alias_1 . ' ' . $path_alias_2;
   $variables['classes_array'][] = $path_alias;
-  // Add CSS files from libraries.
-  drupal_add_css('sites/all/libraries/font-awesome/css/font-awesome.min.css');
-  // Add JavaScript files from libraries.
-  drupal_add_js('sites/all/libraries/knob/js/jquery.knob.js');
 }
 
 

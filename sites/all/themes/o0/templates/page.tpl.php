@@ -209,7 +209,7 @@
 </div>
 <!-- /page -->
   
-  <script src="<?php print $base_path . $directory; ?>/scripts/foundation/foundation/foundation.topbar.js"></script>
+  <script src="<?php print $base_path; ?>/sites/all/libraries/foundation/js/foundation/foundation.topbar.js"></script>
   
   <script>
     (function ($, Drupal, window, document, undefined) {
