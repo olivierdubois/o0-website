@@ -2,72 +2,47 @@
  * BUTTON - Default - ZURB Foundation
  */
 
-/* CSS from ZURB Foundation (v4) 'button' class, 'as-is' from 'foundation.css' */
+/* CSS from ZURB Foundation (v5) 'button' rule, 'as-is' from 'foundation.css'. */
 button, .button {
   @include button;
 }
 /* Overrides */
 button, .button {
-  background-color: $button-background-color;
-  border-color: $button-border-color;
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-  /*text-transform: uppercase;*/
-  padding-top: 0.8125em; padding-bottom: 0.75em; -webkit-appearance: none;
-}
-button:hover, button:focus, .button:hover, .button:focus {
-  background-color: rgb(122, 122, 122);
-  border-color: rgb(92, 92, 92);
-  color: rgb(255, 255, 255);
-}
-button:active, .button:active { -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+  //background-color: $button-background-color;
+  //border-color: $button-border-color;
 
-button.secondary, .button.secondary {
-  background-color: rgb(204, 204, 204);
-  border-color: rgb(163, 163, 163);
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-}
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-  background-color: rgb(153, 153, 153);
-  border-color: rgb(122, 122, 122);
-  color: rgb(255, 255, 255);
-}
+  &:hover, &:focus {
+    background-color: $button-background-color-s-hover;
+    border-color: $button-border-color-s-hover;
+    color: $button-font-color-s-hover;
+    text-decoration: none;
+  }
 
-button.large, .button.large { /*font-size: 1.25em;*/ padding-top: 1.03125em; padding-bottom: 1.03125em; -webkit-appearance: none; }
-button.small, .button.small { /*font-size: 0.8125em;*/ padding-top: 0.625em; padding-bottom: 0.5625em; -webkit-appearance: none; }
-button.tiny, .button.tiny { /*font-size: 0.6875em;*/ padding-top: 0.5em; padding-bottom: 0.4375em; -webkit-appearance: none; }
-button.expand, .button.expand { }
-button.left-align, .button.left-align { }
-button.right-align, .button.right-align { }
-button.radius, .button.radius { -webkit-border-radius: 3px; border-radius: 3px; }
-button.round, .button.round { -webkit-border-radius: 1000px; border-radius: 1000px; }
+  /* CSS from ZURB Foundation (v5) 'button' rules, 'as-is' from 'foundation.css'. */
+  &.large { padding-top: 1.125rem; padding-right: 2.25rem; padding-bottom: 1.1875rem; padding-left: 2.25rem; font-size: 1.25rem; }
+  &.small { padding-top: 0.875rem; padding-right: 1.75rem; padding-bottom: 0.9375rem; padding-left: 1.75rem; font-size: 0.8125rem; }
+  &.tiny { padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.6875rem; padding-left: 1.25rem; font-size: 0.6875rem; }
+  &.expand { padding-right: 0; padding-left: 0; width: 100%; }
+  &.left-align { text-align: left; text-indent: 0.75rem; }
+  &.right-align { text-align: right; padding-right: 0.75rem; }
+  &.radius { -webkit-border-radius: 3px; border-radius: 3px; }
+  &.round { -webkit-border-radius: 1000px; border-radius: 1000px; }
 
-@media only screen and (min-width: 768px) {
-button, .button { display: inline-block; }
-}
+  /* 'Brown' style. */
+  &.button-style-brown {
+    background-color: rgb(105, 26, 2);
+    padding-top: 0.875rem; padding-right: 1.75rem; padding-bottom: 0.9375rem; padding-left: 1.75rem; font-size: 0.8125rem;
 
-/* 'Brown' Colour */
-button.button-style-brown, .button.button-style-brown {
-  background-color: rgb(105, 26, 2);
-  border-color: rgb(63, 16, 1) /* Background color + 20% black */;
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-  /*text-transform: uppercase;*/
-  padding-top: 0.8125em; padding-bottom: 0.75em; -webkit-appearance: none;
+    &:hover, &:focus {
+      background-color: rgb(63, 16, 1);
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  @media only screen and (min-width: $mq-breakpoint-medium) {
+    display: inline-block;
+  }
 }
-button.button-style-brown:hover, button.button-style-brown:focus, .button.button-style-brown:hover, .button.button-style-brown:focus {
-  background-color: rgb(63, 16, 1);
-  border-color: rgb(21, 5, 0) /* Background color + 20% black */;
-  color: rgb(255, 255, 255);
-}
-button.button-style-brown:active, .button.button-style-brown:active { -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
 
 

@@ -231,128 +231,107 @@ div.item-list ul.pager li.pager-last a {
 /**
  * BUTTON - Default - ZURB Foundation
  */
-/* CSS from ZURB Foundation (v4) 'button' class, 'as-is' from 'foundation.css' */
+/* CSS from ZURB Foundation (v5) 'button' rule, 'as-is' from 'foundation.css'. */
 button, .button {
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   cursor: pointer;
-  font-family: inherit;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0 0 1.25em;
+  line-height: normal;
+  margin: 0 0 1.25rem;
   position: relative;
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding-top: 0.75em;
-  padding-right: 1.5em;
-  padding-bottom: 0.8125em;
-  padding-left: 1.5em;
-  font-size: 1em;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1.0625rem;
+  padding-bottom: 1rem;
+  -webkit-appearance: none;
+  border: none;
   background-color: #999999;
   border-color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal !important;
   color: white;
+  text-decoration: none;
+  text-transform: none;
 }
 
 /* Overrides */
 button, .button {
-  background-color: #999999;
-  border-color: #666666;
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-  /*text-transform: uppercase;*/
-  padding-top: 0.8125em;
-  padding-bottom: 0.75em;
-  -webkit-appearance: none;
+  /* CSS from ZURB Foundation (v5) 'button' rules, 'as-is' from 'foundation.css'. */
+  /* 'Brown' style. */
 }
-
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #7a7a7a;
-  border-color: #5c5c5c;
+  background-color: #666666;
+  border-color: #333333;
   color: white;
+  text-decoration: none;
 }
-
-button:active, .button:active {
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-}
-
-button.secondary, .button.secondary {
-  background-color: #cccccc;
-  border-color: #a3a3a3;
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-}
-
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-  background-color: #999999;
-  border-color: #7a7a7a;
-  color: white;
-}
-
 button.large, .button.large {
-  /*font-size: 1.25em;*/
-  padding-top: 1.03125em;
-  padding-bottom: 1.03125em;
-  -webkit-appearance: none;
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
 }
-
 button.small, .button.small {
-  /*font-size: 0.8125em;*/
-  padding-top: 0.625em;
-  padding-bottom: 0.5625em;
-  -webkit-appearance: none;
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
 }
-
 button.tiny, .button.tiny {
-  /*font-size: 0.6875em;*/
-  padding-top: 0.5em;
-  padding-bottom: 0.4375em;
-  -webkit-appearance: none;
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 0.6875rem;
 }
-
+button.expand, .button.expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+button.left-align, .button.left-align {
+  text-align: left;
+  text-indent: 0.75rem;
+}
+button.right-align, .button.right-align {
+  text-align: right;
+  padding-right: 0.75rem;
+}
 button.radius, .button.radius {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-
 button.round, .button.round {
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
 }
-
-@media only screen and (min-width: 768px) {
+button.button-style-brown, .button.button-style-brown {
+  background-color: #691a02;
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
+}
+button.button-style-brown:hover, button.button-style-brown:focus, .button.button-style-brown:hover, .button.button-style-brown:focus {
+  background-color: #3f1001;
+  color: white;
+}
+@media only screen and (min-width: 767px) {
   button, .button {
     display: inline-block;
   }
-}
-/* 'Brown' Colour */
-button.button-style-brown, .button.button-style-brown {
-  background-color: #691a02;
-  border-color: #3f1001;
-  /*font-family: inherit;*/
-  /*font-size: 1em;*/
-  /*font-weight: bold;*/
-  /*color: rgb(255, 255, 255);*/
-  /*text-transform: uppercase;*/
-  padding-top: 0.8125em;
-  padding-bottom: 0.75em;
-  -webkit-appearance: none;
-}
-
-button.button-style-brown:hover, button.button-style-brown:focus, .button.button-style-brown:hover, .button.button-style-brown:focus {
-  background-color: #3f1001;
-  border-color: #150500;
-  color: white;
-}
-
-button.button-style-brown:active, .button.button-style-brown:active {
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 /**
