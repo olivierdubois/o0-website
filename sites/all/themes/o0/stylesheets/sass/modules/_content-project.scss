@@ -29,6 +29,7 @@
 
 .node-project .field-name-field-project-type {
   font-size: 1.375em;
+  color: darken($color-2-grey, 20);
 }
 .node-project .field-name-field-project-link {
 }
@@ -53,6 +54,23 @@
  * VIEWS - Project - Page Grid
  */
 
+.view .views-view-grid .node-project {
+}
+
 .view .views-view-grid .node-project .field-name-field-project-type {
   font-size: 1em;
+}
+
+.view .views-view-grid .node-project a.blocklevel {
+  * { @include transition(all 0.25s ease); }
+  color: inherit;
+  text-decoration: none;
+  display: blo;
+
+  &:hover {
+    .node-title { color: $color-2-red; }
+    .field-name-field-project-type { color: darken($color-2-grey, 100); }
+    .field-type-date { color: darken($meta-font-color, 15); }
+  }
+
 }

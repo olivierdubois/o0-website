@@ -70,7 +70,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none !important;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: #995019;
+  color: #3d1b00;
 }
 
 ul, ol {
@@ -813,6 +813,7 @@ body.page-node-1 #content-title {
 
 .node-project .field-name-field-project-type {
   font-size: 1.375em;
+  color: #666666;
 }
 
 /* Services. */
@@ -846,6 +847,28 @@ body.page-node-1 #content-title {
  */
 .view .views-view-grid .node-project .field-name-field-project-type {
   font-size: 1em;
+}
+
+.view .views-view-grid .node-project a.blocklevel {
+  color: inherit;
+  text-decoration: none;
+  display: blo;
+}
+.view .views-view-grid .node-project a.blocklevel * {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.view .views-view-grid .node-project a.blocklevel:hover .node-title {
+  color: #ff5529;
+}
+.view .views-view-grid .node-project a.blocklevel:hover .field-name-field-project-type {
+  color: black;
+}
+.view .views-view-grid .node-project a.blocklevel:hover .field-type-date {
+  color: #737373;
 }
 
 /**
