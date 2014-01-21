@@ -5,6 +5,7 @@
 //* Colour palette:
 //* - o0 Orange - rgb(255, 134, 42) - #ff862a - hsl(26, 100, 58.2)
 //* - o0 Black - rgb(51, 51, 51) - #333333 - hsl(0, 0, 20)
+//* - o0 Brown - rgb(61, 27, 0) - #3d1b00 - hsl(27, 100, 12)
 //*
 //*
 //*/
@@ -29,9 +30,11 @@ $theme-name: "o0";
 // Primary colours.
 $color-1-orange: rgb(255, 134, 42); // o0 Orange
 $color-1-black: rgb(51, 51, 51); // o0 Black
+$color-1-brown: rgb(61, 27, 0); // o0 Brown
 
 // Secondary colours.
 $color-2-grey: hsl(0, 0, 60);
+$color-2-red: rgb(255, 85, 41);
 
 
 
@@ -52,8 +55,8 @@ $font-color: rgb(51, 51, 51);
 
 // Heading font.
 $heading-font-stack: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
-$heading-font-color: rgb(255, 134, 42);
-  $heading-font-color-s-hover: rgb(153, 80, 25);
+$heading-font-color: $color-1-orange;
+  $heading-font-color-s-hover: $color-1-brown;
 
 // Hero font.
 $hero-font-stack: Arial, Helvetica, sans-serif;
