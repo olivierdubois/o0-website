@@ -294,18 +294,27 @@ function o0_preprocess_node(&$variables) {
   $variables['content_placeholder_image_classes'] = 'content-placeholder-image';
 
   // TODO : Cleanup
-  // Set theming-related variables depending on the use of certain taxonomy terms. 
-  /*
   $node = $variables['node'];
-  $terms = $node->field_global_t_mod_state;
-  foreach ($terms as $term) {
-    // If 'Moderation state - Needs review'...
-    if ($term[0]['tid'] == 20) {
-      $term = taxonomy_term_load($term[0]['tid']);
-      $variables['output_123456'] = 'Term name: ' . $term->name;
+  // Set theming-related variables depending on the use of certain taxonomy terms.
+  // 'Person - Experience' vocabulary.
+  if (!empty($node->field_global_t_person_exper)) {
+    $field_global_t_person_exper__terms = $node->field_global_t_person_exper;
+    $variables['field_global_t_person_exper__term'] = '';
+    foreach ($field_global_t_person_exper__terms['und'] as $key => $value) {
+      // If 'Freelance front-end web developer'...
+      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 50) {
+        $variables['field_global_t_person_exper__term'] = 'Freelancer';
+      }
+      // If 'Chief Web Ninja at Shervin'...
+      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 51) {
+        $variables['field_global_t_person_exper__term'] = 'Shervin';
+      }
+      // If 'Volunteer at BC SPCA Wild ARC'...
+      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 52) {
+        $variables['field_global_t_person_exper__term'] = 'Wild ARC';
+      }
     }
   }
-  */
 
 }
 
