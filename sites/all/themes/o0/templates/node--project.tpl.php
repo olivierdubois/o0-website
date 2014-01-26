@@ -42,7 +42,11 @@
 
     <div class="row">
       <div class="large-4 columns">
-      
+
+        <?php if (!empty($content['field_global_r_organization'])): ?>
+          <?php print views_embed_view('organization_entity', 'project_node_body', $node->nid); ?>
+        <?php endif; ?>
+
         <?php if (!empty($content['body'])): ?>
           <?php print render($content['body']); ?>
         <?php endif; ?>
@@ -54,6 +58,24 @@
         <?php if (!empty($content['field_global_t_service'])): ?>
           <h4>My work on this project</h4>
           <?php print render($content['field_global_t_service']); ?>
+        <?php endif; ?>
+
+        <?php if (!empty($variables['field_global_t_person_exper__term'])): ?>
+          <?php if ($variables['field_global_t_person_exper__term'] == 'Freelancer'): ?>
+            <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+              <p>This project was completed as freelance work.</p>
+            </div></div></div>
+          <?php endif; ?>
+          <?php if ($variables['field_global_t_person_exper__term'] == 'Shervin'): ?>
+            <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+              <p>This project was completed as part of my work as the lead front-end web developer at Shervin Communications.</p>
+            </div></div></div>
+          <?php endif; ?>
+          <?php if ($variables['field_global_t_person_exper__term'] == 'Wild ARC'): ?>
+            <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+              <p>This project was completed as part of my volunteer work at the BC SPCA Wild ARC.</p>
+            </div></div></div>
+          <?php endif; ?>
         <?php endif; ?>
 
       </div>
@@ -76,6 +98,10 @@
               <?php } ?> */ ?>
             </div>
           </div>
+        <?php endif; ?>
+
+        <?php if (!empty($content['field_project_image_mobile'])): ?>
+          <div class="field field-name-field-project-image-mobile field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_mobile_node', $node->field_project_image_mobile['und'][0]['uri']); ?>" alt="" /></div></div></div>
         <?php endif; ?>
 
       </div>
