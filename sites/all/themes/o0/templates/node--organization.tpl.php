@@ -30,12 +30,21 @@
       hide($content['links']);
     ?>
 
-    <?php if (!empty($content['field_organization_logo'])): ?>
-      <div class="field field-name-field-organization-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_node', $node->field_organization_logo[$node->language][0]['uri']); ?>" alt="" /></div></div></div>
+    <?php if (!empty($content['field_org_logo'])): ?>
+      <div class="row">
+        <div class="large-8 columns">
     <?php endif; ?>
 
-    <?php if (!empty($content['body'])): ?>
-      <?php print render($content['body']); ?>
+          <?php if (!empty($content['body'])): ?>
+            <?php print render($content['body']); ?>
+          <?php endif; ?>
+
+    <?php if (!empty($content['field_org_logo'])): ?>
+        </div>
+        <div class="large-4 columns">
+          <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_node', $node->field_org_logo['und'][0]['uri']); ?>" alt="" /></div></div></div>
+        </div>
+      </div>
     <?php endif; ?>
 
   </div>
