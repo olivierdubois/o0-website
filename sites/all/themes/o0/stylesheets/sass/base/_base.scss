@@ -253,6 +253,13 @@ $mq-breakpoint-small: "319px";
   transition: $value;
 }
 
+// Opacity.
+@mixin opacity($value) {
+  filter: alpha(opacity=($value*10));
+  -moz-opacity: $value;
+  opacity: $value;
+}
+
 // Meta.
 @mixin meta {
   font-size: $meta-font-size;
