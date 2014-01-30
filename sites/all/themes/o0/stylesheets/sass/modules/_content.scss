@@ -58,6 +58,13 @@ h6 {
   }
 }
 
+/* Block-level links. */
+a.blocklevel {
+  * { @include transition(all 0.25s ease); }
+  color: inherit;
+  text-decoration: none;
+}
+
 
 
 

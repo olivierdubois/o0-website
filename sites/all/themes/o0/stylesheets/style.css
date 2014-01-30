@@ -506,13 +506,13 @@ h2.pane-title {
   min-height: 48px;*/
   padding: 0;
   font-size: 3em;
-  color: #999;
+  color: #cccccc;
   line-height: 1em;
   text-decoration: none;
 }
 
 #block-block-5 ul.channels li a:hover {
-  color: black;
+  color: #666666;
 }
 
 #block-block-5 ul.channels li.facebook a:hover {
@@ -735,6 +735,19 @@ h6 {
   content: "\f017";
 }
 
+/* Block-level links. */
+a.blocklevel {
+  color: inherit;
+  text-decoration: none;
+}
+a.blocklevel * {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
 /**
  * VIEWS
  */
@@ -903,17 +916,6 @@ body.page-node-1 #content-title {
   font-size: 1em;
 }
 
-.view .views-view-grid .node-project a.blocklevel {
-  color: inherit;
-  text-decoration: none;
-}
-.view .views-view-grid .node-project a.blocklevel * {
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
 .view .views-view-grid .node-project a.blocklevel:hover .node-title {
   color: #ff5529;
 }
@@ -927,6 +929,19 @@ body.page-node-1 #content-title {
 /**
  * NODE - Organization - Default
  */
+/**
+ * VIEWS - Organization - Page Grid
+ */
+/* Fix vertical and horizontal alignment in 'field-item' container (with the help of 'unifyContainer' JavaScript function). */
+.view .views-view-grid .node-organization .field-name-field-org-logo .field-item {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.view .views-view-grid .node-organization .field-name-field-org-logo .field-item img {
+  max-width: 200px;
+}
+
 /**
  * NODE - Person - Default
  */
