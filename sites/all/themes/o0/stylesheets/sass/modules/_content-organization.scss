@@ -4,3 +4,21 @@
 
 .node-organization {
 }
+
+
+
+
+/**
+ * VIEWS - Organization - Page Grid
+ */
+
+.view .views-view-grid .node-organization {
+}
+
+/* Fix vertical and horizontal alignment in 'field-item' container (with the help of 'unifyContainer' JavaScript function). */
+.view .views-view-grid .node-organization .field-name-field-org-logo .field-item {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  img { max-width: 200px; }
+}
