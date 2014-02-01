@@ -39,6 +39,26 @@
             <?php print render($content['body']); ?>
           <?php endif; ?>
 
+          <?php if (!empty($variables['field_global_t_person_exper__term'])): ?>
+            <?php if ($variables['field_global_t_person_exper__term'] == 'Freelancer'): ?>
+              <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+                    <p>I worked with <?php print $title; ?> during freelance work.</p>
+                  </div></div></div>
+            <?php endif; ?>
+            <?php if ($variables['field_global_t_person_exper__term'] == 'Shervin'): ?>
+              <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+                    <p>I worked with <?php print $title; ?> as part of my work as the lead front-end web developer at Shervin Communications.</p>
+                  </div></div></div>
+            <?php endif; ?>
+            <?php if ($variables['field_global_t_person_exper__term'] == 'Wild ARC'): ?>
+              <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+                    <p>I worked with <?php print $title; ?> as part of my volunteer work at the BC SPCA Wild ARC.</p>
+                  </div></div></div>
+            <?php endif; ?>
+          <?php endif; ?>
+
+          <?php print views_embed_view('project_entity', 'organization_node', $node->nid); ?>
+
     <?php if (!empty($content['field_org_logo'])): ?>
         </div>
         <div class="large-4 columns">
