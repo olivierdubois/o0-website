@@ -28,7 +28,7 @@ if (is_float($foundation_grid_column_width)) {
   $foundation_grid_column_extra = '<div class="large-' . $foundation_grid_column_extra_width . ' columns"></div>';
 }
 // Translate results into Foundation classes.
-$foundation_grid_column_classes = 'large-' . $foundation_grid_column_width . ' columns';
+$foundation_grid_column_classes = 'large-' . $foundation_grid_column_width . ' medium-4 small-12 columns';
 
 ?>
 <?php if (!empty($title)) : ?>
