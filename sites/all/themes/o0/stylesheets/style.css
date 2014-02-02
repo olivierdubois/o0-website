@@ -693,7 +693,10 @@ h6 {
   color: #ff862a;
 }
 
-/* Submitted line */
+.node {
+  /* Submitted line */
+  /* Date fields */
+}
 .node .meta .submitted {
   font-size: 0.75em;
   color: #999999;
@@ -705,15 +708,12 @@ h6 {
   line-height: 0.75em;
   text-align: left;
 }
-
-/* Date fields */
 .node .field-type-date {
   font-size: 0.875em;
   font-weight: bold;
   color: #999999;
   text-transform: uppercase;
 }
-
 .node .meta .field-type-date .field-items {
   position: relative;
   padding-left: 0;
@@ -751,16 +751,25 @@ a.blocklevel * {
 /**
  * VIEWS
  */
-/* Default */
+/* Row. */
 .view .views-row {
   padding: 0.625em 0 0.625em 0;
   border-bottom: 1px dashed #999999;
 }
-
 .view .views-row.views-row-first {
   border-top: 1px dashed #999999;
 }
 
+/* Node. */
+.view .node .node-title {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 1.125em;
+  line-height: 1.125em;
+}
+.view .node .meta .field-type-date {
+  font-size: 0.75em;
+}
 .view .node .meta .field-type-date .field-items {
   position: relative;
   padding-left: 0;
@@ -790,6 +799,14 @@ a.blocklevel * {
   margin: 0;
   padding: 1em 0 1em 0;
 }
+.view .views-view-grid .node .field-type-date {
+  font-size: 0.75em;
+}
+@media only screen and (max-width: 767px) {
+  .view .views-view-grid .node {
+    border-bottom: 1px dashed #999999;
+  }
+}
 
 .view .views-view-grid .node-title {
   margin-top: 0.5em;
@@ -798,15 +815,6 @@ a.blocklevel * {
   line-height: 1.125em;
 }
 
-.view .views-view-grid .node .field-type-date {
-  font-size: 0.75em;
-}
-
-@media only screen and (max-width: 767px) {
-  .view .views-view-grid .node {
-    border-bottom: 1px dashed #999999;
-  }
-}
 /**
  * OVERRIDE
  */
@@ -825,7 +833,6 @@ body.page-node-1 #content-title {
 .node-article .field-name-field-article-image-2 {
   margin: 1.5em 0 0 0;
 }
-
 .node-article .field-name-field-article-image-2 .field-item {
   float: left !important;
   width: 21%;
@@ -835,7 +842,12 @@ body.page-node-1 #content-title {
 /**
  * NODE - Project - Default
  */
-/* Decrease all heading font sizes by -0.375em to accommodate narrow column layout. */
+.node-project {
+  /* Decrease all heading font sizes by -0.375em to accommodate narrow column layout. */
+  /* Release date. */
+  /* Services. */
+  /* Experience. */
+}
 .node-project h1 {
   font-size: 2.5em;
 }
@@ -854,8 +866,6 @@ body.page-node-1 #content-title {
 .node-project h6 {
   font-size: 1em;
 }
-
-/* Release date. */
 .node-project .meta .field-type-date .field-items {
   position: relative;
   padding-left: 0;
@@ -876,13 +886,10 @@ body.page-node-1 #content-title {
   -moz-osx-font-smoothing: grayscale;
   content: "\f073" !important;
 }
-
 .node-project .field-name-field-project-type {
   font-size: 1.375em;
   color: #666666;
 }
-
-/* Services. */
 .node-project .field-name-field-global-t-service ul {
   padding-left: 0;
   margin-left: 2.142857142857143em;
@@ -908,22 +915,18 @@ body.page-node-1 #content-title {
   color: #999999;
 }
 
-/* Experience. */
 /**
  * VIEWS - Project - Page Grid
  */
 .view .views-view-grid .node-project .field-name-field-project-type {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-.view .views-view-grid .node-project a.blocklevel:hover .node-title {
-  color: #ff5529;
-}
-.view .views-view-grid .node-project a.blocklevel:hover .field-name-field-project-type {
-  color: black;
-}
-.view .views-view-grid .node-project a.blocklevel:hover .field-type-date {
-  color: #737373;
+/**
+ * VIEWS - Project - Embedded in node
+ */
+.view.view-project-entity .node-project .field-name-field-project-type {
+  font-size: 1rem;
 }
 
 /**
@@ -932,7 +935,9 @@ body.page-node-1 #content-title {
 /**
  * VIEWS - Organization - Page Grid
  */
-/* Fix vertical and horizontal alignment in 'field-item' container (with the help of 'unifyContainer' JavaScript function). */
+.view .views-view-grid .node-organization {
+  /* Fix vertical and horizontal alignment in 'field-item' container (with the help of 'unifyContainer' JavaScript function). */
+}
 .view .views-view-grid .node-organization .field-name-field-org-logo .field-item {
   display: table-cell;
   vertical-align: middle;

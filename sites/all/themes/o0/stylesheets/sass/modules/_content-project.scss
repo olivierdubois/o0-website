@@ -3,47 +3,49 @@
  */
 
 .node-project {
-}
-
-/* Decrease all heading font sizes by -0.375em to accommodate narrow column layout. */
-.node-project {
+  /* Decrease all heading font sizes by -0.375em to accommodate narrow column layout. */
   h1 { font-size: 2.5em; }
   h2 { font-size: 2em; }
   h3 { font-size: 1.75em; }
   h4 { font-size: 1.5em; }
   h5 { font-size: 1.250em; }
   h6 { font-size: 1em; }
-}
 
-/* Release date. */
-.node-project .meta .field-type-date {
-  .field-items {
-    @include icon-field-items;
+  /* Release date. */
+  .meta .field-type-date {
+    .field-items {
+      @include icon-field-items;
+    }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      content: "\f073" !important;
+    }
   }
 
-  .field-item:before {
-    @include icon-field-item-before;
-    content: "\f073" !important;
+  .field-name-field-project-type {
+    font-size: 1.375em;
+    color: darken($color-2-grey, 20);
   }
-}
 
-.node-project .field-name-field-project-type {
-  font-size: 1.375em;
-  color: darken($color-2-grey, 20);
-}
-.node-project .field-name-field-project-link {
-}
+  .node-project .field-name-field-project-link {}
 
-/* Services. */
-.node-project .field-name-field-global-t-service {
-  ul { @include icon-lu; }
+  /* Services. */
+  .field-name-field-global-t-service {
+    ul { @include icon-lu; }
+    li { @include icon-li; }
 
-  li { @include icon-li; }
+    li:before {
+      @include icon-li-before;
+      content: "\f00c";
+      color: $color-2-grey;
+    }
+  }
 
-  li:before {
-    @include icon-li-before;
-    content: "\f00c";
-    color: $color-2-grey;
+  /* Experience. */
+  .field-name-field-global-t-person-exper-descr * {
+    //font-size: 0.875rem;
+    //color: $color-2-grey;
   }
 }
 
@@ -55,21 +57,18 @@
  */
 
 .view .views-view-grid .node-project {
+  .field-name-field-project-type { font-size: 1rem; }
 }
 
-.view .views-view-grid .node-project .field-name-field-project-type {
-  font-size: 1em;
-}
 
-.view .views-view-grid .node-project a.blocklevel {
-  * { @include transition(all 0.25s ease); }
-  color: inherit;
-  text-decoration: none;
 
-  &:hover {
-    .node-title { color: $color-2-red; }
-    .field-name-field-project-type { color: darken($color-2-grey, 100); }
-    .field-type-date { color: darken($meta-font-color, 15); }
+
+/**
+ * VIEWS - Project - Embedded in node
+ */
+
+.view.view-project-entity .node-project {
+  .field-name-field-project-type {
+    font-size: 1rem;
   }
-
 }

@@ -28,33 +28,35 @@ h6 {
   color: $heading-font-color;
 }
 
-/* Submitted line */
-.node .meta .submitted {
-  @include meta;
-  margin: 0.1875em 0 0 0;
-  padding: 0;
-  font-size: 0.625em;
-  font-weight: bold;
-  line-height: 0.75em;
-  text-align: left;
-}
-
-/* Date fields */
-.node .field-type-date {
-  font-size: 0.875em;
-  font-weight: bold;
-  color: rgb(153, 153, 153);
-  text-transform: uppercase;
-}
-
-.node .meta .field-type-date {
-  .field-items {
-    @include icon-field-items;
+.node {
+  /* Submitted line */
+  .meta .submitted {
+    @include meta;
+    margin: 0.1875em 0 0 0;
+    padding: 0;
+    font-size: 0.625em;
+    font-weight: bold;
+    line-height: 0.75em;
+    text-align: left;
   }
 
-  .field-item:before {
-    @include icon-field-item-before;
-    content: "\f017";
+  /* Date fields */
+  .field-type-date {
+    font-size: 0.875em;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+  }
+
+  .meta .field-type-date {
+    .field-items {
+      @include icon-field-items;
+    }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      content: "\f017";
+    }
   }
 }
 
@@ -72,24 +74,36 @@ a.blocklevel {
  * VIEWS
  */
 
-/* Default */
-.view .node .node-title {
-}
+/* Row. */
 .view .views-row {
   padding: 0.625em 0 0.625em 0;
   border-bottom: 1px dashed rgb(153, 153, 153);
+
+  &.views-row-first {
+    border-top: 1px dashed rgb(153, 153, 153);
+  }
 }
-.view .views-row.views-row-first {
-  border-top: 1px dashed rgb(153, 153, 153);
-}
-.view .node .meta .field-type-date {
-  .field-items {
-    @include icon-field-items;
+
+/* Node. */
+.view .node {
+  .node-title {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-size: 1.125em;
+    line-height: 1.125em;
   }
 
-  .field-item:before {
-    @include icon-field-item-before;
-    content: "\f017";
+  .meta .field-type-date {
+    font-size: 0.75em;
+
+    .field-items {
+      @include icon-field-items;
+    }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      content: "\f017";
+    }
   }
 }
 
@@ -106,20 +120,16 @@ a.blocklevel {
 .view .views-view-grid .node {
   margin: 0;
   padding: 1em 0 1em 0;
+
+  .field-type-date { font-size: 0.75em; }
+
+  @media only screen and (max-width: $mq-breakpoint-medium) { border-bottom: 1px dashed rgb(153, 153, 153); }
 }
 .view .views-view-grid .node-title {
   margin-top: 0.5em;
   margin-bottom: 0;
   font-size: 1.125em;
   line-height: 1.125em;
-}
-.view .views-view-grid .node .field-type-date {
-  font-size: 0.75em;
-}
-@media only screen and (max-width: 767px) {
-  .view .views-view-grid .node {
-    border-bottom: 1px dashed rgb(153, 153, 153);
-  }
 }
 
 
