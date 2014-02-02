@@ -47,6 +47,13 @@
     //font-size: 0.875rem;
     //color: $color-2-grey;
   }
+
+  /* Block-level links. */
+  a.blocklevel {
+    &:hover {
+      .field-name-field-project-type { color: darken($color-2-grey, 100); }
+    }
+  }
 }
 
 
