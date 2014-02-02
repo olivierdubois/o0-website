@@ -44,7 +44,7 @@
       <div class="large-4 columns">
 
         <?php if (!empty($content['field_global_r_organization'])): ?>
-          <?php print views_embed_view('organization_entity', 'project_node_body', $node->nid); ?>
+          <?php print views_embed_view('organization_reference', 'project_node_body', $node->nid); ?>
         <?php endif; ?>
 
         <?php if (!empty($content['body'])): ?>

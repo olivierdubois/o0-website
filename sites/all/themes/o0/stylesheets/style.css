@@ -923,9 +923,9 @@ body.page-node-1 #content-title {
 }
 
 /**
- * VIEWS - Project - Embedded in node
+ * VIEWS - Project - Embed in node
  */
-.view.view-project-entity .node-project .field-name-field-project-type {
+.view.view-project-reference .node-project .field-name-field-project-type {
   font-size: 1rem;
 }
 
