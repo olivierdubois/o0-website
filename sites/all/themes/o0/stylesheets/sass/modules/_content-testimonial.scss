@@ -3,4 +3,55 @@
  */
 
 .node-testimonial {
+  .node-title { display: none; }
+
+  .field-name-body {
+    p:first-child:before {
+      content: open-quote;
+      position: relative;
+      top: 1rem;
+      padding-right: 0.313rem;
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: bold;
+      color: $color-2-grey;
+      line-height: 1rem;
+    }
+
+    p:last-child:after {
+      content: close-quote;
+      position: relative;
+      top: 1rem;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
+      color: $color-2-grey;
+      line-height: 1rem;
+    }
+
+    font-style: italic;
+    color: darken($color-2-grey, 20);
+  }
+
+  .field-name-field-testimonial-author-name {
+    display: inline-block;
+    margin-left: 2em;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: darken($color-2-grey, 15);
+
+    .separator { font-weight: normal; }
+  }
+
+  .field-name-field-testimonial-author-title, .field-name-field-testimonial-author-org {
+    display: inline-block;
+    font-size: 0.813rem;
+    font-style: italic;
+    color: darken($color-2-grey, 15);
+
+    .separator { font-weight: normal; }
+  }
 }
+
+/* Hide page title. */
+body.node-type-testimonial #page-title { display: none; }

@@ -747,6 +747,12 @@ a.blocklevel * {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+a.blocklevel:hover .node-title {
+  color: #ff5529;
+}
+a.blocklevel:hover .field-type-date {
+  color: #737373;
+}
 
 /**
  * VIEWS
@@ -847,6 +853,7 @@ body.page-node-1 #content-title {
   /* Release date. */
   /* Services. */
   /* Experience. */
+  /* Block-level links. */
 }
 .node-project h1 {
   font-size: 2.5em;
@@ -913,6 +920,9 @@ body.page-node-1 #content-title {
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
   color: #999999;
+}
+.node-project a.blocklevel:hover .field-name-field-project-type {
+  color: black;
 }
 
 /**
@@ -1042,6 +1052,59 @@ body.page-node-1 #content-title {
 /**
  * NODE - Testimonial - Default
  */
+.node-testimonial .node-title {
+  display: none;
+}
+.node-testimonial .field-name-body {
+  font-style: italic;
+  color: #666666;
+}
+.node-testimonial .field-name-body p:first-child:before {
+  content: open-quote;
+  position: relative;
+  top: 1rem;
+  padding-right: 0.313rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #999999;
+  line-height: 1rem;
+}
+.node-testimonial .field-name-body p:last-child:after {
+  content: close-quote;
+  position: relative;
+  top: 1rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #999999;
+  line-height: 1rem;
+}
+.node-testimonial .field-name-field-testimonial-author-name {
+  display: inline-block;
+  margin-left: 2em;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #737373;
+}
+.node-testimonial .field-name-field-testimonial-author-name .separator {
+  font-weight: normal;
+}
+.node-testimonial .field-name-field-testimonial-author-title, .node-testimonial .field-name-field-testimonial-author-org {
+  display: inline-block;
+  font-size: 0.813rem;
+  font-style: italic;
+  color: #737373;
+}
+.node-testimonial .field-name-field-testimonial-author-title .separator, .node-testimonial .field-name-field-testimonial-author-org .separator {
+  font-weight: normal;
+}
+
+/* Hide page title. */
+body.node-type-testimonial #page-title {
+  display: none;
+}
+
 /**
  * NODE - Feed - Content region
  */

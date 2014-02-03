@@ -9,25 +9,13 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?> class="node-title title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
-    <?php if ($display_submitted): ?>
-      <div class="meta submitted">
-        <?php //print $user_picture; ?>
-        <?php //print $submitted; ?>
-      </div>
-    <?php endif; ?>
   </header>
-  
+
   <div class="node-content clearfix"<?php print $content_attributes; ?>>
     <?php
-      // Hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
+    // Hide the comments and links now so that we can render them later.
+    hide($content['comments']);
+    hide($content['links']);
     ?>
 
     <?php if (!empty($content['body'])): ?>
@@ -35,15 +23,15 @@
     <?php endif; ?>
 
     <?php if (!empty($content['field_testimonial_author_name'])): ?>
-      <?php print render($content['field_testimonial_author_name']); ?>
+      <div class="field field-name-field-testimonial-author-name field-type-text field-label-hidden"><div class="field-items"><div class="field-item"><?php print $node->field_testimonial_author_name['und'][0]['safe_value']; ?><?php if (!empty($content['field_testimonial_author_title']) || !empty($content['field_testimonial_author_org'])): ?> <span class="separator">-</span> <?php endif; ?></div></div></div>
     <?php endif; ?>
 
     <?php if (!empty($content['field_testimonial_author_title'])): ?>
-      <?php print render($content['field_testimonial_author_title']); ?>
+      <div class="field field-name-field-testimonial-author-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item"><?php print $node->field_testimonial_author_title['und'][0]['safe_value']; ?><?php if (!empty($content['field_testimonial_author_org'])): ?><span class="separator">,</span> <?php endif; ?></div></div></div>
     <?php endif; ?>
 
     <?php if (!empty($content['field_testimonial_author_org'])): ?>
-      <?php print render($content['field_testimonial_author_org']); ?>
+      <div class="field field-name-field-testimonial-author-org field-type-text field-label-hidden"><div class="field-items"><div class="field-item"><?php print $node->field_testimonial_author_org['und'][0]['safe_value']; ?></div></div></div>
     <?php endif; ?>
   </div>
 
