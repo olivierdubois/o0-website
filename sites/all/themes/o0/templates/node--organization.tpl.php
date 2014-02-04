@@ -57,6 +57,8 @@
             <?php endif; ?>
           <?php endif; ?>
 
+          <?php print views_embed_view('testimonial_reference', 'organization_node', $node->nid); ?>
+
           <?php print views_embed_view('project_reference', 'organization_node', $node->nid); ?>
 
     <?php if (!empty($content['field_org_logo'])): ?>
