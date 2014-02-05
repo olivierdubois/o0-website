@@ -57,9 +57,29 @@
             <?php endif; ?>
           <?php endif; ?>
 
-          <?php print views_embed_view('testimonial_reference', 'organization_node', $node->nid); ?>
+          <?php
+            $view = views_get_view('testimonial_reference');
+            $view_preview = $view->preview('organization_node');
+            $view_result_count = count($view->result);
+            if (!empty($view->result)):
+          ?>
+            <h5>What they are saying about me</h5>
+            <?php print views_embed_view('testimonial_reference', 'organization_node', $node->nid); ?>
+          <?php endif; ?>
 
-          <?php print views_embed_view('project_reference', 'organization_node', $node->nid); ?>
+          <?php
+            $view = views_get_view('project_reference');
+            $view_preview = $view->preview('organization_node');
+            $view_result_count = count($view->result);
+            if (!empty($view->result)):
+          ?>
+            <?php if ($view_result_count <= 1): ?>
+              <h5>Project</h5>
+            <?php else: ?>
+              <h5>Projects</h5>
+            <?php endif; ?>
+            <?php print views_embed_view('project_reference', 'organization_node', $node->nid); ?>
+          <?php endif; ?>
 
     <?php if (!empty($content['field_org_logo'])): ?>
         </div>
