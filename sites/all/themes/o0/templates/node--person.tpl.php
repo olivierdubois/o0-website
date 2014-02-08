@@ -23,9 +23,6 @@
     <?php endif; ?>
 
     <div class="meta">
-      <?php if (!empty($content['field_global_pub_date'])): ?>
-        <?php print render($content['field_global_pub_date']); ?>
-      <?php endif; ?>
     </div>
   </header>
   
