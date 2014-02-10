@@ -662,7 +662,7 @@ color: rgb(255, 255, 255);
 /**
  * NODE - Defaults
  */
-/* Heading */
+/* Heading. */
 h1 {
   font-size: 2.625em;
 }
@@ -687,15 +687,15 @@ h6 {
   font-size: 1.375em;
 }
 
-/* Page Title */
-#page-title {
+/* Page title, node title. */
+#page-title, .node-title {
   margin-top: 0;
   color: #ff862a;
 }
 
 .node {
-  /* Submitted line */
-  /* Date fields */
+  /* Submitted line. */
+  /* Date fields. */
 }
 .node .meta .submitted {
   font-size: 0.75em;
@@ -800,7 +800,7 @@ a.blocklevel:hover .field-type-date {
 /**
  * VIEWS - Page Grid
  */
-/* Default */
+/* Default. */
 .view .views-view-grid .node {
   margin: 0;
   padding: 1em 0 1em 0;
@@ -824,9 +824,14 @@ a.blocklevel:hover .field-type-date {
 /**
  * OVERRIDE
  */
-/* Homepage title */
+/* Homepage title. */
 body.front #content-title,
 body.page-node-1 #content-title {
+  display: none;
+}
+
+/* Project node. */
+body.node-type-project #content-title {
   display: none;
 }
 
