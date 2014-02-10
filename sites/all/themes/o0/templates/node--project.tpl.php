@@ -7,31 +7,6 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?> class="node-title title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
-    <?php if (!empty($content['field_project_type'])): ?>
-      <?php print render($content['field_project_type']); ?>
-    <?php endif; ?>
-
-    <?php if ($display_submitted): ?>
-      <div class="meta submitted">
-        <?php //print $user_picture; ?>
-        <?php //print $submitted; ?>
-      </div>
-    <?php endif; ?>
-  
-    <div class="meta">
-      <?php if (!empty($content['field_project_date'])): ?>
-        <?php print render($content['field_project_date']); ?>
-      <?php endif; ?>
-    </div>
-  </header>
   
   <div class="node-content clearfix"<?php print $content_attributes; ?>>
     <?php
@@ -43,6 +18,33 @@
     <div class="row">
       <div class="large-4 columns">
 
+        <header>
+          <?php print render($title_prefix); ?>
+          <?php if (!$page): ?>
+            <h2<?php print $title_attributes; ?> class="node-title title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+          <?php else: ?>
+            <h1<?php print $title_attributes; ?> class="title" id="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+
+          <?php if (!empty($content['field_project_type'])): ?>
+            <?php print render($content['field_project_type']); ?>
+          <?php endif; ?>
+
+          <?php if ($display_submitted): ?>
+            <div class="meta submitted">
+              <?php //print $user_picture; ?>
+              <?php //print $submitted; ?>
+            </div>
+          <?php endif; ?>
+
+          <div class="meta">
+            <?php if (!empty($content['field_project_date'])): ?>
+              <?php print render($content['field_project_date']); ?>
+            <?php endif; ?>
+          </div>
+        </header>
+
         <?php if (!empty($content['field_global_r_organization'])): ?>
           <?php print views_embed_view('organization_reference', 'project_node_body', $node->nid); ?>
         <?php endif; ?>
@@ -50,11 +52,7 @@
         <?php if (!empty($content['body'])): ?>
           <?php print render($content['body']); ?>
         <?php endif; ?>
-      
-        <?php if (!empty($content['field_project_link'])): ?>
-          <?php print render($content['field_project_link']); ?>
-        <?php endif; ?>
-      
+
         <?php if (!empty($content['field_global_t_service'])): ?>
           <h4>My work on this project</h4>
           <?php print render($content['field_global_t_service']); ?>
@@ -78,6 +76,10 @@
           <?php endif; ?>
         <?php endif; ?>
 
+        <?php if (!empty($content['field_project_link'])): ?>
+          <?php print render($content['field_project_link']); ?>
+        <?php endif; ?>
+
       </div>
 
       <div class="large-8 columns">
@@ -89,20 +91,48 @@
         <?php else: ?>
           <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_laptop_node', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
         <?php endif; ?>
-    
-        <?php if (!empty($content['field_project_image_2'])): ?>
+
+        <?php
+        // TODO : Cleanup
+
+        // Get the number of columns for the display.
+        $view_column_number = 2;
+        // Calculate the width of the columns based on a 12-column Foundation grid.
+        $foundation_grid_columns = 12;
+        $foundation_grid_column_width = ($foundation_grid_columns / $view_column_number);
+        // Translate results into Foundation classes.
+        $foundation_grid_column_classes = 'large-' . $foundation_grid_column_width . ' medium-' . $foundation_grid_column_width . ' small-12 columns';
+
+        /* Merge '$node->field_project_image_mobile' into '$node->field_project_image_2' array in order to display all secondary images in 1 grid display. */
+        $node_field_project_image_2 = '';
+        if (!empty($content['field_project_image_2'])) {
+          foreach ($node->field_project_image_2['und'] as $key => $value) {
+            $node_field_project_image_2[] = '<div class="field field-name-field-project-image-2 field-type-image thumbnail ' . $foundation_grid_column_classes . '"><div class="field-items"><div class="field-item"><a href="' . image_style_url('project_image_modal_fullscreen', $node->field_project_image_2['und'][$key]['uri']) . '" class="colorbox-inline"><img typeof="foaf:Image" src="' . image_style_url('project_image_2_node', $node->field_project_image_2['und'][$key]['uri']) . '" alt="" /></a></div></div></div>';
+          }
+        }
+        if (!empty($content['field_project_image_mobile'])) {
+          foreach ($node->field_project_image_mobile['und'] as $key => $value) {
+            $node_field_project_image_2[] = '<div class="field field-name-field-project-image-mobile field-type-image thumbnail ' . $foundation_grid_column_classes . '"><div class="field-items"><div class="field-item"><a href="' . image_style_url('project_image_modal_fullscreen', $node->field_project_image_mobile['und'][$key]['uri']) . '" class="colorbox-inline"><img typeof="foaf:Image" src="' . image_style_url('project_image_mobile_2_node', $node->field_project_image_mobile['und'][$key]['uri']) . '" alt="" /></a></div></div></div>';
+          }
+        }
+
+        /* Count the number of items in the new array. */
+        $node_field_project_image_2_count = count($node_field_project_image_2);
+        $i = 0;
+
+        ?>
+
+        <?php if (!empty($node_field_project_image_2)): ?>
           <div class="field-group-format field-group-div group-project-image-2 clearfix">
             <div class="field-group-format-wrapper" style="display: block;">
-              <?php print render($content['field_project_image_2']); ?>
-              <?php /* <?php foreach ($node->field_project_image_2[$node->language] as $key => $value) { ?>
-                <div class="field field-name-field-project-image-2 field-type-image thumbnail"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('project_image_modal_fullscreen', $node->field_project_image_2[$node->language][$key]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_2_node', $node->field_project_image_2[$node->language][$key]['uri']); ?>" alt="" /></a></div></div></div>
-              <?php } ?> */ ?>
+              <?php foreach ($node_field_project_image_2 as $key => $value) {
+                $i++;
+                if ($i == 1 || $i == 3 || $i == 5) { print '<div class="row">'; }
+                print $node_field_project_image_2[$key];
+                if (is_int($i/$view_column_number) || $i == $node_field_project_image_2_count) { print '</div>'; }
+              } ?>
             </div>
           </div>
-        <?php endif; ?>
-
-        <?php if (!empty($content['field_project_image_mobile'])): ?>
-          <div class="field field-name-field-project-image-mobile field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_mobile_node', $node->field_project_image_mobile['und'][0]['uri']); ?>" alt="" /></div></div></div>
         <?php endif; ?>
 
       </div>
