@@ -28,7 +28,26 @@
     color: darken($color-2-grey, 20);
   }
 
-  .node-project .field-name-field-project-link {}
+  .field-name-field-project-image {
+    margin: 0.5em 1em 4em 1em;
+
+    .field-item {
+      position: relative;
+
+      .field-name-field-project-image-mobile-laptop-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+  }
+
+  .group-project-image-2 {
+    margin: 0 5em 0 5em;
+  }
+
+  .field-name-field-project-link {}
 
   /* Services. */
   .field-name-field-global-t-service {

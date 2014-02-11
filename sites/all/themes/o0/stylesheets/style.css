@@ -902,6 +902,21 @@ body.node-type-project #content-title {
   font-size: 1.375em;
   color: #666666;
 }
+.node-project .field-name-field-project-image {
+  margin: 0.5em 1em 4em 1em;
+}
+.node-project .field-name-field-project-image .field-item {
+  position: relative;
+}
+.node-project .field-name-field-project-image .field-item .field-name-field-project-image-mobile-laptop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.node-project .group-project-image-2 {
+  margin: 0 5em 0 5em;
+}
 .node-project .field-name-field-global-t-service ul {
   padding-left: 0;
   margin-left: 2.142857142857143em;
