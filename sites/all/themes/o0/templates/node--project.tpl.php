@@ -45,6 +45,22 @@
           </div>
         </header>
 
+        <?php if (!empty($content['field_project_image'])): ?>
+          <?php if (empty($content['field_project_image_mobile'])): ?>
+            <div class="field field-name-field-project-image field-type-image show-for-small"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('project_image_modal_fullscreen', $node->field_project_image['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_laptop_node', $node->field_project_image['und'][0]['uri']); ?>" alt="" /></a></div></div></div>
+          <?php else: ?>
+            <div class="field field-name-field-project-image field-type-image show-for-small"><div class="field-items"><div class="field-item">
+                  <a href="<?php print image_style_url('project_image_modal_fullscreen', $node->field_project_image['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image">
+                    <img typeof="foaf:Image" src="<?php print image_style_url('project_image_laptop_node', $node->field_project_image['und'][0]['uri']); ?>" alt="" />
+                    <img class="field-name-field-project-image-mobile-laptop-overlay" typeof="foaf:Image" src="<?php print image_style_url('project_image_mobile_laptop_overlay', $node->field_project_image_mobile['und'][0]['uri']); ?>" alt="" />
+                  </a>
+                  <a href="<?php print image_style_url('project_image_mobile_modal_fullscreen', $node->field_project_image_mobile['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image"></a>
+                </div></div></div>
+          <?php endif; ?>
+        <?php else: ?>
+          <div class="field field-name-field-project-image field-type-image show-for-small"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_laptop_node', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+        <?php endif; ?>
+
         <?php if (!empty($content['field_global_r_organization'])): ?>
           <?php print views_embed_view('organization_reference', 'project_node_body', $node->nid); ?>
         <?php endif; ?>
@@ -93,6 +109,7 @@
                 <img typeof="foaf:Image" src="<?php print image_style_url('project_image_laptop_node', $node->field_project_image['und'][0]['uri']); ?>" alt="" />
                 <img class="field-name-field-project-image-mobile-laptop-overlay" typeof="foaf:Image" src="<?php print image_style_url('project_image_mobile_laptop_overlay', $node->field_project_image_mobile['und'][0]['uri']); ?>" alt="" />
               </a>
+              <a href="<?php print image_style_url('project_image_mobile_modal_fullscreen', $node->field_project_image_mobile['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image"></a>
             </div></div></div>
           <?php endif; ?>
         <?php else: ?>
@@ -172,3 +189,14 @@
   </section>
 
 </article>
+
+<script>
+  (function($, Drupal, window, document, undefined) {
+    $(window).ready(function() {
+      mqColorboxGroup();
+    });
+    $(window).resize(function() {
+      mqColorboxGroup();
+    });
+  })(jQuery, Drupal, this, this.document);
+</script>

@@ -37,3 +37,20 @@ function unifyContainer() {
   $('.field-item').css('height', heightMax);
   $('.field-item').css('width', widthMax);
 }
+
+
+
+
+/**
+ * Define Colorbox image group depending on visible elements and media queries.
+ */
+function mqColorboxGroup() {
+  if ( $(window).innerWidth() > 419 ) {
+    $('.field-name-field-project-image.show-for-small a').attr('rel', 'node-field-project-image-disabled');
+    $('.field-name-field-project-image.hide-for-small a').attr('rel', 'node-field-project-image');
+  }
+  if ( $(window).innerWidth() < 419 ) {
+    $('.field-name-field-project-image.show-for-small a').attr('rel', 'node-field-project-image');
+    $('.field-name-field-project-image.hide-for-small a').attr('rel', 'node-field-project-image-disabled');
+  }
+}
