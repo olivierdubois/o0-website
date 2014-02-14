@@ -134,6 +134,11 @@ $meta-font-size: 0.75em;
 $meta-font-color: $color-2-grey;
 $meta-text-transform: uppercase;
 
+// Legal.
+$legal-font-size: 0.75em;
+$legal-font-color: $color-2-grey;
+$legal-text-transform: none;
+
 
 
 
@@ -265,6 +270,13 @@ $mq-breakpoint-small: "319px";
   font-size: $meta-font-size;
   color: $meta-font-color;
   text-transform: $meta-text-transform;
+}
+
+// Legal.
+@mixin legal {
+  font-size: $legal-font-size;
+  color: $legal-font-color;
+  text-transform: $legal-text-transform;
 }
 
 // Button.

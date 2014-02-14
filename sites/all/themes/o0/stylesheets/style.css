@@ -707,6 +707,12 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   content: "\f017";
 }
+.node .legal {
+  font-size: 0.75em;
+  color: #999999;
+  text-transform: none;
+  font-style: italic;
+}
 
 /* Block-level links. */
 a.blocklevel {

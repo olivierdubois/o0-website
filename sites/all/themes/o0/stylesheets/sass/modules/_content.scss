@@ -58,6 +58,11 @@ h6 {
       content: "\f017";
     }
   }
+
+  .legal {
+    @include legal;
+    font-style: italic;
+  }
 }
 
 /* Block-level links. */
