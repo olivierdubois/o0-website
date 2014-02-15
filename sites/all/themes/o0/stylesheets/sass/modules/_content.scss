@@ -29,33 +29,30 @@ h6 {
 }
 
 .node {
-  /* Submitted line. */
-  .meta .submitted {
-    @include meta;
-    margin: 0.1875em 0 0 0;
-    padding: 0;
-    font-size: 0.625em;
-    font-weight: bold;
-    line-height: 0.75em;
-    text-align: left;
-  }
+  .meta {
+    margin: -1em 0 1em 0;
 
-  /* Date fields. */
-  .field-type-date {
-    font-size: 0.875em;
-    font-weight: bold;
-    color: rgb(153, 153, 153);
-    text-transform: uppercase;
-  }
-
-  .meta .field-type-date {
-    .field-items {
-      @include icon-field-items;
+    /* Submitted line. */
+    .submitted {
+      @include meta;
+      font-size: 0.625em;
+      font-weight: bold;
     }
 
-    .field-item:before {
-      @include icon-field-item-before;
-      content: "\f017";
+    /* Date fields. */
+    .field-type-date {
+      @include meta;
+      font-size: 0.875em;
+      font-weight: bold;
+
+      .field-items {
+        @include icon-field-items;
+      }
+
+      .field-item:before {
+        @include icon-field-item-before;
+        content: "\f017";
+      }
     }
   }
 
@@ -103,17 +100,9 @@ a.blocklevel {
     line-height: 1.125em;
   }
 
-  .meta .field-type-date {
-    font-size: 0.75em;
-
-    .field-items {
-      @include icon-field-items;
-    }
-
-    .field-item:before {
-      @include icon-field-item-before;
-      content: "\f017";
-    }
+  .meta {
+    margin: 0;
+    .field-type-date { font-size: 0.75em; }
   }
 }
 
@@ -130,9 +119,7 @@ a.blocklevel {
 .view .views-view-grid .node {
   margin: 0;
   padding: 1em 0 1em 0;
-
   .field-type-date { font-size: 0.75em; }
-
   @media only screen and (max-width: $mq-breakpoint-medium) { border-bottom: 1px dashed rgb(153, 153, 153); }
 }
 .view .views-view-grid .node-title {
