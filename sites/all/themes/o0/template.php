@@ -296,6 +296,28 @@ function o0_preprocess_node(&$variables) {
   // TODO : Cleanup
   $node = $variables['node'];
   // Set theming-related variables depending on the use of certain taxonomy terms.
+  // 'Project - Type' vocabulary.
+  if (!empty($node->field_project_t_project_type)) {
+    $field_project_t_project_type__terms = $node->field_project_t_project_type;
+    $variables['field_project_t_project_type__term'] = '';
+    $variables['field_project_image__image_style'] = 'project_image_node';
+    foreach ($field_project_t_project_type__terms['und'] as $key => $value) {
+      // If 'Website'...
+      if ($field_project_t_project_type__terms['und'][$key]['tid'] == 28) {
+        $variables['field_project_t_project_type__term'] = 'Website';
+        $variables['field_project_image__image_style'] = 'project_image_laptop_node';
+      }
+      // If 'Logo'...
+      if ($field_project_t_project_type__terms['und'][$key]['tid'] == 39) {
+        $variables['field_project_t_project_type__term'] = 'Logo';
+      }
+      // If 'Email'...
+      if ($field_project_t_project_type__terms['und'][$key]['tid'] == 38) {
+        $variables['field_project_t_project_type__term'] = 'Email';
+        $variables['field_project_image__image_style'] = 'project_image_email_node';
+      }
+    }
+  }
   // 'Person - Experience' vocabulary.
   if (!empty($node->field_global_t_person_exper)) {
     $field_global_t_person_exper__terms = $node->field_global_t_person_exper;
@@ -303,7 +325,7 @@ function o0_preprocess_node(&$variables) {
     foreach ($field_global_t_person_exper__terms['und'] as $key => $value) {
       // If 'Freelance front-end web developer'...
       if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 50) {
-        $variables['field_global_t_person_exper__term'] = 'Freelancer';
+        $variables['field_global_t_person_exper__term'] = 'Freelance web developer';
       }
       // If 'Chief Web Ninja at Shervin'...
       if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 51) {
@@ -312,6 +334,10 @@ function o0_preprocess_node(&$variables) {
       // If 'Volunteer at BC SPCA Wild ARC'...
       if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 52) {
         $variables['field_global_t_person_exper__term'] = 'Wild ARC';
+      }
+      // If 'Freelance graphic designer'...
+      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 53) {
+        $variables['field_global_t_person_exper__term'] = 'Freelance graphic designer';
       }
     }
   }
