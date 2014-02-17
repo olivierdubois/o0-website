@@ -906,6 +906,14 @@ body.node-type-project #content-title {
 }
 
 /**
+ * VIEWS
+ */
+.view .node-project .field-name-field-project-image {
+  margin: 0;
+  /* Reset margin to 0 to override margin used in default node rules. */
+}
+
+/**
  * VIEWS - Project - Page Grid
  */
 .view .views-view-grid .node-project .field-name-field-project-type {
