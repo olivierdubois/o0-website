@@ -168,7 +168,7 @@
   bottom: -26px;
   right: 80px;
   color: #313131;
-  border-left: 1px solid #313131;
+  //border-left: 1px solid #313131;
   padding: 0 0 0 15px;
 }
 /* Slideshow not implemented. */
@@ -186,28 +186,28 @@
   position: absolute;
   bottom: -26px;
   right: 45px;
-  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat 0 -48px;
-  width: 21px;
-  height: 15px;
+  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat -8px -88px;
+  width: 24px;
+  height: 24px;
   text-indent: -9999px;
 }
 #cboxPrevious:hover {
-  background-position: 0 -111px;
+  background-position: -48px -88px;
 }
 #cboxNext {
   position: absolute;
   bottom: -26px;
   right: 15px;
-  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat 0 -29px;
-  width: 21px;
-  height: 15px;
+  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat -8px -48px;
+  width: 24px;
+  height: 24px;
   text-indent: -9999px;
 }
 #cboxNext:hover {
-  background-position: 0 -92px;
+  background-position: -48px -48px;
 }
 #cboxLoadingOverlay {
-  background: #e6e6e6;
+  background: hsl(0, 0, 95);
 }
 #cboxLoadingGraphic {
   background: url(../libraries/colorbox/styles/o0/images/loading.png) no-repeat center center;
@@ -216,20 +216,20 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat 0px 0px;
-  width: 25px;
-  height: 25px;
+  background: url(../libraries/colorbox/styles/o0/images/controls.png) no-repeat -8px -8px;
+  width: 24px;
+  height: 24px;
   text-indent: -9999px;
   opacity: 0;
 }
 #cboxClose:hover {
-  background-position: 0 -63px;
+  background-position: -48px -8px;
 }
 
 
 
 
 #cboxCurrent {
-  font-size: 0.875em;
+  font-size: 0.813em;
   color: hsl(0, 0, 50);
 }
