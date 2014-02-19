@@ -89,6 +89,7 @@ function o0_preprocess_html(&$variables, $hook) {
   drupal_add_js('sites/all/libraries/foundation/js/vendor/modernizr.js');
   drupal_add_js('sites/all/libraries/foundation/js/foundation.min.js');
   // Add JavaScript files from libraries.
+  drupal_add_js('sites/all/themes/o0/libraries/colorbox/styles/o0/colorbox_style.js');
   drupal_add_js('sites/all/libraries/knob/js/jquery.knob.js');
   // Attributes for body element.
   $path_alias_1 = 'path-alias-1-' . arg(0, drupal_get_path_alias());
