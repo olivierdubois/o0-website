@@ -1468,13 +1468,17 @@ body.node-type-testimonial #page-title {
   background-position: -48px -8px;
 }
 
+/**
+ * OVERRIDE
+ */
 #cboxCurrent {
   font-size: 0.813em;
   color: gray;
 }
 
 #cboxContent {
-  -moz-box-shadow: 0px 3px 10px #999;
-  -webkit-box-shadow: 0px 3px 10px #999;
-  box-shadow: 0px 3px 10px #999;
+  border: 1px solid #cccccc;
+  -moz-box-shadow: 0 0 5px 1px #cccccc;
+  -webkit-box-shadow: 0 0 5px 1px #cccccc;
+  box-shadow: 0 0 5px 1px #cccccc;
 }
