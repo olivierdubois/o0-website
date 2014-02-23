@@ -94,9 +94,6 @@
 }
 #colorbox {
   background: #fff url(images/bg_tab.png) center bottom repeat-x;
-//  -moz-box-shadow: 3px 3px 16px #333;
-//  -webkit-box-shadow: 3px 3px 16px #333;
-//  box-shadow: 3px 3px 16px #333;
   -moz-border-radius-bottomleft: 9px;
   -moz-border-radius-bottomright: 9px;
   -webkit-border-bottom-left-radius: 9px;
@@ -168,7 +165,6 @@
   bottom: -30px;
   right: 80px;
   color: #313131;
-  //border-left: 1px solid #313131;
   padding: 0 0 0 15px;
 }
 /* Slideshow not implemented. */

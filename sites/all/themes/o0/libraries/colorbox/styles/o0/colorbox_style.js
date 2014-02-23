@@ -13,8 +13,6 @@ Drupal.behaviors.initColorboxO0Style = {
       $('#cboxClose', context).css('opacity', 0);
     });
     $(document).bind('cbox_complete', function () {
-      // Show close button with a delay.
-      //$('#cboxClose', context).fadeTo('fast', 0, function () {$(this).css('opacity', 1)});
       // Show #cboxContent content.
       $('#cboxContent', context).css('opacity', 1);
       // Show close button when mouse hover #cboxContent content.
