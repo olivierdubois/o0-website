@@ -301,12 +301,14 @@ function o0_preprocess_node(&$variables) {
   if (!empty($node->field_project_t_project_type)) {
     $field_project_t_project_type__terms = $node->field_project_t_project_type;
     $variables['field_project_t_project_type__term'] = '';
-    $variables['field_project_image__image_style'] = 'project_image_node';
+    $variables['field_project_image__image_style__node'] = 'project_image_node';
+    $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
     foreach ($field_project_t_project_type__terms['und'] as $key => $value) {
       // If 'Website'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 28) {
         $variables['field_project_t_project_type__term'] = 'Website';
-        $variables['field_project_image__image_style'] = 'project_image_laptop_node';
+        $variables['field_project_image__image_style__node'] = 'project_image_laptop_node';
+        $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
       }
       // If 'Logo'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 39) {
@@ -315,7 +317,8 @@ function o0_preprocess_node(&$variables) {
       // If 'Email'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 38) {
         $variables['field_project_t_project_type__term'] = 'Email';
-        $variables['field_project_image__image_style'] = 'project_image_email_node';
+        $variables['field_project_image__image_style__node'] = 'project_image_email_node';
+        $variables['field_project_image__image_style__fullscreen'] = 'project_image_email_modal_fullscreen';
       }
     }
   }
