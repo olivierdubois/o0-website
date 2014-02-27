@@ -91,6 +91,9 @@ function o0_preprocess_html(&$variables, $hook) {
   // Add JavaScript files from libraries.
   drupal_add_js('sites/all/themes/o0/libraries/colorbox/styles/o0/colorbox_style.js');
   drupal_add_js('sites/all/libraries/knob/js/jquery.knob.js');
+  // Add amCharts library JavaScript files.
+  drupal_add_js('sites/all/libraries/amcharts/amcharts/amcharts.js');
+  drupal_add_js('sites/all/libraries/amcharts/amcharts/serial.js');
   // Attributes for body element.
   $path_alias_1 = 'path-alias-1-' . arg(0, drupal_get_path_alias());
   $path_alias_2 = 'path-alias-2-' . arg(1, drupal_get_path_alias());
