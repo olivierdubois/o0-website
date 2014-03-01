@@ -1,0 +1,39 @@
+/**
+ * AMCHARTS
+ */
+
+
+
+
+// Primary colours.
+$chart-column-fill-1-blue: rgb(135, 206, 235); // Blue
+
+
+
+
+.amcharts a {
+  display: none !important;
+}
+
+.chart-person-skill {
+  width: 100%;
+  height: 200px;
+
+  /* X-axis label. */
+  text {
+    tspan {
+      font-size: 1rem !important;
+      font-weight: bold !important;
+    }
+  }
+
+  /* Y-axis label. */
+  text[text-anchor="end"] {
+    fill: hsl(0, 0, 70);
+
+    tspan {
+      font-size: 0.875em !important;
+      font-weight: normal !important;
+    }
+  }
+}
