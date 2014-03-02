@@ -81,19 +81,15 @@ function o0_preprocess_html(&$variables, $hook) {
   $variables['head_title'] = preg_replace('/\|/', '-', $variables['head_title']);
   $variables['head_title'] = preg_replace('/\-/', '|', $variables['head_title'], 1);
   // Add ZURB Foundation framework CSS files.
-  drupal_add_css('sites/all/libraries/foundation/css/normalize.css');
-  drupal_add_css('sites/all/libraries/foundation/css/foundation.min.css');
+  drupal_add_css('sites/all/libraries/foundation/css/normalize.css', array('group' => CSS_DEFAULT));
+  drupal_add_css('sites/all/libraries/foundation/css/foundation.min.css', array('group' => CSS_DEFAULT));
   // Add CSS files from libraries.
-  drupal_add_css('sites/all/libraries/font-awesome/css/font-awesome.min.css');
+  drupal_add_css('sites/all/libraries/font-awesome/css/font-awesome.min.css', array('group' => CSS_DEFAULT));
   // Add ZURB Foundation framework JavaScript files.
-  drupal_add_js('sites/all/libraries/foundation/js/vendor/modernizr.js');
-  drupal_add_js('sites/all/libraries/foundation/js/foundation.min.js');
+  drupal_add_js('sites/all/libraries/foundation/js/vendor/modernizr.js', array('group' => JS_LIBRARY));
+  drupal_add_js('sites/all/libraries/foundation/js/foundation.min.js', array('group' => JS_LIBRARY));
   // Add JavaScript files from libraries.
-  drupal_add_js('sites/all/themes/o0/libraries/colorbox/styles/o0/colorbox_style.js');
-  drupal_add_js('sites/all/libraries/knob/js/jquery.knob.js');
-  // Add amCharts library JavaScript files.
-  drupal_add_js('sites/all/libraries/amcharts/amcharts/amcharts.js');
-  drupal_add_js('sites/all/libraries/amcharts/amcharts/serial.js');
+  drupal_add_js('sites/all/themes/o0/libraries/colorbox/styles/o0/colorbox_style.js', array('group' => JS_DEFAULT));
   // Attributes for body element.
   $path_alias_1 = 'path-alias-1-' . arg(0, drupal_get_path_alias());
   $path_alias_2 = 'path-alias-2-' . arg(1, drupal_get_path_alias());
@@ -126,6 +122,16 @@ function o0_process_html(&$variables, $hook) {
  * Add convenience variables and template suggestions
  */
 function o0_preprocess_page(&$variables) {
+
+  // Add Javascript files depending on node type or page path.
+  if ((isset($variables['node']) && $variables['node']->type == 'person') || (arg(0, drupal_get_path_alias()) == 'about')) {
+    // Add amCharts library JavaScript files.
+    drupal_add_js('sites/all/libraries/amcharts/amcharts/amcharts.js', array('group' => JS_LIBRARY, 'weight' => 5000));
+    drupal_add_js('sites/all/libraries/amcharts/amcharts/serial.js', array('group' => JS_LIBRARY, 'weight' => 5000));
+    // Add amMap library JavaScript files.
+    drupal_add_js('sites/all/libraries/ammap/ammap/ammap.js', array('group' => JS_LIBRARY, 'weight' => 5010));
+    drupal_add_js('sites/all/libraries/ammap/ammap/maps/js/worldLow.js', array('group' => JS_LIBRARY, 'weight' => 5010));
+  }
 
   // Site navigation links.
   $variables['main_menu_links'] = '';
@@ -309,17 +315,17 @@ function o0_preprocess_node(&$variables) {
     foreach ($field_project_t_project_type__terms['und'] as $key => $value) {
       // If 'Website'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 28) {
-        $variables['field_project_t_project_type__term'] = 'Website';
+        $variables['field_project_t_project_type__term'] = 'website';
         $variables['field_project_image__image_style__node'] = 'project_image_laptop_node';
         $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
       }
       // If 'Logo'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 39) {
-        $variables['field_project_t_project_type__term'] = 'Logo';
+        $variables['field_project_t_project_type__term'] = 'logo';
       }
       // If 'Email'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 38) {
-        $variables['field_project_t_project_type__term'] = 'Email';
+        $variables['field_project_t_project_type__term'] = 'email';
         $variables['field_project_image__image_style__node'] = 'project_image_email_node';
         $variables['field_project_image__image_style__fullscreen'] = 'project_image_email_modal_fullscreen';
       }
