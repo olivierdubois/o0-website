@@ -5,8 +5,6 @@
 
 - ZURB Foundation 5.0.3
 
-- jQuery Knob 1.2.3
-
 - amCharts 3.4.4
 
 - amMap 3.8.10

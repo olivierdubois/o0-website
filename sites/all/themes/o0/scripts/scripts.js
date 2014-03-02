@@ -5,16 +5,6 @@ $ = jQuery;
 
 
 /**
- * jQuery Knob.
- */
-$(function() {
-  $(".chart-doughnut").knob();
-});
-
-
-
-
-/**
  * Unify width and height of 'field-item' container in grid view.
  * This can be used to align images of different sizes (such as logos, etc.) on
  * the center of the 'field-item' containers.
