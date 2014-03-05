@@ -58,7 +58,7 @@
             </div></div></div>
           <?php endif; ?>
         <?php else: ?>
-          <div class="field field-name-field-project-image field-type-image show-for-small"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+          <div class="field field-name-field-project-image field-type-image show-for-small"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $variables['content_placeholder_image']); ?>" alt="" class="<?php print $variables['content_placeholder_image_classes']; ?>" /></div></div></div>
         <?php endif; ?>
 
         <?php if (!empty($content['field_global_r_organization'])): ?>
@@ -102,7 +102,7 @@
 
         <?php if (!empty($content['field_project_image'])): ?>
           <?php if (empty($content['field_project_image_mobile'])): ?>
-            <div class="field field-name-field-project-image field-type-image hide-for-small"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url($variables['field_project_image__image_style__fullscreen'], $node->field_project_image['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $node->field_project_image['und'][0]['uri']); ?>" alt="" /></a></div></div></div>
+            <div class="field field-name-field-project-image field-type-image project-type-<?php print $variables['field_project_t_project_type__term']; ?> hide-for-small"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url($variables['field_project_image__image_style__fullscreen'], $node->field_project_image['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $node->field_project_image['und'][0]['uri']); ?>" alt="" /></a></div></div></div>
           <?php else: ?>
             <div class="field field-name-field-project-image field-type-image hide-for-small"><div class="field-items"><div class="field-item">
               <a href="<?php print image_style_url($variables['field_project_image__image_style__fullscreen'], $node->field_project_image['und'][0]['uri']); ?>" class="colorbox-inline" rel="node-field-project-image">
@@ -113,7 +113,7 @@
             </div></div></div>
           <?php endif; ?>
         <?php else: ?>
-          <div class="field field-name-field-project-image field-type-image hide-for-small"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+          <div class="field field-name-field-project-image field-type-image hide-for-small"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__node'], $variables['content_placeholder_image']); ?>" alt="" class="<?php print $variables['content_placeholder_image_classes']; ?>" /></div></div></div>
         <?php endif; ?>
 
         <?php
