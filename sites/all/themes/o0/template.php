@@ -307,27 +307,32 @@ function o0_preprocess_node(&$variables) {
   $node = $variables['node'];
   // Set theming-related variables depending on the use of certain taxonomy terms.
   // 'Project - Type' vocabulary.
+  // Set default image styles.
+  $variables['field_project_t_project_type__term'] = '';
+  $variables['field_project_image__image_style__node'] = 'project_image_node';
+  $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
+  $variables['field_project_image__image_style__view_page_grid'] = 'project_image_view_page_grid';
   if (!empty($node->field_project_t_project_type)) {
     $field_project_t_project_type__terms = $node->field_project_t_project_type;
-    $variables['field_project_t_project_type__term'] = '';
-    $variables['field_project_image__image_style__node'] = 'project_image_node';
-    $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
     foreach ($field_project_t_project_type__terms['und'] as $key => $value) {
       // If 'Website'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 28) {
         $variables['field_project_t_project_type__term'] = 'website';
         $variables['field_project_image__image_style__node'] = 'project_image_laptop_node';
         $variables['field_project_image__image_style__fullscreen'] = 'project_image_modal_fullscreen';
+        $variables['field_project_image__image_style__view_page_grid'] = 'project_image_website_view_page_grid';
       }
       // If 'Logo'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 39) {
         $variables['field_project_t_project_type__term'] = 'logo';
+        $variables['field_project_image__image_style__view_page_grid'] = 'project_image_view_page_grid';
       }
       // If 'Email'...
       if ($field_project_t_project_type__terms['und'][$key]['tid'] == 38) {
         $variables['field_project_t_project_type__term'] = 'email';
         $variables['field_project_image__image_style__node'] = 'project_image_email_node';
         $variables['field_project_image__image_style__fullscreen'] = 'project_image_email_modal_fullscreen';
+        $variables['field_project_image__image_style__view_page_grid'] = 'project_image_email_view_page_grid';
       }
     }
   }
