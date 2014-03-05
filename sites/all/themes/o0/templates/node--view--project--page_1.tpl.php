@@ -18,10 +18,10 @@
 
       <?php if (!empty($content['field_project_image_t'])): ?>
         <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_page_grid', $node->field_project_image_t['und'][0]['uri']); ?>" alt="" /></div></div></div>
-      <?php elseif (!empty($content['field_project_image'])): ?>
-        <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_page_grid', $node->field_project_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
+    <?php elseif (!empty($content['field_project_image'])): ?>
+        <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__view_page_grid'], $node->field_project_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
       <?php else: ?>
-        <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_page_grid', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+        <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url($variables['field_project_image__image_style__view_page_grid'], $variables['content_placeholder_image']); ?>" alt="" class="<?php print $variables['content_placeholder_image_classes']; ?>" /></div></div></div>
       <?php endif; ?>
 
       <?php print render($title_prefix); ?>
