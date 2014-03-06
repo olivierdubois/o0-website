@@ -41,6 +41,13 @@
         z-index: 10;
       }
     }
+
+    &.project-type-email {
+      border: 1px solid hsl(0, 0, 80);
+      -moz-box-shadow: 0 0 5px 1px hsl(0, 0, 80);
+      -webkit-box-shadow: 0 0 5px 1px hsl(0, 0, 80);
+      box-shadow: 0 0 5px 1px hsl(0, 0, 80);
+    }
   }
 
   .group-project-image-2 {
