@@ -47,7 +47,6 @@ regions[help] = Help
 ;features[] = secondary_menu
 
 ; STYLESHEETS
-stylesheets[all][] = stylesheets/reset.css
 ;stylesheets[all][] = ../o0cms/styles/toolbar-override.css
 ;stylesheets[all][] = ../o0cms/styles/seven-override.css
 ;stylesheets[all][] = ../o0cms/styles/admin-content.css
