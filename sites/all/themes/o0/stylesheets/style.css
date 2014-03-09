@@ -705,6 +705,11 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   content: "\f017";
 }
+.node .image-title {
+  font-size: 0.75em;
+  font-style: italic;
+  color: #999999;
+}
 .node .legal {
   font-size: 0.75em;
   color: #999999;

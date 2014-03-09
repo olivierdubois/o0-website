@@ -56,6 +56,12 @@ h6 {
     }
   }
 
+  .image-title {
+    font-size: 0.75em;
+    font-style: italic;
+    color: darken($color-2-grey, 0);
+  }
+
   .legal {
     @include legal;
     font-style: italic;
