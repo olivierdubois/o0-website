@@ -19,9 +19,9 @@
         <div class="row">
           <div class="large-4 medium-4 small-4 columns">
             <?php if (!empty($content['field_project_image_t'])): ?>
-              <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_embed', $node->field_project_image_t['und'][0]['uri']); ?>" alt="" /></div></div></div>
+              <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_embed', $node->field_project_image_t['und'][0]['uri']); ?>" alt="<?php print $node->field_project_image_t['und'][0]['alt']; ?>" title="<?php print $node->field_project_image_t['und'][0]['title']; ?>" /></div></div></div>
             <?php elseif (!empty($content['field_project_image'])): ?>
-              <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_embed', $node->field_project_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
+              <div class="field field-name-field-project-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('project_image_view_embed', $node->field_project_image['und'][0]['uri']); ?>" alt="<?php print $node->field_project_image['und'][0]['alt']; ?>" title="<?php print $node->field_project_image['und'][0]['title']; ?>" /></div></div></div>
             <?php endif; ?>
           </div>
           <div class="large-8 medium-8 small-8 columns">
