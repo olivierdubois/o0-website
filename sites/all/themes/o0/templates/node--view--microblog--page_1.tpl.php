@@ -18,9 +18,9 @@
 
       <?php if (!empty($content['field_article_image'])): ?>
         <?php //print render($content['field_article_image']); ?>
-        <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_view_page_grid', $node->field_article_image['und'][0]['uri']); ?>" alt="" /></div></div></div>
+        <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_view_page_grid', $node->field_article_image['und'][0]['uri']); ?>" alt="<?php print $node->field_article_image['und'][0]['alt']; ?>" title="<?php print $node->field_article_image['und'][0]['title']; ?>" /></div></div></div>
       <?php else: ?>
-        <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_view_page_grid', $content_placeholder_image); ?>" alt="" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
+        <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_view_page_grid', $content_placeholder_image); ?>" alt="Placeholder image" class="<?php print $content_placeholder_image_classes; ?>" /></div></div></div>
       <?php endif; ?>
 
       <?php print render($title_prefix); ?>
