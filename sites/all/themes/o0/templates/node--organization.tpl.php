@@ -84,7 +84,7 @@
     <?php if (!empty($content['field_org_logo'])): ?>
         </div>
         <div class="large-4 columns">
-          <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_node', $node->field_org_logo['und'][0]['uri']); ?>" alt="" /></div></div></div>
+          <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_node', $node->field_org_logo['und'][0]['uri']); ?>" alt="<?php print $title; ?> logo" /></div></div></div>
         </div>
       </div>
     <?php endif; ?>

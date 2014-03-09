@@ -17,7 +17,7 @@
       ?>
 
       <?php if (!empty($content['field_org_logo'])): ?>
-        <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_view_page_grid', $node->field_org_logo['und'][0]['uri']); ?>" alt="" /></div></div></div>
+        <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><img typeof="foaf:Image" src="<?php print image_style_url('organization_logo_view_page_grid', $node->field_org_logo['und'][0]['uri']); ?>" alt="<?php print $title; ?> logo" /></div></div></div>
       <?php else: ?>
         <div class="field field-name-field-org-logo field-type-image"><div class="field-items"><div class="field-item"><?php print $title; ?></div></div></div>
       <?php endif; ?>
