@@ -303,7 +303,7 @@ function o0_preprocess_node(&$variables) {
   $variables['content_placeholder_image'] = 'public://article/image/content-image-placeholder.jpg';
   $variables['content_placeholder_image_classes'] = 'content-placeholder-image';
 
-  // TODO : Cleanup
+  // TODO : Clean up
   $node = $variables['node'];
   // Set theming-related variables depending on the use of certain taxonomy terms.
   // 'Project - Type' vocabulary.
@@ -356,6 +356,19 @@ function o0_preprocess_node(&$variables) {
       // If 'Freelance graphic designer'...
       if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 53) {
         $variables['field_global_t_person_exper__term'] = 'Freelance graphic designer';
+      }
+    }
+  }
+  // 'Content state' vocabulary.
+  $variables['field_global_t_content_state__term'] = '';
+  $variables['field_global_t_content_state__message'] = '';
+  if (!empty($node->field_global_t_content_state)) {
+    $field_global_t_content_state__terms = $node->field_global_t_content_state;
+    foreach ($field_global_t_content_state__terms['und'] as $key => $value) {
+      // If 'Stale'...
+      if ($field_global_t_content_state__terms['und'][$key]['tid'] == 61) {
+        $variables['field_global_t_content_state__term'] = 'stale';
+        $variables['field_global_t_content_state__message'] = '<div class="messages message message-info">Please note that this post was originally published more than a year ago and may contain outdated information. Although the concepts and principles are generally still relevant, some of the references may no longer be up-to-date.</div>';
       }
     }
   }
