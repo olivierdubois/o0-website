@@ -1,0 +1,113 @@
+/**
+ * SYSTEM MESSAGE
+ */
+
+// Font Awesome icons to use with ':before' (v4.0.3).
+@mixin messages-icon {
+  // Font Awesome 'fa-ul' rule.
+  padding-left: 0;
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+@mixin messages-icon-message {
+  // Font Awesome 'fa-ul > li' rule.
+  position: relative;
+}
+@mixin messages-icon-message-before {
+  // Font Awesome 'fa-li' rule.
+  position: absolute;
+  left: -0.267857142857142875em; //* Default: -2.142857142857143em; */
+  width: 2.142857142857143em;
+  top: 0.33482142857142859375em; //* Default: 0.14285714285714285em; */
+  text-align: center;
+  // Font Awesome 'fa' rule.
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.messages {
+  @include messages-icon;
+  margin: 0 0 1em 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+
+  &.status {
+    @include messages-icon-message;
+    background-image: none;
+    background-color: lighten(rgb(134, 186, 72), 35);
+    border: none;
+    color: darken(rgb(134, 186, 72), 10);
+
+    &:before {
+      @include messages-icon-message-before;
+      content: "\f058";
+      font-size: 2.5em;
+      color: rgb(134, 186, 72);
+    }
+  }
+
+  &.info {
+    @include messages-icon-message;
+    background-image: none;
+    background-color: lighten(rgb(66, 139, 169), 40);
+    border: none;
+    color: darken(rgb(66, 139, 169), 10);
+
+    &:before {
+      @include messages-icon-message-before;
+      content: "\f05a";
+      font-size: 2.5em;
+      color: rgb(66, 139, 169);
+    }
+  }
+
+  &.help {
+    @include messages-icon-message;
+    background-image: none;
+    background-color: lighten(rgb(66, 139, 169), 40);
+    border: none;
+    color: darken(rgb(66, 139, 169), 10);
+
+    &:before {
+      @include messages-icon-message-before;
+      content: "\f059";
+      font-size: 2.5em;
+      color: rgb(66, 139, 169);
+    }
+  }
+
+  &.warning {
+    @include messages-icon-message;
+    background-image: none;
+    background-color: lighten(rgb(232, 124, 52), 32);
+    border: none;
+    color: darken(rgb(232, 124, 52), 10);
+
+    &:before {
+      @include messages-icon-message-before;
+      content: "\f06a";
+      font-size: 2.5em;
+      color: rgb(232, 124, 52);
+    }
+  }
+
+  &.error {
+    @include messages-icon-message;
+    background-image: none;
+    background-color: lighten(rgb(228, 79, 55), 35);
+    border: none;
+    color: darken(rgb(228, 79, 55), 10);
+
+    &:before {
+      @include messages-icon-message-before;
+      content: "\f057";
+      font-size: 2.5em;
+      color: rgb(228, 79, 55);
+    }
+  }
+}
