@@ -111,3 +111,45 @@
     }
   }
 }
+
+
+
+
+/**
+ * 403/404 ERROR PAGES
+ */
+
+body.page-error {
+  .error-title {
+    display: none;
+  }
+
+  #page-title, h1, h2, h3, h4, h5, h6 {
+    margin: 0.25em 0 0.25em 0;
+    color: $font-color;
+  }
+
+  .error-message {
+    margin: 0 0 1em 0;
+    font-family: $heading-font-stack;
+    font-weight: bold;
+    color: $color-1-orange;
+    line-height: 1em;
+  }
+
+  &.page-error-403 {
+    .error-message { font-size: 2.063em; }
+  }
+
+  &.page-error-404 {
+    .error-message { font-size: 1.938em; }
+  }
+
+  .error-code {
+    font-family: $heading-font-stack;
+    font-size: 8em;
+    font-weight: bold;
+    color: $color-1-orange;
+    line-height: 1em;
+  }
+}

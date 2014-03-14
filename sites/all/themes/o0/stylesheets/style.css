@@ -765,6 +765,37 @@ h2.pane-title {
 }
 
 /**
+ * 403/404 ERROR PAGES
+ */
+body.page-error .error-title {
+  display: none;
+}
+body.page-error #page-title, body.page-error h1, body.page-error h2, body.page-error h3, body.page-error h4, body.page-error h5, body.page-error h6 {
+  margin: 0.25em 0 0.25em 0;
+  color: #333333;
+}
+body.page-error .error-message {
+  margin: 0 0 1em 0;
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff862a;
+  line-height: 1em;
+}
+body.page-error.page-error-403 .error-message {
+  font-size: 2.063em;
+}
+body.page-error.page-error-404 .error-message {
+  font-size: 1.938em;
+}
+body.page-error .error-code {
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif;
+  font-size: 8em;
+  font-weight: bold;
+  color: #ff862a;
+  line-height: 1em;
+}
+
+/**
  * NODE - Defaults
  */
 /* Heading. */
