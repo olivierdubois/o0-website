@@ -90,6 +90,14 @@ function o0_preprocess_html(&$variables, $hook) {
   drupal_add_js('sites/all/libraries/foundation/js/foundation.min.js', array('group' => JS_LIBRARY));
   // Add JavaScript files from libraries.
   drupal_add_js('sites/all/themes/o0/libraries/colorbox/styles/o0/colorbox_style.js', array('group' => JS_DEFAULT));
+  // Attributes for body element for custom 403/404 error pages.
+  $http_header_status = drupal_get_http_header('status');
+  if ($http_header_status == '403 Forbidden') {
+    $variables['classes_array'][] = 'page-error page-error-403';
+  }
+  if ($http_header_status == '404 Not Found') {
+    $variables['classes_array'][] = 'page-error page-error-404';
+  }
   // Attributes for body element.
   $path_alias_1 = 'path-alias-1-' . arg(0, drupal_get_path_alias());
   $path_alias_2 = 'path-alias-2-' . arg(1, drupal_get_path_alias());
@@ -122,6 +130,15 @@ function o0_process_html(&$variables, $hook) {
  * Add convenience variables and template suggestions
  */
 function o0_preprocess_page(&$variables) {
+
+  // Template suggestions for custom 403/404 error pages.
+  $http_header_status = drupal_get_http_header('status');
+  if ($http_header_status == '403 Forbidden') {
+    $variables['theme_hook_suggestions'][] = 'page__403';
+  }
+  if ($http_header_status == '404 Not Found') {
+    $variables['theme_hook_suggestions'][] = 'page__404';
+  }
 
   // Add Javascript files depending on node type or page path.
   if ((isset($variables['node']) && $variables['node']->type == 'person') || (arg(0, drupal_get_path_alias()) == 'about')) {
