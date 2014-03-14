@@ -368,7 +368,7 @@ function o0_preprocess_node(&$variables) {
       // If 'Stale'...
       if ($field_global_t_content_state__terms['und'][$key]['tid'] == 61) {
         $variables['field_global_t_content_state__term'] = 'stale';
-        $variables['field_global_t_content_state__message'] = '<div class="messages message message-info">Please note that this post was originally published more than a year ago and may contain outdated information. Although the concepts and principles are generally still relevant, some of the references may no longer be up-to-date.</div>';
+        $variables['field_global_t_content_state__message'] = '<div class="messages info"><h2 class="element-invisible">Info message</h2>Please note that this post was originally published more than a year ago and may contain outdated information. Although the concepts and principles are generally still relevant, some of the references may no longer be up-to-date.</div>';
       }
     }
   }
