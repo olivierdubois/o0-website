@@ -36,6 +36,10 @@
       hide($content['links']);
     ?>
 
+    <?php if (!empty($variables['field_global_t_content_state__term'])): ?>
+      <?php print $variables['field_global_t_content_state__message']; ?>
+    <?php endif; ?>
+
     <?php if (!empty($content['field_article_image'])): ?>
       <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('article_image_modal_fullscreen', $node->field_article_image['und'][0]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_node', $node->field_article_image['und'][0]['uri']); ?>" alt="<?php print $node->field_article_image['und'][0]['alt']; ?>" title="<?php print $node->field_article_image['und'][0]['title']; ?>" /></a><div class="image-title"><?php print $node->field_article_image['und'][0]['title']; ?></div></div></div></div>
     <?php endif; ?>
