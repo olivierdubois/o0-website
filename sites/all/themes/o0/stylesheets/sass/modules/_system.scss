@@ -5,9 +5,7 @@
 // Font Awesome icons to use with ':before' (v4.0.3).
 @mixin messages-icon {
   // Font Awesome 'fa-ul' rule.
-  padding-left: 0;
-  margin-left: 2.142857142857143em;
-  list-style-type: none;
+  padding-left: 3.625em !important;
 }
 @mixin messages-icon-message {
   // Font Awesome 'fa-ul > li' rule.
@@ -31,8 +29,9 @@
 }
 
 .messages {
-  @include messages-icon;
   margin: 0 0 1em 0 !important;
+  padding: 1.25em 0 1.25em 0 !important;
+  @include messages-icon;
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 

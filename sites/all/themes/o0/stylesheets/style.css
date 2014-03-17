@@ -636,10 +636,9 @@ h2.pane-title {
  * SYSTEM MESSAGE
  */
 .messages {
-  padding-left: 0;
-  margin-left: 2.142857142857143em;
-  list-style-type: none;
   margin: 0 0 1em 0 !important;
+  padding: 1.25em 0 1.25em 0 !important;
+  padding-left: 3.625em !important;
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 }
