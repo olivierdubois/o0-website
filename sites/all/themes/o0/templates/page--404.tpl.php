@@ -1,3 +1,10 @@
+<?php
+/**
+ * @file
+ * '404 Page not found' page template.
+ *
+ */
+?>
 <!-- page -->
 <div id="page-wrapper">
 <div id="page">
