@@ -1,3 +1,10 @@
+<?php
+/**
+ * @file
+ * Page template.
+ *
+ */
+?>
 <!-- page -->
 <div id="page-wrapper">
 <div id="page">
