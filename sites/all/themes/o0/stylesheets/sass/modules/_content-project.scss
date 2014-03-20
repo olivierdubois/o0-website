@@ -103,7 +103,10 @@
  */
 
 .view .views-view-grid .node-project {
-  .field-name-field-project-type { font-size: 1rem; }
+  .field-name-field-project-type {
+    font-size: 1rem;
+    line-height: 1.125em;
+  }
 }
 
 
@@ -116,5 +119,6 @@
 .view.view-project-reference .node-project {
   .field-name-field-project-type {
     font-size: 1rem;
+    line-height: 1.125em;
   }
 }

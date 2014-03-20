@@ -943,7 +943,7 @@ a.blocklevel:hover .field-type-date {
 
 .view .views-view-grid .node-title {
   margin-top: 0.5em;
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
   font-size: 1.125em;
   line-height: 1.125em;
 }
@@ -1091,6 +1091,7 @@ body.node-type-project #content-title {
  */
 .view .views-view-grid .node-project .field-name-field-project-type {
   font-size: 1rem;
+  line-height: 1.125em;
 }
 
 /**
@@ -1098,6 +1099,7 @@ body.node-type-project #content-title {
  */
 .view.view-project-reference .node-project .field-name-field-project-type {
   font-size: 1rem;
+  line-height: 1.125em;
 }
 
 /**
