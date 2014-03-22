@@ -5,7 +5,7 @@
 // Font Awesome icons to use with ':before' (v4.0.3).
 @mixin messages-icon {
   // Font Awesome 'fa-ul' rule.
-  padding-left: 3.625em !important;
+  padding-left: 4em !important;
 }
 @mixin messages-icon-message {
   // Font Awesome 'fa-ul > li' rule.
@@ -30,7 +30,7 @@
 
 .messages {
   margin: 0 0 1em 0 !important;
-  padding: 1.25em 0 1.25em 0 !important;
+  padding: 1.375em 0 1.375em 0 !important;
   @include messages-icon;
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -45,7 +45,7 @@
     &:before {
       @include messages-icon-message-before;
       content: "\f058";
-      font-size: 2.5em;
+      font-size: 2.625em;
       color: rgb(134, 186, 72);
     }
   }
@@ -60,7 +60,7 @@
     &:before {
       @include messages-icon-message-before;
       content: "\f05a";
-      font-size: 2.5em;
+      font-size: 2.625em;
       color: rgb(66, 139, 169);
     }
   }
@@ -75,7 +75,7 @@
     &:before {
       @include messages-icon-message-before;
       content: "\f059";
-      font-size: 2.5em;
+      font-size: 2.625em;
       color: rgb(66, 139, 169);
     }
   }
@@ -90,7 +90,7 @@
     &:before {
       @include messages-icon-message-before;
       content: "\f06a";
-      font-size: 2.5em;
+      font-size: 2.625em;
       color: rgb(232, 124, 52);
     }
   }
@@ -105,7 +105,7 @@
     &:before {
       @include messages-icon-message-before;
       content: "\f057";
-      font-size: 2.5em;
+      font-size: 2.625em;
       color: rgb(228, 79, 55);
     }
   }
