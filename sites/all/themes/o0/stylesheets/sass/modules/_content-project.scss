@@ -99,7 +99,7 @@
 
 
 /**
- * VIEWS - Project - Page Grid
+ * VIEWS - Project - Page grid
  */
 
 .view .views-view-grid .node-project {
@@ -120,5 +120,29 @@
   .field-name-field-project-type {
     font-size: 1rem;
     line-height: 1.125em;
+  }
+}
+
+
+
+
+/**
+ * VIEWS - Project - 'Featured projects' block
+ */
+
+#block-views-project-block-featured {
+  .more-link {
+    padding: 1em 0 1em 0;
+    text-align: center;
+  }
+
+  .button.view-more {
+    margin-bottom: 0;
+    padding-top: 1rem; padding-right: 2rem; padding-bottom: 1.0625rem; padding-left: 2rem; font-size: 1rem;
+    font-weight: bold !important;
+
+    @media only screen and (min-width: $mq-breakpoint-medium) {
+      display: inline-block;
+    }
   }
 }
