@@ -141,6 +141,39 @@
       </div>
     <?php endif; ?>
 
+    <?php if (!empty($content['field_person_exper_2'])): ?>
+      <h3>Volunteer experience</h3>
+      <div class="field field-name-field-person-exper field-type-field-collection">
+        <div class="field-items">
+          <?php foreach($content['field_person_exper_2']['#items'] as $entity_uri) :
+            $field_collection_item = entity_load('field_collection_item', $entity_uri);
+            foreach($field_collection_item as $field_collection_object) : ?>
+              <div class="field-item row">
+                <div class="large-9 columns">
+                  <?php if ($field_collection_object->field_person_exper_exper): ?>
+                    <div class="field field-name-field-person-exper-exper field-type-text"><?php print $field_collection_object->field_person_exper_exper['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_exper_org): ?>
+                    <div class="field field-name-field-person-exper-org field-type-text"><?php print $field_collection_object->field_person_exper_org['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_exper_loc): ?>
+                    <div class="field field-name-field-person-exper-loc field-type-text"><?php print $field_collection_object->field_person_exper_loc['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                  <?php if ($field_collection_object->field_person_exper_descr): ?>
+                    <div class="field field-name-field-person-exper-descr field-type-text"><?php print $field_collection_object->field_person_exper_descr['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+                <div class="large-3 columns">
+                  <?php if ($field_collection_object->field_person_exper_date): ?>
+                    <div class="field field-name-field-person-exper-date field-type-text"><?php print $field_collection_object->field_person_exper_date['und'][0]['value']; ?></div>
+                  <?php endif; ?>
+                </div>
+              </div>
+            <?php endforeach; endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
     <h3>Skills</h3>
     <?php if (!empty($content['field_person_skill'])): ?>
       <h4>Web technologies</h4>
@@ -252,6 +285,14 @@
         </script>
         <div id="chart-person-skill-2" class="chart chart-person-skill amcharts"></div>
       </div>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_about_2'])): ?>
+      <?php print render($content['field_person_about_2']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_cv_file'])): ?>
+      <div class="field field-name-field-person-cv-file field-type-file"><div class="field-items"><div class="field-item"><a href="<?php print $node->field_person_cv_file['und'][0]['uri']; ?>" class="button">Full résumé</a></div></div></div>
     <?php endif; ?>
 
   </div>
