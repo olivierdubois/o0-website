@@ -58,7 +58,7 @@
 
   /* Services. */
   .field-name-field-global-t-service {
-    ul { @include icon-lu; }
+    ul { @include icon-ul; }
     li { @include icon-li; }
 
     li:before {

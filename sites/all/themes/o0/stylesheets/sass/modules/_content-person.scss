@@ -88,3 +88,39 @@
   font-weight: bold;
   text-align: center;
 }
+
+/* Software. */
+.node-person {
+  .field-name-field-person-software {
+    ul { @include icon-ul; }
+    li { @include icon-li; margin-top: 0.5em; margin-bottom: 0.5em; font-size: 1.125rem; }
+
+    li:before {
+      @include icon-li-before;
+      content: "\f00c";
+      color: $color-2-grey;
+    }
+
+    .software-descr {
+      display: block;
+      font-size: 0.688em;
+      color: $color-2-grey;
+      line-height: 0.75em;
+    }
+  }
+}
+
+.node-person {
+  .field-name-field-person-software-2 {
+    ul { @include icon-ul; }
+    li { @include icon-li; margin-top: 0.5em; margin-bottom: 0.5em; }
+
+    li:before {
+      @include icon-li-before;
+      content: "\f00c";
+      color: $color-2-grey;
+    }
+
+    .software-descr { font-size: 0.813em; }
+  }
+}
