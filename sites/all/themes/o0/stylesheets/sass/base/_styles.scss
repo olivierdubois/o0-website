@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ul, ol {
   margin: 0.75em 1.25em 0.75em 1.875em;
+  font-size: inherit;
 }
 ul ul, ol ol, ul ul ul, ol ol ol {
   font-size: inherit;
