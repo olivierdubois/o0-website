@@ -1,0 +1,61 @@
+/**
+ * NODE - Location - Default
+ */
+
+.node-location {
+}
+
+/* Address. */
+.node-location {
+  .field-name-field-location-address {
+    .field-items { @include icon-field-items; }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      top: 0.125em;
+      font-size: 1.5em;
+      content: "\f041";
+    }
+  }
+}
+
+/* Email. */
+.node-location {
+  .field-name-field-location-email {
+    .field-items { @include icon-field-items; }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      left: -2.438em;
+      top: 0.250em;
+      font-size: 1.125em;
+      content: "\f0e0";
+    }
+  }
+}
+
+/* Phone. */
+.node-location {
+  .field-name-field-location-phone {
+    .field-items { @include icon-field-items; }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      top: 0.125em;
+      font-size: 1.5em;
+      content: "\f095";
+    }
+  }
+}
+
+/* Website. */
+.node-location {
+  .field-name-field-location-website {
+    .field-items { @include icon-field-items; }
+
+    .field-item:before {
+      @include icon-field-item-before;
+      content: "\f0ac";
+    }
+  }
+}
