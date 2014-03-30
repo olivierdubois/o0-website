@@ -1,3 +1,10 @@
 /**
- * FORM
+ * FORM - 'Contact' form
  */
+
+form {
+  .form-textarea {
+    /* Override ZURB Foundation default height for textarea field, as it cannot be overridden in Webform UI. */
+    height: 10em;
+  }
+}
