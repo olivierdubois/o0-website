@@ -134,6 +134,11 @@ $meta-font-size: 0.75em;
 $meta-font-color: $color-2-grey;
 $meta-text-transform: uppercase;
 
+// Note.
+$note-font-size: 0.75em;
+$note-font-color: $color-2-grey;
+$note-text-transform: none;
+
 // Legal.
 $legal-font-size: 0.75em;
 $legal-font-color: $color-2-grey;
@@ -270,6 +275,13 @@ $mq-breakpoint-small: "319px";
   font-size: $meta-font-size;
   color: $meta-font-color;
   text-transform: $meta-text-transform;
+}
+
+// Note.
+@mixin note {
+  font-size: $note-font-size;
+  color: $note-font-color;
+  text-transform: $note-text-transform;
 }
 
 // Legal.
