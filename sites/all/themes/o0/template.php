@@ -304,6 +304,22 @@ function o0_preprocess_page(&$variables) {
     $variables['foundation_grid__footer_last'] = '';
   }
 
+  // Customize title for user login page.
+  if (arg(0) == 'user') {
+    switch (arg(1)) {
+      case '':
+      case 'login':
+        $variables['title'] = t('Login');
+        break;
+      case 'password':
+        $variables['title'] = t('Request a new password');
+        break;
+      case 'register':
+        $variables['title'] = t('Create an account');
+        break;
+    }
+  }
+
 }
 
 
