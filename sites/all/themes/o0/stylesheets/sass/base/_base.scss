@@ -35,6 +35,8 @@ $color-1-brown: rgb(61, 27, 0); // o0 Brown
 // Secondary colours.
 $color-2-grey: hsl(0, 0, 60);
 $color-2-red: rgb(255, 85, 41);
+$color-2-blue: rgb(43, 166, 203);
+$color-2-green: rgb(93, 164, 35);
 
 
 
@@ -90,7 +92,7 @@ $footer-link-font-color: $footer-font-color;
 
 // Primary navigation.
 $navigation-font-stack: "jaf-facitweb-1","jaf-facitweb-2", Arial, Helvetica, sans-serif;
-$navigation-font-color: rgb(255, 255, 255);
+$navigation-font-color: $color-1-black;
   $navigation-font-color-s-hover: $color-1-orange;
   $navigation-font-color-s-active: $color-1-orange;
 $navigation-background-color: rgb(51, 51, 51);
@@ -218,7 +220,7 @@ $form-submit-button-font-stack: $font-stack;
 $form-submit-button-font-color: rgb(255, 255, 255);
   $form-submit-button-font-color-s-hover: rgb(255, 255, 255);
   $form-submit-button-font-color-s-active: rgb(255, 255, 255);
-$form-submit-button-background-color: rgb(204, 204, 204);
+$form-submit-button-background-color: $color-2-blue;
   $form-submit-button-background-color-s-hover: darken($form-submit-button-background-color, 20);
   $form-submit-button-background-color-s-active: darken($form-submit-button-background-color, 20);
 
