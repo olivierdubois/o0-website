@@ -82,7 +82,7 @@
           <?php endif; ?>
           <?php if ($variables['field_global_t_person_exper__term'] == 'Shervin'): ?>
             <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
-              <p>This project was completed as part of my work as the lead web developer at Shervin Communications.</p>
+              <p>This project was completed as part of my work as Lead Web Developer at Shervin Communications.</p>
             </div></div></div>
           <?php endif; ?>
           <?php if ($variables['field_global_t_person_exper__term'] == 'Wild ARC'): ?>
