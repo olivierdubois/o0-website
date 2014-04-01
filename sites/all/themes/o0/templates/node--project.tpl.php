@@ -75,20 +75,25 @@
         <?php endif; ?>
 
         <?php if (!empty($variables['field_global_t_person_exper__term'])): ?>
-          <?php if ($variables['field_global_t_person_exper__term'] == 'Freelancer'): ?>
+          <?php if ($variables['field_global_t_person_exper__term'] == 'Freelance web developer'): ?>
             <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
-              <p>This project was completed as freelance work.</p>
+              <p>This project was completed as part of my freelance web development work.</p>
             </div></div></div>
           <?php endif; ?>
           <?php if ($variables['field_global_t_person_exper__term'] == 'Shervin'): ?>
             <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
-              <p>This project was completed as part of my work as the lead front-end web developer at Shervin Communications.</p>
+              <p>This project was completed as part of my work as the lead web developer at Shervin Communications.</p>
             </div></div></div>
           <?php endif; ?>
           <?php if ($variables['field_global_t_person_exper__term'] == 'Wild ARC'): ?>
             <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
               <p>This project was completed as part of my volunteer work at the BC SPCA Wild ARC.</p>
             </div></div></div>
+          <?php endif; ?>
+          <?php if ($variables['field_global_t_person_exper__term'] == 'Freelance graphic designer'): ?>
+            <div class="field field-name-field-global-t-person-exper-descr field-type-text"><div class="field-items"><div class="field-item">
+                  <p>This project was completed as part of my freelance graphic design work.</p>
+                </div></div></div>
           <?php endif; ?>
         <?php endif; ?>
 
