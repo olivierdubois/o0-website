@@ -33,11 +33,6 @@
       hide($content['links']);
     ?>
 
-    <?php if (!empty($content['field_person_image'])): ?>
-      <?php print render($content['field_person_image']); ?>
-      <?php /* <div class="field field-name-field-person-image field-type-image"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('person_image_modal_fullscreen', $node->field_person_image[$node->language][0]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('person_image_node', $node->field_person_image[$node->language][0]['uri']); ?>" alt="" /></a></div></div></div> */ ?>
-    <?php endif; ?>
-
     <?php if (!empty($content['field_person_cv_summary'])): ?>
       <?php print render($content['field_person_cv_summary']); ?>
     <?php endif; ?>
@@ -200,6 +195,8 @@
             chart_person_skill_1__chart.categoryField = "skill";
             chart_person_skill_1__chart.startDuration = 1;
             chart_person_skill_1__chart.creditsPosition = "top-right";
+            // Disable pan feature for touch devices.
+            chart_person_skill_1__chart.panEventsEnabled = false;
 
             var chart_person_skill_1__graph = new AmCharts.AmGraph();
             chart_person_skill_1__graph.valueField = "level";
@@ -218,6 +215,7 @@
             chart_person_skill_1__categoryAxis.labelRotation = 0;
 
             var chart_person_skill_1__valueAxis = new AmCharts.ValueAxis();
+            chart_person_skill_1__valueAxis.labelFunction = formatValueAxis;
             chart_person_skill_1__valueAxis.minimum = 0;
             chart_person_skill_1__valueAxis.maximum = 100;
             chart_person_skill_1__valueAxis.unit = "%";
@@ -226,6 +224,16 @@
 
             chart_person_skill_1__chart.write("chart-person-skill-1");
           });
+
+          function formatValueAxis(value, formattedValue, chart_person_skill_1__valueAxis) {
+            if (value === 0) { return "0"; }
+            else if (value == 20) { return "Newbie"; }
+            else if (value == 40) { return "Geek"; }
+            else if (value == 60) { return "Pro"; }
+            else if (value == 80) { return "Ninja"; }
+            else if (value == 100) { return "Jedi"; }
+            else { return ""; }
+          }
         </script>
         <div id="chart-person-skill-1" class="chart chart-person-skill amcharts"></div>
       </div>
@@ -256,6 +264,8 @@
             chart_person_skill_2__chart.categoryField = "skill";
             chart_person_skill_2__chart.startDuration = 1;
             chart_person_skill_2__chart.creditsPosition = "top-right";
+            // Disable pan feature for touch devices.
+            chart_person_skill_2__chart.panEventsEnabled = false;
 
             var chart_person_skill_2__graph = new AmCharts.AmGraph();
             chart_person_skill_2__graph.valueField = "level";
@@ -274,6 +284,7 @@
             chart_person_skill_2__categoryAxis.labelRotation = 0;
 
             var chart_person_skill_2__valueAxis = new AmCharts.ValueAxis();
+            chart_person_skill_2__valueAxis.labelFunction = formatValueAxis;
             chart_person_skill_2__valueAxis.minimum = 0;
             chart_person_skill_2__valueAxis.maximum = 100;
             chart_person_skill_2__valueAxis.unit = "%";
@@ -282,17 +293,48 @@
 
             chart_person_skill_2__chart.write("chart-person-skill-2");
           });
+
+          function formatValueAxis(value, formattedValue, chart_person_skill_2__valueAxis) {
+            if (value === 0) { return "0"; }
+            else if (value == 20) { return "Newbie"; }
+            else if (value == 40) { return "Geek"; }
+            else if (value == 60) { return "Pro"; }
+            else if (value == 80) { return "Ninja"; }
+            else if (value == 100) { return "Jedi"; }
+            else { return ""; }
+          }
         </script>
         <div id="chart-person-skill-2" class="chart chart-person-skill amcharts"></div>
       </div>
     <?php endif; ?>
 
-    <?php if (!empty($content['field_person_about_2'])): ?>
-      <?php print render($content['field_person_about_2']); ?>
+    <?php if (!empty($content['field_person_software']) && !empty($content['field_person_software_2'])): ?>
+      <h3>Software</h3>
+      <div class="row">
+        <div class="large-4 medium-5 columns">
+
+          <?php if (!empty($content['field_person_software'])): ?>
+            <?php print render($content['field_person_software']); ?>
+          <?php endif; ?>
+
+        </div>
+        <div class="large-8 medium-7 columns">
+
+          <?php if (!empty($content['field_person_software_2'])): ?>
+            <?php print render($content['field_person_software_2']); ?>
+          <?php endif; ?>
+
+        </div>
+      </div>
     <?php endif; ?>
 
-    <?php if (!empty($content['field_person_cv_file'])): ?>
-      <div class="field field-name-field-person-cv-file field-type-file"><div class="field-items"><div class="field-item"><a href="<?php print $node->field_person_cv_file['und'][0]['uri']; ?>" class="button">Full résumé</a></div></div></div>
+    <?php if (!empty($content['field_person_language'])): ?>
+      <h3>Languages</h3>
+      <?php print render($content['field_person_language']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_about_2'])): ?>
+      <?php print render($content['field_person_about_2']); ?>
     <?php endif; ?>
 
   </div>
