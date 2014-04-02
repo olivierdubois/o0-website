@@ -19,6 +19,7 @@
 
     .field-item:before {
       @include icon-field-item-before;
+      top: 0.438em;
       content: "\f073" !important;
     }
   }
