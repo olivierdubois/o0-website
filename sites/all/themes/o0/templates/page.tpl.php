@@ -9,22 +9,22 @@
 <div id="page-wrapper">
 <div id="page">
 
-<?php /*
-<div id="top-nav-container" class="row hide-for-print">
-  <div class="twelve columns">
-<div class="">
-<?php print $main_menu_links; ?>
-</div>
+  <!-- top bar -->
+  <div id="top-bar-container" class="row hide-for-print show-for-small">
+    <div class="large-12 columns">
+      <div class="">
+        <?php print $variables['main_menu_links']; ?>
+      </div>
+    </div>
   </div>
-</div>
-*/ ?>
+  <!-- /top bar -->
 
   <!-- header -->
   <div id="header-wrapper">
     <div id="header-container" class="row">
       <div id="header" class="large-12 columns">
         <div class="row">
-          <div id="logo" class="large-4 columns">
+          <div id="logo" class="large-4 medium-4 columns">
             <?php if ($logo): ?>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
 				    <?php endif; ?>
@@ -37,18 +37,25 @@
               <?php endif; ?>
             <?php endif; ?>
           </div>
-          <div class="large-8 columns hide-for-small">
+          <div class="large-8 medium-8 columns hide-for-small">
             <div class="row">
-              <div class="large-8 columns hide-for-print">
+              <div id="header-first" class="large-8 medium-8 columns hide-for-print">
+                <?php if ($page['header']): ?>
+                  <?php print render($page['header']); ?>
+                <?php endif; ?>
               </div>
-              <div id="navigation-global" class="large-4 columns hide-for-print">
-                <?php print render($page['navigation_global']); ?>
+              <div id="navigation-global" class="large-4 medium-4 columns hide-for-print">
+                <?php if ($page['navigation_global']): ?>
+                  <?php print render($page['navigation_global']); ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
-              <div id="navigation" class="large-12 columns hide-for-print">
+              <div id="navigation" class="large-12 medium-12 columns hide-for-print">
                 <nav role="navigation">
-                  <?php print render($page['navigation']); ?>
+                  <?php if ($page['navigation']): ?>
+                    <?php print render($page['navigation']); ?>
+                  <?php endif; ?>
                 </nav>
               </div>
             </div>
