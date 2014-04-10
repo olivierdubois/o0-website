@@ -129,6 +129,7 @@
  */
 
 #block-block-9 {
+  display: inline;
   float: right;
   font-size: 0.75rem;
   color: lighten($header-font-color, 10);
@@ -141,6 +142,38 @@
       @include icon-field-item-before;
       width: 1.75em; //* Default: 2.142857142857143em; */
       content: "\f121";
+    }
+  }
+}
+
+
+
+
+/**
+ * BLOCK - User
+ */
+
+#block-block-12 {
+  display: inline;
+  float: right;
+  font-size: 0.75rem;
+  color: lighten($header-font-color, 10);
+  .menu { margin: 0; /* Override system default. */ }
+  .leaf {
+    padding: 0 0.25em 0 0.25em; /* Override system default. */
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover { color: $navigation-font-color-s-hover; }
+    }
+  }
+  .user-name {
+    @include icon-field-items;
+    text-transform: uppercase;
+    &:before {
+      @include icon-field-item-before;
+      width: 1.75em; //* Default: 2.142857142857143em; */
+      content: "\f007";
     }
   }
 }
