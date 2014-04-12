@@ -1,13 +1,89 @@
 /**
- * NAVIGATION TOP-LEVEL
+ * NAVIGATION
  */
 
-#navigation a {
-font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
-font-size: 24px;
-font-weight: bold;
-color: rgb(255, 134, 42);
-text-decoration: none;
+
+
+
+/**
+ * NAVIGATION - Main menu
+ */
+
+#navigation .menu {
+  float: right;
+  font-family: $navigation-font-stack !important;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: $navigation-font-color;
+  list-style-type: none !important;
+
+  .leaf {
+    float: left;
+    a {
+      font-family: $navigation-font-stack !important;
+      color: inherit;
+      text-decoration: none;
+      &.active { color: $navigation-font-color-s-active; }
+      &:hover { color: $navigation-font-color-s-hover; }
+    }
+  }
+
+  @media only screen and (max-width: $mq-breakpoint-medium) {
+    font-size: 1.438rem;
+  }
+}
+
+
+
+
+/**
+ * NAVIGATION - Global menu
+ */
+
+#navigation-global .menu {
+  margin: 0; /* Override system default. */
+  font-family: $font-stack;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: $navigation-font-color;
+  list-style-type: none !important;
+  text-transform: uppercase;
+
+  .leaf {
+    padding: 0 0.25em 0 0.25em; /* Override system default. */
+    float: left;
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover { color: $navigation-font-color-s-hover; }
+    }
+  }
+}
+
+
+
+
+/**
+ * NAVIGATION - Mobile
+ */
+
+/* Override Foundation defaults. */
+#top-bar-container .columns { padding: 0; }
+.top-bar.expanded .toggle-topbar a span { box-shadow: none; }
+.top-bar > * {
+  background: rgb(0, 0, 0) !important;
+}
+
+.top-bar-section {
+  & > * { background: rgb(0, 0, 0) !important; }
+  .leaf { padding: 0; }
+
+  ul li > a {
+    background: rgb(0, 0, 0);
+    font-family: $navigation-font-stack;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }
 
 
