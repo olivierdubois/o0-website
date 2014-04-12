@@ -24,7 +24,7 @@
     <div id="header-container" class="row">
       <div id="header" class="large-12 columns">
         <div class="row">
-          <div id="logo" class="large-4 medium-4 columns">
+          <div id="logo" class="large-2 medium-2 columns">
             <?php if ($logo): ?>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
             <?php endif; ?>
@@ -37,14 +37,14 @@
               <?php endif; ?>
             <?php endif; ?>
           </div>
-          <div class="large-8 medium-8 columns hide-for-small">
+          <div class="large-10 medium-10 columns hide-for-small">
             <div class="row">
-              <div id="header-first" class="large-8 medium-8 columns hide-for-print">
+              <div id="header-first" class="large-9 medium-9 columns hide-for-print">
                 <?php if ($page['header']): ?>
                   <?php print render($page['header']); ?>
                 <?php endif; ?>
               </div>
-              <div id="navigation-global" class="large-4 medium-4 columns hide-for-print">
+              <div id="navigation-global" class="large-3 medium-3 columns hide-for-print">
                 <?php if ($page['navigation_global']): ?>
                   <?php print render($page['navigation_global']); ?>
                 <?php endif; ?>
