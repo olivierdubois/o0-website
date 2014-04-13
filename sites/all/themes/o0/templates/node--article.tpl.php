@@ -41,7 +41,7 @@
     <?php endif; ?>
 
     <?php if (!empty($content['field_article_image'])): ?>
-      <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('article_image_modal_fullscreen', $node->field_article_image['und'][0]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_node', $node->field_article_image['und'][0]['uri']); ?>" alt="<?php print $node->field_article_image['und'][0]['alt']; ?>" title="<?php print $node->field_article_image['und'][0]['title']; ?>" /></a><div class="image-title"><?php print $node->field_article_image['und'][0]['title']; ?></div></div></div></div>
+      <div class="field field-name-field-article-image field-type-image"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('article_image_modal_fullscreen', $node->field_article_image['und'][0]['uri']); ?>" class="colorbox" rel="node-field-article-image" title="<?php print $node->field_article_image['und'][0]['title']; ?>"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_node', $node->field_article_image['und'][0]['uri']); ?>" alt="<?php print $node->field_article_image['und'][0]['alt']; ?>" title="<?php print $node->field_article_image['und'][0]['title']; ?>" /></a><div class="image-title"><?php print $node->field_article_image['und'][0]['title']; ?></div></div></div></div>
     <?php endif; ?>
 
     <?php if (!empty($content['body'])): ?>
@@ -52,7 +52,7 @@
       <div class="field-group-format field-group-div group-article-image-2 clearfix">
         <div class="field-group-format-wrapper" style="display: block;">
           <?php foreach ($node->field_article_image_2['und'] as $key => $value) { ?>
-            <div class="field field-name-field-article-image-2 field-type-image thumbnail"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('article_image_modal_fullscreen', $node->field_article_image_2['und'][$key]['uri']); ?>" class="colorbox-inline"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_2_node', $node->field_article_image_2['und'][$key]['uri']); ?>" alt="<?php print $node->field_article_image_2['und'][$key]['alt']; ?>" title="<?php print $node->field_article_image_2['und'][$key]['title']; ?>" /></a></div></div></div>
+            <div class="field field-name-field-article-image-2 field-type-image thumbnail"><div class="field-items"><div class="field-item"><a href="<?php print image_style_url('article_image_modal_fullscreen', $node->field_article_image_2['und'][$key]['uri']); ?>" class="colorbox" rel="node-field-article-image" title="<?php print $node->field_article_image_2['und'][$key]['title']; ?>"><img typeof="foaf:Image" src="<?php print image_style_url('article_image_2_node', $node->field_article_image_2['und'][$key]['uri']); ?>" alt="<?php print $node->field_article_image_2['und'][$key]['alt']; ?>" title="<?php print $node->field_article_image_2['und'][$key]['title']; ?>" /></a></div></div></div>
           <?php } ?>
         </div>
       </div>
