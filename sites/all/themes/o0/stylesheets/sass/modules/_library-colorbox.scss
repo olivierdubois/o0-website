@@ -229,9 +229,22 @@
  * OVERRIDE
  */
 
-#cboxCurrent {
-  font-size: 0.813em;
-  color: hsl(0, 0, 50);
+#colorbox {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#cboxWrapper {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 #cboxContent {
@@ -239,4 +252,15 @@
   -moz-box-shadow: 0 0 5px 1px hsl(0, 0, 80);
   -webkit-box-shadow: 0 0 5px 1px hsl(0, 0, 80);
   box-shadow: 0 0 5px 1px hsl(0, 0, 80);
+}
+
+#cboxTitle {
+  padding-top: 0.375em;
+  font-size: 0.813em;
+  color: hsl(0, 0, 30);
+}
+
+#cboxCurrent {
+  font-size: 0.813em;
+  color: hsl(0, 0, 50);
 }
