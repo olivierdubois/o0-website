@@ -4,7 +4,11 @@
 
 .node-person {
 }
-.node-person .field-name-field-person-image {
+
+/* About. */
+.node-person {
+  .field-name-field-person-about {
+  }
 }
 
 /* Education. */
@@ -122,5 +126,94 @@
     }
 
     .software-descr { font-size: 0.813em; }
+  }
+}
+
+
+
+
+/**
+ * VIEW - About me (teaser)
+ */
+
+.view-display-id-block_about_teaser {
+  .node-person {
+    .field-name-field-person-about {
+      font-family: $heading-font-stack;
+      font-size: 1.625em;
+      color: hsl(0, 0, 40);
+    }
+  }
+}
+
+
+
+
+/**
+ * VIEW - About me
+ */
+
+.view-display-id-block_about {
+  .node-person {
+    .field-name-field-person-about {
+      font-family: $heading-font-stack;
+      font-size: 1.25em;
+    }
+  }
+}
+
+
+
+
+/**
+ * BLOCK - Curriculum vitae button
+ */
+
+#block-block-13,
+#block-block-14,
+.field-name-field-person-cv-file .field-item
+{
+  text-align: center;
+
+  .button {
+    &[href="/about/cv"] {
+      background-color: lighten($color-2-blue, 10);
+      font-weight: bold !important;
+      &:hover, &:focus { background-color: lighten($color-2-blue, 0); }
+    }
+
+    &[href$=".pdf"] {
+      background-color: lighten($color-2-blue, 10);
+      font-weight: bold !important;
+      &:hover, &:focus { background-color: lighten($color-2-blue, 0); }
+    }
+  }
+}
+
+
+
+
+/**
+ * TODO - Clean up all CSS rules below.
+ */
+
+#block-block-10
+{
+  .button {
+    margin-right: 0.5em;
+    padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.6875rem; padding-left: 1.25rem; /* 'Small' button CSS rules. */
+  }
+}
+
+#block-views-person-block-about {
+  .views-row {
+    border: none;
+  }
+}
+
+body.page-about-cv {
+  .node-title { display: none; }
+  .field-item:first-child, .views-row.views-row-first {
+    border-top: none !important;
   }
 }

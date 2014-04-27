@@ -7,34 +7,17 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?> class="node-title title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
-    <?php if ($display_submitted): ?>
-      <div class="meta submitted">
-        <?php //print $user_picture; ?>
-        <?php //print $submitted; ?>
-      </div>
-    <?php endif; ?>
-
-    <div class="meta">
-    </div>
-  </header>
   
   <div class="node-content clearfix"<?php print $content_attributes; ?>>
-    <?php
-      // Hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-    ?>
+
+    <h2 style="margin-top: 0;">Curriculum vitae</h2>
 
     <?php if (!empty($content['field_person_cv_summary'])): ?>
       <?php print render($content['field_person_cv_summary']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_cv_file'])): ?>
+      <div class="field field-name-field-person-cv-file field-type-file"><div class="field-items"><div class="field-item"><a href="http://olivierdubois.com/system/files/person/file/Olivier_Dubois_-_Curriculum_Vitae_2014-04-1.pdf" target="_blank" class="button">Download CV (PDF)</a></div></div></div>
     <?php endif; ?>
 
     <?php if (!empty($content['field_person_educ'])): ?>
@@ -335,6 +318,10 @@
 
     <?php if (!empty($content['field_person_about_2'])): ?>
       <?php print render($content['field_person_about_2']); ?>
+    <?php endif; ?>
+
+    <?php if (!empty($content['field_person_cv_file'])): ?>
+      <div class="field field-name-field-person-cv-file field-type-file"><div class="field-items"><div class="field-item"><a href="http://olivierdubois.com/system/files/person/file/Olivier_Dubois_-_Curriculum_Vitae_2014-04-1.pdf" target="_blank" class="button">Download CV (PDF)</a></div></div></div>
     <?php endif; ?>
 
   </div>
