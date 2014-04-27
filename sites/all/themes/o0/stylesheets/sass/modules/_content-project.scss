@@ -58,7 +58,7 @@
   .field-name-field-project-link {}
 
   /* Services. */
-  .field-name-field-global-t-service {
+  .field-name-field-project-t-service {
     ul { @include icon-ul; }
     li { @include icon-li; }
 
@@ -70,7 +70,7 @@
   }
 
   /* Experience. */
-  .field-name-field-global-t-person-exper-descr * {
+  .field-name-field-project-t-person-exper-descr * {
     //font-size: 0.875rem;
     //color: $color-2-grey;
   }

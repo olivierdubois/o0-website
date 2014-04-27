@@ -278,22 +278,22 @@ function o0_preprocess_page(&$variables) {
   $footer_third = $variables['page']['footer_third'];
   $footer_last = $variables['page']['footer_last'];
   if (!empty($footer_first) && !empty($footer_second) && !empty($footer_third) && !empty($footer_last)) {
-    $variables['foundation_grid__footer_first'] = 'large-3';
-    $variables['foundation_grid__footer_second'] = 'large-3';
-    $variables['foundation_grid__footer_third'] = 'large-3';
-    $variables['foundation_grid__footer_last'] = 'large-3';
+    $variables['foundation_grid__footer_first'] = 'large-3 medium-3 small-6';
+    $variables['foundation_grid__footer_second'] = 'large-3 medium-3 small-6';
+    $variables['foundation_grid__footer_third'] = 'large-3 medium-3 small-12';
+    $variables['foundation_grid__footer_last'] = 'large-3 medium-3 small-12';
   } elseif (!empty($footer_first) && !empty($footer_second) && empty($footer_third) && !empty($footer_last)) {
-    $variables['foundation_grid__footer_first'] = 'large-4';
-    $variables['foundation_grid__footer_second'] = 'large-4';
+    $variables['foundation_grid__footer_first'] = 'large-4 medium-4 small-4';
+    $variables['foundation_grid__footer_second'] = 'large-4 medium-4 small-4';
     $variables['foundation_grid__footer_third'] = '';
-    $variables['foundation_grid__footer_last'] = 'large-4';
+    $variables['foundation_grid__footer_last'] = 'large-4 medium-4 small-4';
   } elseif (!empty($footer_first) && empty($footer_second) && empty($footer_third) && !empty($footer_last)) {
-    $variables['foundation_grid__footer_first'] = 'large-6';
+    $variables['foundation_grid__footer_first'] = 'large-6 medium-6 small-6';
     $variables['foundation_grid__footer_second'] = '';
     $variables['foundation_grid__footer_third'] = '';
-    $variables['foundation_grid__footer_last'] = 'large-6';
+    $variables['foundation_grid__footer_last'] = 'large-6 medium-6 small-6';
   } elseif (!empty($footer_first) && empty($footer_second) && empty($footer_third) && empty($footer_last)) {
-    $variables['foundation_grid__footer_first'] = 'large-12';
+    $variables['foundation_grid__footer_first'] = 'large-12 medium-12 small-12';
     $variables['foundation_grid__footer_second'] = '';
     $variables['foundation_grid__footer_third'] = '';
     $variables['foundation_grid__footer_last'] = '';
@@ -370,25 +370,25 @@ function o0_preprocess_node(&$variables) {
     }
   }
   // 'Person - Experience' vocabulary.
-  if (!empty($node->field_global_t_person_exper)) {
-    $field_global_t_person_exper__terms = $node->field_global_t_person_exper;
-    $variables['field_global_t_person_exper__term'] = '';
-    foreach ($field_global_t_person_exper__terms['und'] as $key => $value) {
+  if (!empty($node->field_project_t_person_exper)) {
+    $field_project_t_person_exper__terms = $node->field_project_t_person_exper;
+    $variables['field_project_t_person_exper__term'] = '';
+    foreach ($field_project_t_person_exper__terms['und'] as $key => $value) {
       // If 'Freelance front-end web developer'...
-      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 50) {
-        $variables['field_global_t_person_exper__term'] = 'Freelance web developer';
+      if ($field_project_t_person_exper__terms['und'][$key]['tid'] == 50) {
+        $variables['field_project_t_person_exper__term'] = 'Freelance web developer';
       }
       // If 'Chief Web Ninja at Shervin'...
-      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 51) {
-        $variables['field_global_t_person_exper__term'] = 'Shervin';
+      if ($field_project_t_person_exper__terms['und'][$key]['tid'] == 51) {
+        $variables['field_project_t_person_exper__term'] = 'Shervin';
       }
       // If 'Volunteer at BC SPCA Wild ARC'...
-      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 52) {
-        $variables['field_global_t_person_exper__term'] = 'Wild ARC';
+      if ($field_project_t_person_exper__terms['und'][$key]['tid'] == 52) {
+        $variables['field_project_t_person_exper__term'] = 'Wild ARC';
       }
       // If 'Freelance graphic designer'...
-      if ($field_global_t_person_exper__terms['und'][$key]['tid'] == 53) {
-        $variables['field_global_t_person_exper__term'] = 'Freelance graphic designer';
+      if ($field_project_t_person_exper__terms['und'][$key]['tid'] == 53) {
+        $variables['field_project_t_person_exper__term'] = 'Freelance graphic designer';
       }
     }
   }
@@ -415,10 +415,9 @@ function o0_preprocess_node(&$variables) {
  * Implements theme_links() targeting the main menu specifically
  * Outputs Foundation Nav bar http://foundation.zurb.com/docs/navigation.php
  */
-function o0_links__system_main_menu($vars) {
+function o0_links__system_main_menu($variables) {
   // Get all the main menu links
   $menu_links = menu_tree_output(menu_tree_all_data('main-menu'));
-  
   // Initialize some variables to prevent errors
   $output = '';
   $sub_menu = '';
@@ -426,7 +425,6 @@ function o0_links__system_main_menu($vars) {
   foreach ($menu_links as $key => $link) {
     // Add special class needed for Foundation dropdown menu to work
     !empty($link['#below']) ? $link['#attributes']['class'][] = 'has-dropdown' : '';
-
     // Render top level and make sure we have an actual link
     if (!empty($link['#href'])) {
       $output .= '<li' . drupal_attributes($link['#attributes']) . '>' . l($link['#title'], $link['#href']);
@@ -435,24 +433,26 @@ function o0_links__system_main_menu($vars) {
         if (!empty($sub_link['#href'])) {
           $sub_menu .= '<li>' . l($sub_link['#title'], $sub_link['#href']) . '</li>';
         }
-        
       }
       $output .= !empty($link['#below']) ? '<ul class="dropdown">' . $sub_menu . '</ul>' : '';
-      
       // Reset dropdown to prevent duplicates
       unset($sub_menu);
       $sub_menu = '';
-      
       $output .=  '</li>';
     }
   }
-  return '<nav class="top-bar"><ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1><a href="#">Menu</a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul><section class="top-bar-section"><ul class="left">' . $output . '</ul></section></nav>';
+  return '<nav class="top-bar" data-topbar>
+            <ul class="title-area">
+              <li class="name">
+                <h1><a href="#"></a></h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+              <ul class="left">' . $output . '</ul>
+            </section>
+          </nav>';
 }
 
 
