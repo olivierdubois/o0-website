@@ -30,6 +30,8 @@ body {
 
 p {
   margin: 1em 0 1em 0;
+  font-size: inherit !important;
+  /* Override ZURB Foundation declaration. */
 }
 p.first {
   font-size: 1.25em;
@@ -75,6 +77,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 ul, ol {
   margin: 0.75em 1.25em 0.75em 1.875em;
+  font-size: inherit;
 }
 
 ul ul, ol ol, ul ul ul, ol ol ol {
@@ -96,6 +99,12 @@ img {
   line-height: 26px;
 }
 
+/* Override Drupal system.menus.css. */
+ul li.leaf {
+  list-style: none;
+  list-style-image: none;
+}
+
 /**
  * LAYOUT
  */
@@ -104,12 +113,16 @@ img {
   padding: 0;
 }
 
-#top-nav-container {
-  height: 100px;
-}
-
 #header-wrapper {
   margin: 0 0 50px 0;
+}
+
+#header-first {
+  padding-top: 1em;
+}
+
+#navigation-global {
+  padding-top: 1em;
 }
 
 #postscript-wrapper {
@@ -125,14 +138,92 @@ img {
 }
 
 /**
- * NAVIGATION TOP-LEVEL
+ * NAVIGATION
  */
-#navigation a {
-  font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", Arial, Helvetica, sans-serif;
-  font-size: 24px;
+/**
+ * NAVIGATION - Main menu
+ */
+#navigation .menu {
+  float: right;
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif !important;
+  font-size: 1.75rem;
   font-weight: bold;
-  color: #ff862a;
+  color: #333333;
+  list-style-type: none !important;
+}
+#navigation .menu .leaf {
+  float: left;
+}
+#navigation .menu .leaf a {
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif !important;
+  color: inherit;
   text-decoration: none;
+}
+#navigation .menu .leaf a.active {
+  color: #ff862a;
+}
+#navigation .menu .leaf a:hover {
+  color: #ff862a;
+}
+@media only screen and (max-width: 767px) {
+  #navigation .menu {
+    font-size: 1.438rem;
+  }
+}
+
+/**
+ * NAVIGATION - Global menu
+ */
+#navigation-global .menu {
+  margin: 0;
+  /* Override system default. */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #333333;
+  list-style-type: none !important;
+  text-transform: uppercase;
+}
+#navigation-global .menu .leaf {
+  padding: 0 0.25em 0 0.25em;
+  /* Override system default. */
+  float: left;
+}
+#navigation-global .menu .leaf a {
+  color: inherit;
+  text-decoration: none;
+}
+#navigation-global .menu .leaf a:hover {
+  color: #ff862a;
+}
+
+/**
+ * NAVIGATION - Mobile
+ */
+/* Override Foundation defaults. */
+#top-bar-container .columns {
+  padding: 0;
+}
+
+.top-bar.expanded .toggle-topbar a span {
+  box-shadow: none;
+}
+
+.top-bar > * {
+  background: black !important;
+}
+
+.top-bar-section > * {
+  background: black !important;
+}
+.top-bar-section .leaf {
+  padding: 0;
+}
+.top-bar-section ul li > a {
+  background: black;
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /**
@@ -264,7 +355,7 @@ button, .button {
   text-transform: none;
 }
 
-/* Overrides */
+/* Overrides. */
 button, .button {
   /* CSS from ZURB Foundation (v5) 'button' rules, 'as-is' from 'foundation.css'. */
   /* 'Brown' style. */
@@ -336,7 +427,46 @@ button.button-style-brown:hover, button.button-style-brown:focus, .button.button
 }
 
 /**
- * BUTTON - Comments, Language Link - Reply, Permalink, etc.
+ * BUTTON - 'View more' button - Default
+ */
+/* Default overrides. */
+.button.view-more {
+  /* Set default to use the 'small' padding rules. */
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+}
+.button.view-more.large {
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+}
+.button.view-more.small {
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
+}
+.button.view-more.tiny {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 0.6875rem;
+}
+@media only screen and (min-width: 767px) {
+  .button.view-more {
+    display: inline-block;
+  }
+}
+
+/**
+ * BUTTON - Comments, language link - Reply, permalink, etc.
  */
 /* CSS from ZURB Foundation 'button' class, 'as-is' from 'foundation.css' */
 .comment-reply a,
@@ -409,8 +539,128 @@ a.language-link:hover, a.language-link:focus {
   }
 }
 /**
- * FORM
+ * FORM - Buttons
  */
+/* CSS from ZURB Foundation (v5) 'button' rule, 'as-is' from 'foundation.css'. */
+.form-submit {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1.0625rem;
+  padding-bottom: 1rem;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #999999;
+  border-color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal !important;
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Overrides. */
+.form-submit {
+  background-color: #2ba6cb;
+  font-weight: bold !important;
+  /* CSS from ZURB Foundation (v5) 'button' rules, 'as-is' from 'foundation.css'. */
+}
+.form-submit:hover, .form-submit:focus {
+  background-color: #196177;
+  color: white;
+  text-decoration: none;
+}
+.form-submit.large {
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+}
+.form-submit.small {
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
+}
+.form-submit.tiny {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 0.6875rem;
+}
+.form-submit.expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+.form-submit.left-align {
+  text-align: left;
+  text-indent: 0.75rem;
+}
+.form-submit.right-align {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+.form-submit.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.form-submit.round {
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+@media only screen and (min-width: 767px) {
+  .form-submit {
+    display: inline-block;
+  }
+}
+.form-submit[value="Clone"], .form-submit[value="Preview"], .form-submit[value="Upload"], .form-submit[value="View all"] {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  /* 'Small' button CSS rules. */
+  background-color: #b3b3b3;
+  font-weight: normal !important;
+}
+.form-submit[value="Clone"]:hover, .form-submit[value="Clone"]:focus, .form-submit[value="Preview"]:hover, .form-submit[value="Preview"]:focus, .form-submit[value="Upload"]:hover, .form-submit[value="Upload"]:focus, .form-submit[value="View all"]:hover, .form-submit[value="View all"]:focus {
+  background-color: #999999;
+}
+
+.form-actions .form-submit {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.form-actions .form-submit:first-child {
+  margin-left: 0rem;
+  margin-right: 0.5rem;
+}
+
+/**
+ * FORM - 'Contact' form
+ */
+form .form-textarea {
+  /* Override ZURB Foundation default height for textarea field, as it cannot be overridden in Webform UI. */
+  height: 10em;
+}
+
 /**
  * PANELS
  */
@@ -432,11 +682,9 @@ h2.pane-title {
   color: #666666;
   line-height: 1em;
 }
-
 #block-block-1 p {
   margin: 0;
 }
-
 #block-block-1 a {
   color: #666666;
   text-decoration: none;
@@ -453,11 +701,9 @@ h2.pane-title {
   color: gray;
   line-height: 1em;
 }
-
 #block-block-2 p {
   margin: 0;
 }
-
 #block-block-2 a {
   color: gray;
   text-decoration: none;
@@ -499,10 +745,8 @@ h2.pane-title {
 
 #block-block-5 ul.channels li a {
   display: block;
-  /*width: 48px;
-  min-height: 48px;*/
   padding: 0;
-  font-size: 3em;
+  font-size: 2.5em;
   color: #cccccc;
   line-height: 1em;
   text-decoration: none;
@@ -545,11 +789,9 @@ h2.pane-title {
   color: gray;
   line-height: 1em;
 }
-
 #block-block-20 p {
   margin: 0;
 }
-
 #block-block-20 a {
   color: gray;
   text-decoration: none;
@@ -571,6 +813,85 @@ h2.pane-title {
   filter: alpha(opacity=10);
   -moz-opacity: 1;
   opacity: 1;
+}
+
+/**
+ * BLOCK - Site version
+ */
+#block-block-9 {
+  display: inline;
+  float: right;
+  font-size: 0.75rem;
+  color: gray;
+}
+#block-block-9 .menu {
+  margin: 0;
+  /* Override system default. */
+}
+#block-block-9 .leaf {
+  padding: 0 0.25em 0 0.25em;
+  /* Override system default. */
+}
+#block-block-9 .site-version {
+  position: relative;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+#block-block-9 .site-version:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1.75em;
+  content: "\f121";
+}
+
+/**
+ * BLOCK - User
+ */
+#block-block-12 {
+  display: inline;
+  float: right;
+  font-size: 0.75rem;
+  color: gray;
+}
+#block-block-12 .menu {
+  margin: 0;
+  /* Override system default. */
+}
+#block-block-12 .leaf {
+  padding: 0 0.25em 0 0.25em;
+  /* Override system default. */
+}
+#block-block-12 .leaf a {
+  color: inherit;
+  text-decoration: none;
+}
+#block-block-12 .leaf a:hover {
+  color: #ff862a;
+}
+#block-block-12 .user-name {
+  position: relative;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+#block-block-12 .user-name:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1.75em;
+  content: "\f007";
 }
 
 /**
@@ -637,8 +958,8 @@ h2.pane-title {
  */
 .messages {
   margin: 0 0 1em 0 !important;
-  padding: 1.25em 0 1.25em 0 !important;
-  padding-left: 3.625em !important;
+  padding: 1.375em 1.375em 1.375em 0 !important;
+  padding-left: 4em !important;
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 }
@@ -663,7 +984,7 @@ h2.pane-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f058";
-  font-size: 2.5em;
+  font-size: 2.625em;
   color: #86ba48;
 }
 .messages.info {
@@ -687,7 +1008,7 @@ h2.pane-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f05a";
-  font-size: 2.5em;
+  font-size: 2.625em;
   color: #428ba9;
 }
 .messages.help {
@@ -711,7 +1032,7 @@ h2.pane-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f059";
-  font-size: 2.5em;
+  font-size: 2.625em;
   color: #428ba9;
 }
 .messages.warning {
@@ -735,7 +1056,7 @@ h2.pane-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f06a";
-  font-size: 2.5em;
+  font-size: 2.625em;
   color: #e87c34;
 }
 .messages.error {
@@ -759,7 +1080,7 @@ h2.pane-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f057";
-  font-size: 2.5em;
+  font-size: 2.625em;
   color: #e44f37;
 }
 
@@ -822,6 +1143,11 @@ h6 {
   font-size: 1.375em;
 }
 
+.field-items, .field-item {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /* Page title, node title. */
 #page-title, .node-title {
   margin-top: 0;
@@ -850,13 +1176,9 @@ h6 {
 .node .meta .field-type-date .field-items {
   position: relative;
   padding-left: 0;
-  margin-left: 2.142857142857143em;
 }
 .node .meta .field-type-date .field-item:before {
-  position: absolute;
-  left: -2.142857142857143em;
   width: 2.142857142857143em;
-  top: 0.525em;
   text-align: center;
   display: inline-block;
   font-family: FontAwesome;
@@ -865,12 +1187,19 @@ h6 {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  top: 0.525em;
   content: "\f017";
 }
 .node .image-title {
   font-size: 0.75em;
   font-style: italic;
   color: #999999;
+}
+.node .note {
+  font-size: 0.75em;
+  color: #999999;
+  text-transform: none;
+  font-style: italic;
 }
 .node .legal {
   font-size: 0.75em;
@@ -978,6 +1307,50 @@ body.node-type-project #content-title {
 }
 
 /**
+ * VIEWS - Blog - 'Recent blog' block
+ */
+#block-views-blog-block-recent .more-link {
+  padding: 1em 0 1em 0;
+  text-align: center;
+}
+#block-views-blog-block-recent .button.view-more {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: bold !important;
+}
+@media only screen and (min-width: 767px) {
+  #block-views-blog-block-recent .button.view-more {
+    display: inline-block;
+  }
+}
+
+/**
+ * VIEWS - Microblog - 'Recent microblog' block
+ */
+#block-views-microblog-block-recent .more-link {
+  padding: 1em 0 1em 0;
+  text-align: center;
+}
+#block-views-microblog-block-recent .button.view-more {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: bold !important;
+}
+@media only screen and (min-width: 767px) {
+  #block-views-microblog-block-recent .button.view-more {
+    display: inline-block;
+  }
+}
+
+/**
  * NODE - Project - Default
  */
 .node-project {
@@ -1008,13 +1381,9 @@ body.node-type-project #content-title {
 .node-project .meta .field-type-date .field-items {
   position: relative;
   padding-left: 0;
-  margin-left: 2.142857142857143em;
 }
 .node-project .meta .field-type-date .field-item:before {
-  position: absolute;
-  left: -2.142857142857143em;
   width: 2.142857142857143em;
-  top: 0.525em;
   text-align: center;
   display: inline-block;
   font-family: FontAwesome;
@@ -1023,6 +1392,7 @@ body.node-type-project #content-title {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  top: 0.438em;
   content: "\f073" !important;
 }
 .node-project .field-name-field-project-type {
@@ -1050,15 +1420,15 @@ body.node-type-project #content-title {
 .node-project .group-project-image-2 {
   margin: 0 5em 0 5em;
 }
-.node-project .field-name-field-global-t-service ul {
+.node-project .field-name-field-project-t-service ul {
   padding-left: 0;
   margin-left: 2.142857142857143em;
   list-style-type: none;
 }
-.node-project .field-name-field-global-t-service li {
+.node-project .field-name-field-project-t-service li {
   position: relative;
 }
-.node-project .field-name-field-global-t-service li:before {
+.node-project .field-name-field-project-t-service li:before {
   position: absolute;
   left: -2.142857142857143em;
   width: 2.142857142857143em;
@@ -1087,7 +1457,7 @@ body.node-type-project #content-title {
 }
 
 /**
- * VIEWS - Project - Page Grid
+ * VIEWS - Project - Page grid
  */
 .view .views-view-grid .node-project .field-name-field-project-type {
   font-size: 1rem;
@@ -1100,6 +1470,28 @@ body.node-type-project #content-title {
 .view.view-project-reference .node-project .field-name-field-project-type {
   font-size: 1rem;
   line-height: 1.125em;
+}
+
+/**
+ * VIEWS - Project - 'Featured projects' block
+ */
+#block-views-project-block-featured .more-link {
+  padding: 1em 0 1em 0;
+  text-align: center;
+}
+#block-views-project-block-featured .button.view-more {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: bold !important;
+}
+@media only screen and (min-width: 767px) {
+  #block-views-project-block-featured .button.view-more {
+    display: inline-block;
+  }
 }
 
 /**
@@ -1123,6 +1515,7 @@ body.node-type-project #content-title {
 /**
  * NODE - Person - Default
  */
+/* About. */
 /* Education. */
 .node-person .field-name-field-person-educ > .field-items > .field-item,
 .node-person .field-name-field-person-educ-2 > .field-items > .field-item {
@@ -1212,6 +1605,146 @@ body.node-type-project #content-title {
   text-align: center;
 }
 
+/* Software. */
+.node-person .field-name-field-person-software ul {
+  padding-left: 0;
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+.node-person .field-name-field-person-software li {
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.125rem;
+}
+.node-person .field-name-field-person-software li:before {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  top: 0.33482142857142859375em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c";
+  color: #999999;
+}
+.node-person .field-name-field-person-software .software-descr {
+  display: block;
+  font-size: 0.688em;
+  color: #999999;
+  line-height: 0.75em;
+}
+
+.node-person .field-name-field-person-software-2 ul {
+  padding-left: 0;
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+.node-person .field-name-field-person-software-2 li {
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.node-person .field-name-field-person-software-2 li:before {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  top: 0.33482142857142859375em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c";
+  color: #999999;
+}
+.node-person .field-name-field-person-software-2 .software-descr {
+  font-size: 0.813em;
+}
+
+/**
+ * VIEW - About me (teaser)
+ */
+.view-display-id-block_about_teaser .node-person .field-name-field-person-about {
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif;
+  font-size: 1.625em;
+  color: #666666;
+}
+
+/**
+ * VIEW - About me
+ */
+.view-display-id-block_about .node-person .field-name-field-person-about {
+  font-family: "jaf-facitweb-1", "jaf-facitweb-2", Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+}
+
+/**
+ * BLOCK - Curriculum vitae button
+ */
+#block-block-13,
+#block-block-14,
+.field-name-field-person-cv-file .field-item {
+  text-align: center;
+}
+#block-block-13 .button[href="/about/cv"],
+#block-block-14 .button[href="/about/cv"],
+.field-name-field-person-cv-file .field-item .button[href="/about/cv"] {
+  background-color: #4fbada;
+  font-weight: bold !important;
+}
+#block-block-13 .button[href="/about/cv"]:hover, #block-block-13 .button[href="/about/cv"]:focus,
+#block-block-14 .button[href="/about/cv"]:hover,
+#block-block-14 .button[href="/about/cv"]:focus,
+.field-name-field-person-cv-file .field-item .button[href="/about/cv"]:hover,
+.field-name-field-person-cv-file .field-item .button[href="/about/cv"]:focus {
+  background-color: #2ba6cb;
+}
+#block-block-13 .button[href$=".pdf"],
+#block-block-14 .button[href$=".pdf"],
+.field-name-field-person-cv-file .field-item .button[href$=".pdf"] {
+  background-color: #4fbada;
+  font-weight: bold !important;
+}
+#block-block-13 .button[href$=".pdf"]:hover, #block-block-13 .button[href$=".pdf"]:focus,
+#block-block-14 .button[href$=".pdf"]:hover,
+#block-block-14 .button[href$=".pdf"]:focus,
+.field-name-field-person-cv-file .field-item .button[href$=".pdf"]:hover,
+.field-name-field-person-cv-file .field-item .button[href$=".pdf"]:focus {
+  background-color: #2ba6cb;
+}
+
+/**
+ * TODO - Clean up all CSS rules below.
+ */
+#block-block-10 .button {
+  margin-right: 0.5em;
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  /* 'Small' button CSS rules. */
+}
+
+#block-views-person-block-about .views-row {
+  border: none;
+}
+
+body.page-about-cv .node-title {
+  display: none;
+}
+body.page-about-cv .field-item:first-child, body.page-about-cv .views-row.views-row-first {
+  border-top: none !important;
+}
+
 /**
  * NODE - Testimonial - Default
  */
@@ -1266,6 +1799,88 @@ body.node-type-project #content-title {
 /* Hide page title. */
 body.node-type-testimonial #page-title {
   display: none;
+}
+
+/**
+ * NODE - Location - Default
+ */
+/* Address. */
+.node-location .field-name-field-location-address .field-items {
+  position: relative;
+  padding-left: 0;
+}
+.node-location .field-name-field-location-address .field-item:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  top: 0.125em;
+  font-size: 1.5em;
+  content: "\f041";
+}
+
+/* Email. */
+.node-location .field-name-field-location-email .field-items {
+  position: relative;
+  padding-left: 0;
+}
+.node-location .field-name-field-location-email .field-item:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  left: -2.438em;
+  top: 0.250em;
+  font-size: 1.125em;
+  content: "\f0e0";
+}
+
+/* Phone. */
+.node-location .field-name-field-location-phone .field-items {
+  position: relative;
+  padding-left: 0;
+}
+.node-location .field-name-field-location-phone .field-item:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  top: 0.125em;
+  font-size: 1.5em;
+  content: "\f095";
+}
+
+/* Website. */
+.node-location .field-name-field-location-website .field-items {
+  position: relative;
+  padding-left: 0;
+}
+.node-location .field-name-field-location-website .field-item:before {
+  width: 2.142857142857143em;
+  text-align: center;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f0ac";
 }
 
 /**
@@ -1646,9 +2261,22 @@ body.node-type-testimonial #page-title {
 /**
  * OVERRIDE
  */
-#cboxCurrent {
-  font-size: 0.813em;
-  color: gray;
+#colorbox {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#cboxWrapper {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 #cboxContent {
@@ -1656,6 +2284,17 @@ body.node-type-testimonial #page-title {
   -moz-box-shadow: 0 0 5px 1px #cccccc;
   -webkit-box-shadow: 0 0 5px 1px #cccccc;
   box-shadow: 0 0 5px 1px #cccccc;
+}
+
+#cboxTitle {
+  padding-top: 0.375em;
+  font-size: 0.813em;
+  color: #4d4d4d;
+}
+
+#cboxCurrent {
+  font-size: 0.813em;
+  color: gray;
 }
 
 /**
@@ -1691,4 +2330,9 @@ body.node-type-testimonial #page-title {
 #chart-person-chart-work-1 .amChartsLegend text tspan {
   font-size: 0.875rem !important;
   font-weight: bold !important;
+}
+@media only screen and (max-width: 767px) {
+  #chart-person-chart-work-1 .amChartsLegend text tspan {
+    font-size: 0.75rem !important;
+  }
 }
