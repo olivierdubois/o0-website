@@ -1,4 +1,62 @@
 /**
+ * FORM - Buttons
+ */
+
+/* CSS from ZURB Foundation (v5) 'button' rule, 'as-is' from 'foundation.css'. */
+.form-submit {
+  @include button;
+}
+/* Overrides. */
+.form-submit {
+  background-color: $form-submit-button-background-color;
+  //border-color: $button-border-color;
+  font-weight: bold !important;
+
+  &:hover, &:focus {
+    background-color: $form-submit-button-background-color-s-hover;
+    //border-color: $form-submit-button-border-color-s-hover;
+    color: $form-submit-button-font-color-s-hover;
+    text-decoration: none;
+  }
+
+  /* CSS from ZURB Foundation (v5) 'button' rules, 'as-is' from 'foundation.css'. */
+  &.large { padding-top: 1.125rem; padding-right: 2.25rem; padding-bottom: 1.1875rem; padding-left: 2.25rem; font-size: 1.25rem; }
+  &.small { padding-top: 0.875rem; padding-right: 1.75rem; padding-bottom: 0.9375rem; padding-left: 1.75rem; font-size: 0.8125rem; }
+  &.tiny { padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.6875rem; padding-left: 1.25rem; font-size: 0.6875rem; }
+  &.expand { padding-right: 0; padding-left: 0; width: 100%; }
+  &.left-align { text-align: left; text-indent: 0.75rem; }
+  &.right-align { text-align: right; padding-right: 0.75rem; }
+  &.radius { -webkit-border-radius: 3px; border-radius: 3px; }
+  &.round { -webkit-border-radius: 1000px; border-radius: 1000px; }
+
+  @media only screen and (min-width: $mq-breakpoint-medium) {
+    display: inline-block;
+  }
+
+  &[value="Save"]
+  {}
+
+  &[value="Clone"],
+  &[value="Preview"],
+  &[value="Upload"],
+  &[value="View all"]
+  {
+    padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.6875rem; padding-left: 1.25rem; /* 'Small' button CSS rules. */
+    background-color: lighten($color-2-grey, 10);
+    font-weight: normal !important;
+    &:hover, &:focus { background-color: lighten($color-2-grey, 0); }
+  }
+}
+
+.form-actions {
+  .form-submit { margin-left: 0.5rem; margin-right: 0.5rem; }
+  .form-submit:first-child { margin-left: 0rem; margin-right: 0.5rem; }
+}
+
+
+
+
+/**
  * FORM - 'Contact' form
  */
 
