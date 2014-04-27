@@ -64,6 +64,10 @@ $heading-font-color: $color-1-orange;
 $hero-font-stack: Arial, Helvetica, sans-serif;
 $hero-font-color: rgb(102, 102, 102);
 
+// Header font.
+$header-font-stack: Arial, Helvetica, sans-serif;
+$header-font-color: rgb(102, 102, 102);
+
 // Footer font.
 $footer-font-stack: Arial, Helvetica, sans-serif;
 $footer-font-color: rgb(102, 102, 102);
@@ -311,14 +315,10 @@ $mq-breakpoint-small: "319px";
   // Font Awesome 'fa-ul' rule.
   position: relative;
   padding-left: 0;
-  margin-left: 2.142857142857143em;
 }
 @mixin icon-field-item-before {
   // Font Awesome 'fa-li' rule.
-  position: absolute;
-  left: -2.142857142857143em;
-  width: 2.142857142857143em;
-  top: 0.357em; //* Default: 0.14285714285714285em; */
+  width: 2.142857142857143em; //* Default: 2.142857142857143em; */
   text-align: center;
   // Font Awesome 'fa' rule.
   display: inline-block;
